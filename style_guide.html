@@ -1,0 +1,35 @@
+<div id="hearderBox">
+	<h1><a a href="/main/mainPage.do">KSMALL</a></h1>
+
+ 
+	<div class="loginBox"> 
+		<fieldset class="clearFix">
+			<div class="loginIdpw">
+				<input class="loginInput" type="text" id="user_id" name="user_id" title="아이디"  value="아이디" 
+							onfocus="if (this.value=='아이디') {this.value='';}" 
+							onblur="if (this.value.length==0) {this.value='아이디';} "/>
+				<input class="loginInput" type="password" id="pwd"  name="pwd" title="비밀번호" value="비밀번호" 
+							onfocus="if (this.value=='비밀번호') {this.value='';}"
+							onblur="if (this.value.length==0) {this.value='비밀번호';} "/> 
+			</div>
+			<button type="button" class="btnLogin" onclick="javascript:actionLogin()">로그인</button> 
+			<button type="button" class="btnJoin" onclick="javascript:fn_main_headPageMove('99', 'main/contents/MemberAgree', '회원가입', '안내');">회원가입</button> 
+			<button type="button" class="btnIdpw" onclick="javascript:findUserInfo();">ID/PW찾기</button>
+		</fieldset>
+	</div> 
+    
+
+
+	<div class="searchBox">
+		<fieldset class="clearFix"> 
+			<legend>검색 폼</legend>
+			<input class="searchInput" type="text" name="searchterm" id="search" title="단말기명을 입력하세요" value="단말기명을 입력하세요" 
+						onfocus="javascript:this.value='';"/>
+			<button type="button" class="btnsearch"  
+						onclick="javascript:fn_main_headPageAction('10','product/productList.do?searchKeyword=' + document.loginForm.searchterm.value);" >
+				단말기검색
+			</button>
+		</fieldset> 
+	</div>
+
+</div>
