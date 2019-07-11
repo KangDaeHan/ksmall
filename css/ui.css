@@ -22,13 +22,16 @@
 }
 
 @font-face {
-	font-family: 'NotoSansBold';
+	font-family: 'The150';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: normal;
 	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
-		url(../font/NotoSansCJKkr-Bold.eot),
-		url(../font/NotoSansCJKkr-Bold.eot?#iefix) format('embeded-opentype'),
-		url(../font/NotoSansCJKkr-Bold.woff) format('woff');
+		url(../font/The150.eot),
+		url(../font/The150.eot?#iefix) format('embeded-opentype'),
+		url(../font/The150.otf) format('opentype'),
+		url(../font/The150.svg#The150) format('svg'),
+		url(../font/The150.woff2) format('woff2'),
+		url(../font/The150.woff) format('woff');
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -882,6 +885,7 @@ button {
 	height: 77px;
 	background: url("../image/intro/bg_bn_intro.png") no-repeat 50% bottom;
 	margin-left: -387px;
+	z-index: 50;
 }
 .intro_banner .all_view {
 	position: absolute;
@@ -981,14 +985,25 @@ button {
 	left:0;
 }
 #section .section .cont .title_off {
-	position:relative;
-	display:block;
-	text-align:center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	height: 21%;
+	margin: auto;
+	font-family: "The150", arial, helvetica, serif , sans-serif;
+	font-size: 28px;
+	line-height: 1.2;
+	color: #fff;
+	text-align: center;
+	opacity: 0.75;
 }
 #section .section .cont.on , #section .section .cont.active {
 	width: 730px;
 }
-#section .section .cont.on .title_off , #section .section .cont.active .title_off , #section .section .cont .title_on , #section .section .cont.active.on .title_on {
+#section .section .cont.on .title_off , #section .section .cont.active.on .title_off , #section .section .cont .title_on , #section .section .cont.active.on .title_on {
 	display:none;
 	z-index: 100;
 }
@@ -1086,6 +1101,53 @@ button {
 	max-width: 100%;
 	overflow: hidden;
 }
+.tp-bullets {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 50%;
+	left: auto !important;
+	bottom: auto !important;
+	right: 15px;
+	width: auto;
+	height: 290px;
+	margin: -145px 0 0 0;
+	padding: 0;
+	z-index: 1100;
+}
+.tp-bullets.simplebullets.round .bullet {
+	float: none;
+	display: block;
+	width: 6px;
+	height: 50px;
+	margin: 10px 0 0 0;
+	padding: 0;
+	border: 0;
+	border-radius: 3px;
+	background: #8e8e8d;
+	cursor: pointer;
+}
+.tp-bullets.simplebullets.round .bullet.first {
+	margin: 0;
+}
+.tp-bullets.simplebullets.round .bullet.last {
+	margin-right: 0;
+}
+.tp-bullets.simplebullets.round .bullet.selected {
+	background: #1d1d1b;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Ver.tablet */
