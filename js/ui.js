@@ -35,10 +35,16 @@ function layer_open(el, menuNum, title, addtxt, tel) {
 
     $(`#${el} .btn_pop_close , #${el} > .bg`).click(function(e) {
         if (bg) {
+			$('.section .cont.active').find(".area > img").attr("src", function (index, attr) {
+				return attr.replace("_on.jpg", "_off.jpg");
+			});
 			$(`#${el} .${menuNum}`).removeClass('active on').css('width','290px');
             temp.fadeOut();
             $("html").removeAttr("style");
         } else {
+			$('.section .cont.active').find(".area > img").attr("src", function (index, attr) {
+				return attr.replace("_on.jpg", "_off.jpg");
+			});
 			$(`#${el} .${menuNum}`).removeClass('active on').css('width','290px');
             temp.fadeOut();
             $("html").removeAttr("style");

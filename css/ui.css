@@ -8,30 +8,58 @@
 	src: local('Noto Sans Regular'), local('NotoSans-Regular'),
 		url(../font/NotoSansCJKkr-Regular.eot),
 		url(../font/NotoSansCJKkr-Regular.eot?#iefix) format('embeded-opentype'),
+		url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
 		url(../font/NotoSansCJKkr-Regular.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'NotoSansMedium';
 	font-style: normal;
-	font-weight: 600;
+	font-weight: normal;
 	src: local('Noto Sans Medium'), local('NotoSans-Medium'),
 		url(../font/NotoSansCJKkr-Medium.eot),
 		url(../font/NotoSansCJKkr-Medium.eot?#iefix) format('embeded-opentype'),
+		url(../font/NotoSansCJKkr-Medium.otf) format('opentype'),
 		url(../font/NotoSansCJKkr-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'The120';
+	font-style: normal;
+	font-weight: normal;
+	src: local('The120'),
+		url(../font/The120.eot),
+		url(../font/The120.eot?#iefix) format('embeded-opentype'),
+		url(../font/The120.otf) format('opentype'),
+		url(../font/The120.svg#The120) format('svg'),
+		url(../font/The120.woff2) format('woff2'),
+		url(../font/The120.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'The150';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+	src: local('The150'),
 		url(../font/The150.eot),
 		url(../font/The150.eot?#iefix) format('embeded-opentype'),
 		url(../font/The150.otf) format('opentype'),
 		url(../font/The150.svg#The150) format('svg'),
 		url(../font/The150.woff2) format('woff2'),
 		url(../font/The150.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'The160';
+	font-style: normal;
+	font-weight: normal;
+	src: local('The160'),
+		url(../font/The160.eot),
+		url(../font/The160.eot?#iefix) format('embeded-opentype'),
+		url(../font/The160.otf) format('opentype'),
+		url(../font/The160.svg#The160) format('svg'),
+		url(../font/The160.woff2) format('woff2'),
+		url(../font/The160.woff) format('woff');
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -889,11 +917,13 @@ button {
 }
 .intro_banner .all_view {
 	position: absolute;
-	bottom: 14px;
-	left: 47px;
+	bottom: 12px;
+	left: 71px;
 	display: block;
 	padding-right: 22px;
+	font-family: 'NotoSans' , arial, helvetica, serif , sans-serif;
 	font-size: 14px;
+	line-height: 1.2;
 	color: #162b84;
 	text-align: center;
 }
@@ -937,6 +967,7 @@ button {
 	position: relative;
 	display: block;
 	width: 100%;
+	font-family: 'NotoSansMedium' , arial, helvetica, serif , sans-serif;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 25px;
@@ -1021,13 +1052,14 @@ button {
 	left: 0;
 	width: 100%;
 	padding-left: 22px;
+	font-family: "The120", arial, helvetica, serif , sans-serif;
 	font-size: 42px;
 	font-weight: 400;
 	color: #000;
 	white-space: nowrap;
 }
 #section .section .cont.on .title_on .tit strong , #section .section .cont.active .title_on .tit strong {
-	font-weight: 700;
+	font-family: "The160", arial, helvetica, serif , sans-serif;
 	color: #000;
 }
 #section .section .cont.on .title_on .name , #section .section .cont.active .title_on .name {
@@ -1038,8 +1070,8 @@ button {
 	display: block;
 	/* width: 100%; */
 	padding: 0 26px;
+	font-family: "The150", arial, helvetica, serif , sans-serif;
 	font-size: 28px;
-	font-weight: 600;
 	line-height: 60px;
 	color: #fff;
 }
@@ -1063,8 +1095,8 @@ button {
 #section .section .cont.on .title_on .link .btn , #section .section .cont.active .title_on .link .btn {
 	padding: 0 32px 0 12px;
 	border: 0;
+	font-family: 'NotoSansMedium', arial, helvetica, serif , sans-serif;
 	font-size: 16px;
-	font-weight: 600;
 	color: #fff;
 	line-height: 60px;
 	text-align: center;
@@ -1110,10 +1142,10 @@ button {
 	top: 50%;
 	left: auto !important;
 	bottom: auto !important;
-	right: 15px;
+	right: 41px;
 	width: auto;
 	height: 290px;
-	margin: -145px 0 0 0;
+	margin: -145px 0 0 0 !important;
 	padding: 0;
 	z-index: 1100;
 }
