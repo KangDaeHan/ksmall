@@ -1261,19 +1261,19 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 .html5vid.videoisplaying .tp-poster	{	display: none}
 
 .tp-video-play-button		{	background:#000;
-								background:rgba(0,0,0,0.3);
-								padding:5px;
-								border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
-								position: absolute;
-								top: 50%;
-								left: 50%;
-								font-size: 40px;
-								color: #FFF;
-								z-index: 3;
-								margin-top: -27px;
-								margin-left: -28px;
-								text-align: center;
-								cursor: pointer;
+		background:rgba(0,0,0,0.3);
+		padding:5px;
+		border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 40px;
+		color: #FFF;
+		z-index: 3;
+		margin-top: -27px;
+		margin-left: -28px;
+		text-align: center;
+		cursor: pointer;
 							}
 
 .html5vid .tp-revstop		{	width:15px;height:20px; border-left:5px solid #fff; border-right:5px solid #fff; position:relative;margin:10px 20px; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
@@ -1290,7 +1290,6 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 /********************************
 	-	FULLSCREEN VIDEO ENDS	-
 *********************************/
-
 
 /********************************
 	-	DOTTED OVERLAYS	-
@@ -1310,8 +1309,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 *************************/
 
 /** BULLETS **/
-
-.tpclear		{	clear:both}
+.tpclear {	clear:both}
 
 
 .tp-bullets									{	z-index:1000; position:absolute;
@@ -1374,7 +1372,6 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 .tp-bullets.simplebullets.navbar .bullet.selected		{	background-position:bottom left}
 
 
-
 /*************************************
 	-	TP ARROWS 	-
 **************************************/
@@ -1396,40 +1393,40 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 															-khtml-opacity: 0;
 															opacity: 0;
 														}
-.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/large_left.png) no-Repeat top left;	width:40px;	height:40px;   }
-.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/large_right.png) no-Repeat top left;	width:40px;	height:40px;   }
+.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(../image/large_left.png) no-Repeat top left;	width:40px;	height:40px;   }
+.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	background:url(../image/large_right.png) no-Repeat top left;	width:40px;	height:40px;   }
 
 
-.tp-leftarrow.round										{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_left.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left; margin-top:0px;	}
-.tp-rightarrow.round									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_right.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left;	margin-top:0px}
+.tp-leftarrow.round										{	z-index:100;cursor:pointer; position:relative;	background:url(../image/small_left.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left; margin-top:0px;	}
+.tp-rightarrow.round									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/small_right.png) no-Repeat top left;	width:19px;	height:14px;  margin-right:0px; float:left;	margin-top:0px}
 
 
-.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/arrow_left.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:0px;	}
-.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:0px}
+.tp-leftarrow.round-old									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_left.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left; margin-top:0px;	}
+.tp-rightarrow.round-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_right.png) no-Repeat top left;	width:26px;	height:26px;  margin-right:0px; float:left;	margin-top:0px}
 
 
-.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_left_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px}
-.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../assets/small_right_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px}
+.tp-leftarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/small_left_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-right:6px; margin-top:12px}
+.tp-rightarrow.navbar									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/small_right_boxed.png) no-Repeat top left;	width:20px;	height:15px;   float:left;	margin-left:6px; margin-top:12px}
 
 
-.tp-leftarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrowleft.png) no-Repeat top left;		width:9px;	height:16px;   float:left;	margin-right:6px; margin-top:10px}
-.tp-rightarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrowright.png) no-Repeat top left;	width:9px;	height:16px;   float:left;	margin-left:6px; margin-top:10px}
+.tp-leftarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrowleft.png) no-Repeat top left;		width:9px;	height:16px;   float:left;	margin-right:6px; margin-top:10px}
+.tp-rightarrow.navbar-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrowright.png) no-Repeat top left;	width:9px;	height:16px;   float:left;	margin-left:6px; margin-top:10px}
 
 .tp-leftarrow.navbar-old.thumbswitharrow				{	margin-right:10px}
 .tp-rightarrow.navbar-old.thumbswitharrow				{	margin-left:0px}
 
-.tp-leftarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:0px}
-.tp-rightarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:0px}
+.tp-leftarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:0px}
+.tp-rightarrow.square									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:0px}
 
 
-.tp-leftarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:0px}
-.tp-rightarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../images/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:0px}
+.tp-leftarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_left2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-right:0px; margin-top:0px}
+.tp-rightarrow.square-old								{	z-index:100;cursor:pointer; position:relative;	background:url(../image/arrow_right2.png) no-Repeat top left;	width:12px;	height:17px;   float:left;	margin-left:0px; margin-top:0px}
 
 
-.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(../images/large_left.png) no-Repeat 0 0;	width:40px;	height:40px;
+.tp-leftarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/large_left.png) no-Repeat 0 0;	width:40px;	height:40px;
 
 														}
-.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(../images/large_right.png) no-Repeat 0 0;	width:40px;	height:40px;
+.tp-rightarrow.default									{	z-index:100;cursor:pointer; position:relative;	background:url(../image/large_right.png) no-Repeat 0 0;	width:40px;	height:40px;
 
 														}
 
@@ -1494,7 +1491,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 /************************************
 		-	TP BANNER TIMER		-
 *************************************/
-.tp-bannertimer								{	width:100%; height:10px; background:url(../images/timer.png);position:absolute; z-index:200;top:0px}
+.tp-bannertimer								{	width:100%; height:10px; position:absolute; z-index:200;top:0px}
 .tp-bannertimer.tp-bottom					{	bottom:0px;height:5px; top:auto}
 
 
@@ -2055,17 +2052,13 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 				top:50%; left:50%;
 				z-index:10000;
 				position:absolute;
-
-
 			}
 
 .tp-loader.spinner0 {
   width: 40px;
   height: 40px;
-  background:url(../images/loader.gif) no-repeat center center;
+  background:url(../image/loader.gif) no-repeat center center;
   background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   margin-top:-20px;
   margin-left:-20px;
   -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
@@ -2079,8 +2072,6 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
   width: 40px;
   height: 40px;
   background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   margin-top:-20px;
   margin-left:-20px;
   -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
@@ -2090,7 +2081,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 	-webkit-border-radius: 3px;
 }
 
-.tp-loader.spinner5 	{background:url(../images/loader.gif) no-repeat 10px 10px;
+.tp-loader.spinner5 	{background:url(../image/loader.gif) no-repeat 10px 10px;
 							background-color:#fff;
 							margin:-22px -22px;
 							width:44px;height:44px;
@@ -2125,8 +2116,6 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
   height: 40px;
   margin-top:-20px;margin-left:-20px;
   background-color: #ff0000;
-   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   border-radius: 100%;
   -webkit-animation: tp-scaleout 1.0s infinite ease-in-out;
   animation: tp-scaleout 1.0s infinite ease-in-out;
@@ -2324,46 +2313,46 @@ zoom: 1;
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.revicon-search-1:before { content: '\e802'} /* '��' */
-.revicon-pencil-1:before { content: '\e831'} /* '��' */
-.revicon-picture-1:before { content: '\e803'} /* '��' */
-.revicon-cancel:before { content: '\e80a'} /* '��' */
-.revicon-info-circled:before { content: '\e80f'} /* '��' */
-.revicon-trash:before { content: '\e801'} /* '��' */
-.revicon-left-dir:before { content: '\e817'} /* '��' */
-.revicon-right-dir:before { content: '\e818'} /* '��' */
-.revicon-down-open:before { content: '\e83b'} /* '��' */
-.revicon-left-open:before { content: '\e819'} /* '��' */
-.revicon-right-open:before { content: '\e81a'} /* '��' */
-.revicon-angle-left:before { content: '\e820'} /* '��' */
-.revicon-angle-right:before { content: '\e81d'} /* '��' */
-.revicon-left-big:before { content: '\e81f'} /* '��' */
-.revicon-right-big:before { content: '\e81e'} /* '��' */
-.revicon-magic:before { content: '\e807'} /* '��' */
-.revicon-picture:before { content: '\e800'} /* '��' */
-.revicon-export:before { content: '\e80b'} /* '��' */
-.revicon-cog:before { content: '\e832'} /* '��' */
-.revicon-login:before { content: '\e833'} /* '��' */
-.revicon-logout:before { content: '\e834'} /* '��' */
-.revicon-video:before { content: '\e805'} /* '��' */
-.revicon-arrow-combo:before { content: '\e827'} /* '��' */
-.revicon-left-open-1:before { content: '\e82a'} /* '��' */
-.revicon-right-open-1:before { content: '\e82b'} /* '��' */
-.revicon-left-open-mini:before { content: '\e822'} /* '��' */
-.revicon-right-open-mini:before { content: '\e823'} /* '��' */
-.revicon-left-open-big:before { content: '\e824'} /* '��' */
-.revicon-right-open-big:before { content: '\e825'} /* '��' */
-.revicon-left:before { content: '\e836'} /* '��' */
-.revicon-right:before { content: '\e826'} /* '��' */
-.revicon-ccw:before { content: '\e808'} /* '��' */
-.revicon-arrows-ccw:before { content: '\e806'} /* '��' */
-.revicon-palette:before { content: '\e829'} /* '��' */
-.revicon-list-add:before { content: '\e80c'} /* '��' */
-.revicon-doc:before { content: '\e809'} /* '��' */
-.revicon-left-open-outline:before { content: '\e82e'} /* '��' */
-.revicon-left-open-2:before { content: '\e82c'} /* '��' */
-.revicon-right-open-outline:before { content: '\e82f'} /* '��' */
-.revicon-right-open-2:before { content: '\e82d'} /* '��' */
-.revicon-equalizer:before { content: '\e83a'} /* '��' */
-.revicon-layers-alt:before { content: '\e804'} /* '��' */
-.revicon-popup:before { content: '\e828'} /* '��' */
+.revicon-search-1:before { content: '\e802'} /* 'ï¿½ï¿½' */
+.revicon-pencil-1:before { content: '\e831'} /* 'ï¿½ï¿½' */
+.revicon-picture-1:before { content: '\e803'} /* 'ï¿½ï¿½' */
+.revicon-cancel:before { content: '\e80a'} /* 'ï¿½ï¿½' */
+.revicon-info-circled:before { content: '\e80f'} /* 'ï¿½ï¿½' */
+.revicon-trash:before { content: '\e801'} /* 'ï¿½ï¿½' */
+.revicon-left-dir:before { content: '\e817'} /* 'ï¿½ï¿½' */
+.revicon-right-dir:before { content: '\e818'} /* 'ï¿½ï¿½' */
+.revicon-down-open:before { content: '\e83b'} /* 'ï¿½ï¿½' */
+.revicon-left-open:before { content: '\e819'} /* 'ï¿½ï¿½' */
+.revicon-right-open:before { content: '\e81a'} /* 'ï¿½ï¿½' */
+.revicon-angle-left:before { content: '\e820'} /* 'ï¿½ï¿½' */
+.revicon-angle-right:before { content: '\e81d'} /* 'ï¿½ï¿½' */
+.revicon-left-big:before { content: '\e81f'} /* 'ï¿½ï¿½' */
+.revicon-right-big:before { content: '\e81e'} /* 'ï¿½ï¿½' */
+.revicon-magic:before { content: '\e807'} /* 'ï¿½ï¿½' */
+.revicon-picture:before { content: '\e800'} /* 'ï¿½ï¿½' */
+.revicon-export:before { content: '\e80b'} /* 'ï¿½ï¿½' */
+.revicon-cog:before { content: '\e832'} /* 'ï¿½ï¿½' */
+.revicon-login:before { content: '\e833'} /* 'ï¿½ï¿½' */
+.revicon-logout:before { content: '\e834'} /* 'ï¿½ï¿½' */
+.revicon-video:before { content: '\e805'} /* 'ï¿½ï¿½' */
+.revicon-arrow-combo:before { content: '\e827'} /* 'ï¿½ï¿½' */
+.revicon-left-open-1:before { content: '\e82a'} /* 'ï¿½ï¿½' */
+.revicon-right-open-1:before { content: '\e82b'} /* 'ï¿½ï¿½' */
+.revicon-left-open-mini:before { content: '\e822'} /* 'ï¿½ï¿½' */
+.revicon-right-open-mini:before { content: '\e823'} /* 'ï¿½ï¿½' */
+.revicon-left-open-big:before { content: '\e824'} /* 'ï¿½ï¿½' */
+.revicon-right-open-big:before { content: '\e825'} /* 'ï¿½ï¿½' */
+.revicon-left:before { content: '\e836'} /* 'ï¿½ï¿½' */
+.revicon-right:before { content: '\e826'} /* 'ï¿½ï¿½' */
+.revicon-ccw:before { content: '\e808'} /* 'ï¿½ï¿½' */
+.revicon-arrows-ccw:before { content: '\e806'} /* 'ï¿½ï¿½' */
+.revicon-palette:before { content: '\e829'} /* 'ï¿½ï¿½' */
+.revicon-list-add:before { content: '\e80c'} /* 'ï¿½ï¿½' */
+.revicon-doc:before { content: '\e809'} /* 'ï¿½ï¿½' */
+.revicon-left-open-outline:before { content: '\e82e'} /* 'ï¿½ï¿½' */
+.revicon-left-open-2:before { content: '\e82c'} /* 'ï¿½ï¿½' */
+.revicon-right-open-outline:before { content: '\e82f'} /* 'ï¿½ï¿½' */
+.revicon-right-open-2:before { content: '\e82d'} /* 'ï¿½ï¿½' */
+.revicon-equalizer:before { content: '\e83a'} /* 'ï¿½ï¿½' */
+.revicon-layers-alt:before { content: '\e804'} /* 'ï¿½ï¿½' */
+.revicon-popup:before { content: '\e828'} /* 'ï¿½ï¿½' */

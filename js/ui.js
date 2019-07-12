@@ -13,7 +13,9 @@ $.fn.preload = function() {
 
 //popup
 function layer_open(el, menuNum, title, addtxt, tel) {
-    var temp = $("#" + el);
+	// setTimeout(function(){
+
+	var temp = $("#" + el);
 	var bg = temp.children().hasClass("bg");
 	
 	$(`#${el} .${menuNum}`).addClass('active on').css('width','730px');
@@ -23,10 +25,10 @@ function layer_open(el, menuNum, title, addtxt, tel) {
 	});
 
     if (bg) {
-        temp.fadeIn();
+		temp.fadeIn(700);
         $("html").attr("style", "overflow:hidden;");
     } else {
-        temp.fadeIn();
+		temp.fadeIn(700);
         $("html").attr("style", "overflow:hidden;");
     }
 
@@ -35,28 +37,29 @@ function layer_open(el, menuNum, title, addtxt, tel) {
 
     $(`#${el} .btn_pop_close , #${el} > .bg`).click(function(e) {
         if (bg) {
+			temp.fadeOut(200);
 			$('.section .cont.active').find(".area > img").attr("src", function (index, attr) {
 				return attr.replace("_on.jpg", "_off.jpg");
 			});
 			$(`#${el} .${menuNum}`).removeClass('active on').css('width','290px');
-            temp.fadeOut();
             $("html").removeAttr("style");
         } else {
+			temp.fadeOut(200);
 			$('.section .cont.active').find(".area > img").attr("src", function (index, attr) {
 				return attr.replace("_on.jpg", "_off.jpg");
 			});
 			$(`#${el} .${menuNum}`).removeClass('active on').css('width','290px');
-            temp.fadeOut();
             $("html").removeAttr("style");
         }
         e.preventDefault();
 	});
 
+	// },700);
+
     $(window).on("resize", function() {
         temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
         temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
 	});
-	
 }
 
 // 태그 추가 및 삭제
