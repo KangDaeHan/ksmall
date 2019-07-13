@@ -937,19 +937,6 @@ button {
 	top:0; 
 	left:0;
 }
-#section .section .cont .area img {
-	max-width: none;
-	height: 290px;
-	-webkit-transition: opacity 1s, -webkit-transform 1s;
-	transition: opacity 1s, transform 1s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-#section .section .cont .area:hover img {
-	opacity: 0.6;
-	-webkit-transform: scale3d(1.1,1.1,1);
-	transform: scale3d(1.1,1.1,1);
-}
 #section .section .cont .title_off {
 	position: absolute;
 	top: 0;
@@ -1027,71 +1014,13 @@ button {
 	right: 0;
 }
 #section .section .cont.on .title_on .link .btn , #section .section .cont.active .title_on .link .btn {
-	padding: 0 12px;
+	padding: 0 32px 0 12px;
 	border: 0;
 	font-family: 'NotoSansMedium', arial, helvetica, serif , sans-serif;
 	font-size: 16px;
 	color: #fff;
 	line-height: 60px;
 	text-align: center;
-}
-#section .section .cont.on .title_on.m1 .link .btn , #section .section .cont.active .title_on.m1 .link .btn {
-	background-color: #248c7a;
-}
-#section .section .cont.on .title_on.m2 .link .btn , #section .section .cont.active .title_on.m2 .link .btn {
-	background-color: #e98f09;
-}
-#section .section .cont.on .title_on.m3 .link .btn , #section .section .cont.active .title_on.m3 .link .btn {
-	background-color: #064da9;
-}
-#section .section .cont.on .title_on.m4 .link .btn , #section .section .cont.active .title_on.m4 .link .btn {
-	background-color: #9401b9;
-}
-
-/* 아코디언 버튼 액션 */
-.btn_over {
-	-webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-	-webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	overflow: hidden;
-}
-.btn_over:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #666;
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-.btn_over:hover, .btn_over:focus, .btn_over:active {
-	color: white;
-}
-.btn_over:hover:before, .btn_over:focus:before, .btn_over:active:before {
-	-webkit-transform: scale(2);
-	transform: scale(2);
-}
-#section .section .cont .title_on .link .btn:after {
-	content: '';
-	display: inline-block;
-	width: 6px;
-	height: 12px;
-	margin: -3px 0 0 5px;
-	background: url("../image/sprite.png") no-repeat -40px -8px;
-	vertical-align: middle;
 }
 #section .section .cont.on .title_on.m1 .link .btn , #section .section .cont.active .title_on.m1 .link .btn {
 	background-color: #248c7a;
@@ -1123,7 +1052,6 @@ button {
 .tp-banner-container .tp-banner {
 	width: 100%;
 	max-width: 100%;
-	max-height: 100% !important;
 	overflow: hidden;
 }
 .tp-bullets {
@@ -1168,7 +1096,6 @@ button {
 	display: inline-block;
 	padding: 0 22px;
 	background: #638fb1;
-	border: 0;
 	border-radius: 22px;
 	font-family: "The140", arial, helvetica, serif , sans-serif;
 	font-size: 16px;
@@ -1180,36 +1107,8 @@ button {
 	background-color: #000;
 }
 
-/* 페이지 로딩시 */
-.loading {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(255,255,255,0.5);
-	z-index: 1200;
-}
-.loading:before {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	content: '';
-	display: block;
-	width: 50px;
-	height: 50px;
-	margin: -25px 0 0 -25px;
-	background: #fff;
-	border-radius: 5px;
-	overflow: hidden;
-}
-.loading img {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -12px 0 0 -12px;
-}
+
+
 
 
 
@@ -1219,24 +1118,12 @@ button {
 
 /* Ver.tablet */
 @media all and (max-width:1360px) {
-	html {font-size:62.5%;}
 	.intro_wrap .footer .inner .utill {
 		position: static;
 		margin: 10px 0 0 0;
 	}
 	.intro_wrap .footer .inner .utill .utill_list li:first-child {
 		margin-left: 0;
-	}
-
-	.intro_banner {
-		bottom: 114px;
-	}
-
-	.tp-banner-container .btn_detail {
-		padding: 0 2.2rem;
-		border-radius: 2.2rem;
-		font-size: 1.3rem;
-		line-height: 3.3rem;
 	}
 }
 

@@ -16,7 +16,7 @@ function layer_open(el, menuNum, title, addtxt, tel) {
     var temp = $("#" + el);
 	var bg = temp.children().hasClass("bg");
 	
-	$(`#${el} .${menuNum}`).addClass('active on').css('width','730px');
+	$(`${el} ${menuNum}`).addClass('active on').css('width','730px');
 
 	$('.section .cont.active').find(".area > img").attr("src", function (index, attr) {
 		return attr.replace("_off.jpg", "_on.jpg");
