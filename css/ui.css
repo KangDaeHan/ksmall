@@ -1,38 +1,16 @@
 @charset "utf-8";
 
 /*웹폰트 설정*/
-@font-face {
-	font-family: 'NotoSans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Noto Sans Regular'), local('NotoSans-Regular'),
-		url(../font/NotoSansCJKkr-Regular.eot),
-		url(../font/NotoSansCJKkr-Regular.eot?#iefix) format('embeded-opentype'),
-		url(../font/NotoSansCJKkr-Regular.otf) format('opentype'),
-		url(../font/NotoSansCJKkr-Regular.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'NotoSansMedium';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Noto Sans Medium'), local('NotoSans-Medium'),
-		url(../font/NotoSansCJKkr-Medium.eot),
-		url(../font/NotoSansCJKkr-Medium.eot?#iefix) format('embeded-opentype'),
-		url(../font/NotoSansCJKkr-Medium.otf) format('opentype'),
-		url(../font/NotoSansCJKkr-Medium.woff) format('woff');
-}
+/* NotoSansKR */
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
 @font-face {
 	font-family: 'The120';
 	font-style: normal;
 	font-weight: normal;
 	src: local('The120'),
-		url(../font/The120.eot),
-		url(../font/The120.eot?#iefix) format('embeded-opentype'),
-		url(../font/The120.otf) format('opentype'),
-		url(../font/The120.svg#The120) format('svg'),
-		url(../font/The120.woff2) format('woff2'),
+		/* url(../font/The120.eot), */
+		/* url(../font/The120.eot?#iefix) format('embeded-opentype'), */
 		url(../font/The120.woff) format('woff');
 }
 
@@ -41,11 +19,8 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local('The140'),
-		url(../font/The140.eot),
-		url(../font/The140.eot?#iefix) format('embeded-opentype'),
-		url(../font/The140.otf) format('opentype'),
-		url(../font/The140.svg#The140) format('svg'),
-		url(../font/The140.woff2) format('woff2'),
+		/* url(../font/The140.eot), */
+		/* url(../font/The140.eot?#iefix) format('embeded-opentype'), */
 		url(../font/The140.woff) format('woff');
 }
 
@@ -54,11 +29,8 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local('The150'),
-		url(../font/The150.eot),
-		url(../font/The150.eot?#iefix) format('embeded-opentype'),
-		url(../font/The150.otf) format('opentype'),
-		url(../font/The150.svg#The150) format('svg'),
-		url(../font/The150.woff2) format('woff2'),
+		/* url(../font/The150.eot), */
+		/* url(../font/The150.eot?#iefix) format('embeded-opentype'), */
 		url(../font/The150.woff) format('woff');
 }
 
@@ -67,11 +39,8 @@
 	font-style: normal;
 	font-weight: normal;
 	src: local('The160'),
-		url(../font/The160.eot),
-		url(../font/The160.eot?#iefix) format('embeded-opentype'),
-		url(../font/The160.otf) format('opentype'),
-		url(../font/The160.svg#The160) format('svg'),
-		url(../font/The160.woff2) format('woff2'),
+		/* url(../font/The160.eot), */
+		/* url(../font/The160.eot?#iefix) format('embeded-opentype'), */
 		url(../font/The160.woff) format('woff');
 }
 
@@ -732,6 +701,9 @@ button {
 }
 
 /* layout */
+.intro_wrap {
+	height: 100vh !important;
+}
 .header {
 	position: fixed;
 	top: 0;
@@ -825,7 +797,11 @@ button {
 }
 
 /* intro */
-
+.intro .inner {
+	height: 100vh !important;
+	padding: 82px 0 76px;
+	overflow: hidden;
+}
 /* 인트로 베너 */
 .intro_banner {
 	position: absolute;
@@ -843,8 +819,9 @@ button {
 	left: 71px;
 	display: block;
 	padding-right: 22px;
-	font-family: 'NotoSans' , arial, helvetica, serif , sans-serif;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 1.2;
 	color: #162b84;
 	text-align: center;
@@ -889,9 +866,9 @@ button {
 	position: relative;
 	display: block;
 	width: 100%;
-	font-family: 'NotoSansMedium' , arial, helvetica, serif , sans-serif;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 25px;
 	color: #000;
 	text-align: center;
@@ -964,7 +941,8 @@ button {
 	line-height: 1.2;
 	color: #fff;
 	text-align: center;
-	opacity: 0.75;
+	opacity: 0.7;
+	z-index: 5;
 }
 #section .section .cont.on , #section .section .cont.active {
 	width: 730px;
@@ -1026,14 +1004,14 @@ button {
 	bottom: 0;
 	right: 0;
 }
-#section .section .cont.on .title_on .link .btn , #section .section .cont.active .title_on .link .btn {
-	padding: 0 12px;
-	border: 0;
-	font-family: 'NotoSansMedium', arial, helvetica, serif , sans-serif;
-	font-size: 16px;
-	color: #fff;
-	line-height: 60px;
-	text-align: center;
+#section .section .cont .title_on .link .btn:after {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 12px;
+	margin: -3px 0 0 5px;
+	background: url("../image/sprite.png") no-repeat -40px -8px;
+	vertical-align: middle;
 }
 #section .section .cont.on .title_on.m1 .link .btn , #section .section .cont.active .title_on.m1 .link .btn {
 	background-color: #248c7a;
@@ -1046,6 +1024,43 @@ button {
 }
 #section .section .cont.on .title_on.m4 .link .btn , #section .section .cont.active .title_on.m4 .link .btn {
 	background-color: #9401b9;
+}
+#section .section .cont.on .title_on .link .btn , #section .section .cont.active .title_on .link .btn {
+	padding: 0 12px;
+	border: 0;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+}
+.section .cont .layer {
+	display:block; 
+	width:730px; 
+	height:290px; 
+	position:absolute; 
+	left:0; 
+	top:0; 
+	z-index:1; 
+	background:#333333; 
+	filter:alpha(opacity=70); 
+	opacity:0.7;
+}
+.section .cont.on .layer {
+	display:none; 
+}
+.section .cont.menu1 .layer {
+	background: #3ba997;
+}
+.section .cont.menu2 .layer {
+	background: #b87600;
+}
+.section .cont.menu3 .layer {
+	background: #2375ff;
+}
+.section .cont.menu4 .layer {
+	background: #82408a;
 }
 
 /* 아코디언 버튼 액션 */
@@ -1084,33 +1099,10 @@ button {
 	-webkit-transform: scale(2);
 	transform: scale(2);
 }
-#section .section .cont .title_on .link .btn:after {
-	content: '';
-	display: inline-block;
-	width: 6px;
-	height: 12px;
-	margin: -3px 0 0 5px;
-	background: url("../image/sprite.png") no-repeat -40px -8px;
-	vertical-align: middle;
-}
-#section .section .cont.on .title_on.m1 .link .btn , #section .section .cont.active .title_on.m1 .link .btn {
-	background-color: #248c7a;
-}
-#section .section .cont.on .title_on.m2 .link .btn , #section .section .cont.active .title_on.m2 .link .btn {
-	background-color: #e98f09;
-}
-#section .section .cont.on .title_on.m3 .link .btn , #section .section .cont.active .title_on.m3 .link .btn {
-	background-color: #064da9;
-}
-#section .section .cont.on .title_on.m4 .link .btn , #section .section .cont.active .title_on.m4 .link .btn {
-	background-color: #9401b9;
-}
 
-.intro .inner {
-	padding: 82px 0 76px;
-	overflow: hidden;
-}
+/* 인트로 비주얼 */
 .forcefullwidth_wrapper_tp_banner {
+	height: 100vh !important;
 	overflow: hidden;
 }
 .tp-banner-container {
@@ -1140,7 +1132,7 @@ button {
 	height: 290px;
 	margin: -145px 0 0 0 !important;
 	padding: 0;
-	z-index: 1100;
+	z-index: 50;
 }
 .tp-bullets.simplebullets.round .bullet {
 	float: none;
@@ -1175,9 +1167,6 @@ button {
 	color: #fff;
 	line-height: 44px;
 	text-align: center;
-}
-.tp-caption a:hover {
-	background-color: #000;
 }
 
 /* 페이지 로딩시 */

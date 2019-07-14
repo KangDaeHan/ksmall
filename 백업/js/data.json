@@ -1,0 +1,30 @@
+{
+	"speed": "2000",
+	"width": "100",
+	"height": "100",
+	"sliders": [{
+			"id": "1",
+			"link": "#",
+			"src": "../image/intro/visual1.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. ",
+			"btn": "First slide",
+			"title": "This is a first slide!"
+		},
+		{
+			"id": "2",
+			"link": "#",
+			"src": "../image/intro/visual2.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis. ",
+			"btn": "Second slide",
+			"title": "This is a second slide!"
+		},
+		{
+			"id": "3",
+			"link": "#",
+			"src": "../image/intro/visual3.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut . ",
+			"btn": "Third slide",
+			"title": "This is a third slide!"
+		}
+	]
+}
