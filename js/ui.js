@@ -48,7 +48,7 @@ function layer_open(el, menuNum, title, addtxt, tel) {
         e.preventDefault();
 	});
 
-	},700);
+	},950);
 
     $(window).on("resize", function() {
         temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
