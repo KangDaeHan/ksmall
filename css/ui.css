@@ -949,6 +949,9 @@ button {
 }
 #section .section .cont.on .title_off , #section .section .cont.active.on .title_off , #section .section .cont .title_on , #section .section .cont.active.on .title_on {
 	display:none;
+	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 100;
 }
 #section .section .cont.on .title_on , #section .section .cont.active.on .title_on {
