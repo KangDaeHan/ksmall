@@ -134,7 +134,7 @@
 		<div id="section">
 			<div class="section">
 				<div class="cont menu1"> <!-- 댑스별 활성화 적용시 active on -->
-					<span class="area"><img src="../image/intro/bn_intro1.jpg" data-src="../image/intro/bn_intro1.jpg" class="preload" alt="" /></span>
+					<span class="area"><img src="../image/intro/bn_intro1.jpg" alt="" /></span>
 					<span class="title_off">단말기 <br/>+</span>
 					<span class="title_on m1">
 						<span class="tit">TURMINAL <strong>UNIT</strong></span>
@@ -148,7 +148,7 @@
 					<span class="layer"></span>
 				</div>
 				<div class="cont menu2">
-					<span class="area"><img src="../image/intro/bn_intro2.jpg" data-src="../image/intro/bn_intro2.jpg" class="preload" alt="" /></span>	
+					<span class="area"><img src="../image/intro/bn_intro2.jpg" alt="" /></span>	
 					<span class="title_off">POS단말기 <br/>+</span>
 					<span class="title_on m2">
 						<span class="tit"><strong>POINT OF SALE</strong> TURMINAL</span>
@@ -161,7 +161,7 @@
 					<span class="layer"></span>
 				</div>
 				<div class="cont menu3">
-					<span class="area"><img src="../image/intro/bn_intro3.jpg" data-src="../image/intro/bn_intro3.jpg" class="preload" alt="" /></span>	
+					<span class="area"><img src="../image/intro/bn_intro3.jpg" alt="" /></span>	
 					<span class="title_off">기타모델<br/>+</span>
 					<span class="title_on m3">
 						<span class="tit">OTHER <strong>MODELS</strong></span>
@@ -173,7 +173,7 @@
 					<span class="layer"></span>
 				</div>
 				<div class="cont menu4">
-					<span class="area"><img src="../image/intro/bn_intro4.jpg" data-src="../image/intro/bn_intro4.jpg" class="preload" alt="" /></span>	
+					<span class="area"><img src="../image/intro/bn_intro4.jpg" alt="" /></span>	
 					<span class="title_off">악세사리<br/>+</span>
 					<span class="title_on m4">
 						<span class="tit"><strong>ACCESSORY</strong></span>
@@ -258,14 +258,14 @@ var onBox = $('.section .cont');
 
 onBox
 	.mouseenter(function() {
-	$(".section .cont").stop().animate({width:"290px"}, 800, 'easeOutCirc').removeClass("on");
-	$(this).stop().animate({width:"730px"}, 800, 'easeOutCirc').addClass("on");
+	$(".section .cont").stop().animate({width:"20%"}, 800, 'easeOutCirc').removeClass("on");
+	$(this).stop().animate({width:"40%"}, 800, 'easeOutCirc').addClass("on");
 	$('.section .cont.active').children('.layer').css('display','block');
 	$('.section .cont.active.on , .section .cont.on').children('.layer').css('display','none'); 
 	})
 	.mouseleave(function(){
-	$(".section .cont").stop().animate({width:"290px"}, 800, 'easeOutCirc').removeClass('on').children('.layer').css('display','block');
-	$('.section .cont.active').stop().animate({width:"730px"}, 800, 'easeOutCirc').children('.layer').css('display','none');
+	$(".section .cont").stop().animate({width:"20%"}, 800, 'easeOutCirc').removeClass('on').children('.layer').css('display','block');
+	$('.section .cont.active').stop().animate({width:"40%"}, 800, 'easeOutCirc').children('.layer').css('display','none');
 	$('.section .cont.on').children('.layer').css('display','none'); 
 	$('.section .cont.active').addClass('on');
 });
