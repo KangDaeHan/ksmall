@@ -13,11 +13,11 @@
 <link rel="stylesheet" type="text/css" href="../css/ui.css" />
 </head>
 <body>
-<div class="intro_wrap">
+<div class="wrap">
 <!-- 상단 영역 -->
 <div class="header">
 	<div class="inner">
-		<h1 class="logo"><img src="../image/t_logo.png" alt="ksmall 로고"></h1>
+		<h1 class="logo"><a href="#"><img src="../image/t_logo.png" alt="ksmall 로고"></a></h1>
 		<!-- 상단 로그인 -->
 		<div class="login">
 			<input type="text" name="" id="" class="inpt" value="" placeholder="아이디"/>
@@ -41,27 +41,49 @@
 	<div class="inner">
 		<!-- 메뉴 리스트 -->
 		<ul class="menu_list">
-			<li class="all_view"><a href="#">전제품 메뉴 보기</a>
+			<!-- <li class="all_view"><a href="#">전제품 메뉴 보기</a></li> -->
+			<li><a href="#">1depth-1</a>
 				<ul>
-					<li class="active"><a href="#">유선단말기</a></li>
-					<li><a href="#">무선단말기</a></li>
-					<li><a href="#">정유사단말기</a></li>
-					<li><a href="#">외식-POS</a></li>
-					<li><a href="#">유통-POS</a></li>
-					<li><a href="#">기타모델</a></li>
-					<li><a href="#">악세사리</a></li>
+					<li class=""><a href="#">2depth-1</a>
+						<ul>
+							<li><a href="#">3depth-1</a></li>
+							<li><a href="#">3depth-2</a></li>
+							<li><a href="#">3depth-3</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="#">2depth-2</a>
+						<ul>
+							<li><a href="#">3depth-1</a></li>
+							<li><a href="#">3depth-2</a></li>
+							<li><a href="#">3depth-3</a></li>
+						</ul>
+					</li>
 				</ul>
 			</li>
-			<li><a href="#">신상품 보기</a></li>
-			<li><a href="#">베스트상품 보기</a></li>
-			<li><a href="#">추천상품 모아보기</a></li>
-			<li><a href="#">공지사항</a></li>
-			<li><a href="#">관리자</a></li>
+			<li><a href="#">1depth-2</a>
+				<ul>
+					<li class=""><a href="#">2depth-1</a>
+						<ul>
+							<li><a href="#">3depth-1</a></li>
+							<li><a href="#">3depth-2</a></li>
+							<li><a href="#">3depth-3</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="#">2depth-2</a>
+						<ul>
+							<li><a href="#">3depth-1</a></li>
+							<li><a href="#">3depth-2</a></li>
+							<li><a href="#">3depth-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<!-- <li><a href="#">1depth-3</a></li> -->
 		</ul>
 		<!-- //메뉴 리스트 -->
 		
 		<!-- ad -->
-		<div class="ad_box">
+		<!-- <div class="ad_box">
 			<h3>KSMALL SERVICE</h3>
 			<ul>
 				<li><a href="#"><span>마이장부</span>길라잡이</a></li>
@@ -69,7 +91,7 @@
 				<li><a href="#"><span>단말기/KSPOS</span>기술지원</a></li>
 				<li><a href="#"><img src="../image/loader.gif" alt="SK m&service 사업성공의 동반자 비즈 메이트"></a></li>
 			</ul>
-		</div>
+		</div> -->
 		<!-- //ad -->
 	</div>
 </div>
@@ -81,20 +103,14 @@
 		<!-- 제품이미지 영역 -->
 		<div class="product_slider_area">
 			<div class="slider main_slider">
-				<a href="../image/product/product1.jpg" data-lightbox="roadtrip"><img src="../image/product/product1.jpg" alt=""></a>
-				<a href="../image/product/product2.jpg" data-lightbox="roadtrip"><img src="../image/product/product2.jpg" alt=""></a>
-				<a href="../image/product/product3.jpg" data-lightbox="roadtrip"><img src="../image/product/product3.jpg" alt=""></a>
-				<a href="../image/product/product4.jpg" data-lightbox="roadtrip"><img src="../image/product/product4.jpg" alt=""></a>
-				<a href="../image/product/product5.jpg" data-lightbox="roadtrip"><img src="../image/product/product5.jpg" alt=""></a>
-				<a href="../image/product/product6.jpg" data-lightbox="roadtrip"><img src="../image/product/product6.jpg" alt=""></a>
+				<a href="../image/product/default.jpg" data-lightbox="roadtrip"><img src="../image/product/default.jpg" alt=""></a>
+				<a href="../image/product/default.jpg" data-lightbox="roadtrip"><img src="../image/product/default.jpg" alt=""></a>
+				<a href="../image/product/default.jpg" data-lightbox="roadtrip"><img src="../image/product/default.jpg" alt=""></a>
 			</div>
 			<div class="slider thumb_slider">
-				<div><img src="../image/product/product1.jpg" alt=""></div>
-				<div><img src="../image/product/product2.jpg" alt=""></div>
-				<div><img src="../image/product/product3.jpg" alt=""></div>
-				<div><img src="../image/product/product4.jpg" alt=""></div>
-				<div><img src="../image/product/product5.jpg" alt=""></div>
-				<div><img src="../image/product/product6.jpg" alt=""></div>
+				<div><img src="../image/product/default.jpg" alt=""></div>
+				<div><img src="../image/product/default.jpg" alt=""></div>
+				<div><img src="../image/product/default.jpg" alt=""></div>
 			</div>
 		</div>
 		<!-- //제품이미지 영역 -->
@@ -140,70 +156,19 @@
 <!-- //하단영역 -->
 </div>
 
+<!-- 팝업 -->
 <div class="ly" id="pop_intro">
 	<div class="bg"></div>
 	<div class="pop_wrap pop_intro">
 		<a href="#" class="sprite btn_pop_close">팝업닫기</a>
-		<!-- 아코디언 메뉴 -->
-		<div id="section">
-			<div class="section">
-				<div class="cont menu1"> <!-- 댑스별 활성화 적용시 active on -->
-					<span class="area"><img src="../image/intro/bn_intro1.jpg" data-src="../image/intro/bn_intro1.jpg" class="preload" alt="" /></span>
-					<span class="title_off">단말기 <br/>+</span>
-					<span class="title_on m1">
-						<span class="tit">TURMINAL <strong>UNIT</strong></span>
-						<span class="name">단말기</span>
-						<span class="link">
-							<a href="#" class="btn btn_over">유선단말기</a>
-							<a href="#" class="btn btn_over">무선단말기</a>
-							<a href="#" class="btn btn_over">정유사단말기</a>
-						</span>
-					</span>
-					<span class="layer"></span>
-				</div>
-				<div class="cont menu2">
-					<span class="area"><img src="../image/intro/bn_intro2.jpg" data-src="../image/intro/bn_intro2.jpg" class="preload" alt="" /></span>	
-					<span class="title_off">POS단말기 <br/>+</span>
-					<span class="title_on m2">
-						<span class="tit"><strong>POINT OF SALE</strong> TURMINAL</span>
-						<span class="name">POS단말기</span>
-						<span class="link">
-							<a href="#" class="btn btn_over">외식-POS</a>
-							<a href="#" class="btn btn_over">유통-POS</a>
-						</span>
-					</span>
-					<span class="layer"></span>
-				</div>
-				<div class="cont menu3">
-					<span class="area"><img src="../image/intro/bn_intro3.jpg" data-src="../image/intro/bn_intro3.jpg" class="preload" alt="" /></span>	
-					<span class="title_off">기타모델<br/>+</span>
-					<span class="title_on m3">
-						<span class="tit">OTHER <strong>MODELS</strong></span>
-						<span class="name">기타모델</span>
-						<span class="link">
-							<a href="#" class="btn btn_over">기타모델</a>
-						</span>
-					</span>
-					<span class="layer"></span>
-				</div>
-				<div class="cont menu4">
-					<span class="area"><img src="../image/intro/bn_intro4.jpg" data-src="../image/intro/bn_intro4.jpg" class="preload" alt="" /></span>	
-					<span class="title_off">악세사리<br/>+</span>
-					<span class="title_on m4">
-						<span class="tit"><strong>ACCESSORY</strong></span>
-						<span class="name">악세사리</span>
-						<span class="link">
-							<a href="#" class="btn btn_over">악세사리</a>
-							<a href="#" class="btn btn_over">주문전표</a>
-						</span>
-					</span>
-					<span class="layer"></span>
-				</div>
-			</div>
+		<!-- 팝업 내용 -->
+		<div>
+			sdsdsds
 		</div>
-		<!-- //아코디언 메뉴 -->
+		<!-- //팝업 내용 -->
 	</div>
 </div>
+<!-- //팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">

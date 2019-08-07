@@ -11,6 +11,57 @@ $.fn.preload = function() {
 	return this;
 };
 
+// 사이드 메뉴
+function sideMenu(){
+	var side = $('.side .menu_list');
+	var sideLink = side.find('> li a');
+	var sideSubDep = side.find('ul ul');
+	var current = $('.local_navi li:last').text().trim();
+
+	sideLink.each(function() {
+		if ( $(this).text() == current ) { // sub location 텍스트와 일치할 경우 lock 클래스 추가
+			$(this).addClass('active');
+			if ( $(this).parent().parent().size() > 0) {
+				$(this).parent().parent().prev('a').addClass('active').next().slideDown();
+				$(this).parent().parent().parent().parent().prev('a').addClass('active').next().slideDown();
+			}
+			$(this).parents('.menu_list').prev().addClass('active');
+		}
+    });
+
+	//1depth
+	side.find('> li > a').on("click", function(){
+		if ($(this).hasClass('active')) {
+			$(this).toggleClass('active').next("ul").slideUp();
+			$(this).parent('li').siblings().find('a').removeClass('active').next("ul").slideUp();
+		} else {
+			side.find(' li > ul').slideUp();
+			$(this).next("ul").slideDown();
+			$(this).parent('li').siblings().find('a').removeClass('active');
+			$(this).addClass('active');
+		}
+	});
+
+	//2depth
+	side.find(' li li > a').on("click", function(){
+		if ($(this).hasClass('active')) {
+			$(this).toggleClass('active').next("ul").slideUp();
+			$(this).parent('li').siblings().find('a').removeClass('active').next("ul").slideUp();
+		} else {
+			sideSubDep.slideUp();
+			$(this).next("ul").slideDown();
+			$(this).parent('li').siblings().find('a').removeClass('active');
+			$(this).addClass('active');
+		}
+	});
+
+	//3depth
+	side.find(' li li li > a').on("click", function(){
+		$(this).parents('ul').stop();
+	});
+
+}
+
 // popup
 function layer_open(el, menuNum, title, addtxt, tel) {
 	var temp = $("#" + el);
@@ -86,6 +137,9 @@ $(document).ready(function() {
 
 	//이미지 미리로드
 	$("img.preload").preload();
+
+	//사이드 메뉴 실행
+	sideMenu();
 
 	//tooltip
 	var title_;

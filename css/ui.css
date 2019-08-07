@@ -387,9 +387,9 @@ button {
 }
 .btn.xs {
 	padding: 0 5px;
-	border: 1px solid #646464;
+	border: 1px solid #969696;
 	font-size: 11px;
-	color: #3c3d3e;
+	color: #8fc4fb;
 	line-height: 21px;
 }
 .btn.sm {
@@ -709,20 +709,25 @@ button {
 	left: 0;
 	right: 0;
 	width: 100%;
-	background: #fff;
+	background: #09306e;
 	z-index: 50;
 }
 .header .inner {
 	position: relative;
+	height: 78px;
 	padding: 0 41px;
 }
 .header .inner .logo {
-	padding-top: 16px;
+	position: absolute;
+	top: 50%;
+	left: 62px;
+	margin-top: -16px;
 }
 .header .inner .sch_box {
 	position: absolute;
-	top: 52px;
-	right: 41px;
+	top: 50%;
+	right: 77px;
+	margin-top: -14px;
 }
 .header .inner .sch_box:after {
 	position: absolute;
@@ -737,63 +742,128 @@ button {
 .header .inner .sch_box .inpt {
 	width: 100%;
 	padding-right: 28px;
+	background: transparent;
+	border-color: #8f8f8f;
+	color: #bec0c1;
 }
 .header .inner .login {
-	margin-top: 9px;
+	padding-top: 39px;
+	margin-left: 299px;
 }
 .header .inner .login .inpt {
 	width: 120px;
 	height: 23px;
+	background: transparent;
+	border: 1px solid #969696;
+	color: #bec0c1;
+}
+
+/* 인트로용 상단 스타일 */
+.intro_wrap .header {
+	background: #fff;
+}
+.intro_wrap .header .inner {
+	height: 82px;
+}
+.intro_wrap .header .inner .logo {
+	position: static;
+	padding-top: 16px;
+	margin: 0;
+}
+.intro_wrap .header .inner .login {
+	margin: 9px 0 0 0;
+	padding: 0;
+}
+.intro_wrap .header .inner .sch_box {
+    top: 52px;
+    right: 41px;
+}
+.intro_wrap .header .inner .sch_box:after {
+	background-position: -323px -7px;
+}
+.intro_wrap .header .inner .login .inpt {
 	border: 0;
 	border-bottom: 1px solid #646464;
+	color: #3c3d3e;
+}
+.intro_wrap .btn.xs {
+    border-color: #646464;
+    color: #3c3d3e;
+}
+
+.container {
+	min-height: 860px;
+}
+.container .inner {
+	padding-top: 78px;
 }
 
 .intro_wrap .footer {
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 50;
+}
+.wrap .footer {
+	position: relative;
+}
+.footer {
 	width: 100%;
 	background: #efefef;
 	border-top: 1px solid #e0e0e0;
-	z-index: 50;
 }
-.intro_wrap .footer .inner {
+.footer .inner {
 	padding: 13px 41px 25px;
 }
-.intro_wrap .footer .inner .footer_info {
+.footer .inner .footer_info {
 	font-family: "굴림체", "GulimChe", "맑은고딕" , "MalgunGothic" , arial, helvetica, serif , sans-serif;
 	font-size: 11px;
 	color: #959595;
 }
-.intro_wrap .footer .inner .footer_info span {
+.footer .inner .footer_info span {
 	display: inline-block;
 	margin: 0 17px 2px 0;
 }
-.intro_wrap .footer .inner .utill {
+.footer .inner .utill {
 	position: absolute;
 	top: 11px;
 	right: 41px;
 }
-.intro_wrap .footer .inner .utill .utill_list:after {
+.footer .inner .utill .utill_list:after {
 	content: '';
 	display: block;
 	clear: both;
 }
-.intro_wrap .footer .inner .utill .utill_list li {
+.footer .inner .utill .utill_list li {
 	float: left;
 	margin: 5px 0 0 16px;
 }
-.intro_wrap .footer .inner .utill .utill_list li.site_link {
+.footer .inner .utill .utill_list li.site_link {
 	margin-top: 0;
 }
-.intro_wrap .footer .inner .utill .utill_list li.bold {
+.footer .inner .utill .utill_list li.bold {
 	font-weight: 600;
 }
-.intro_wrap .footer .inner .utill .utill_list li > a {
+.footer .inner .utill .utill_list li > a {
 	font-family: "돋움", "Dotum", arial, helvetica, serif , sans-serif;
 	font-size: 11px;
 	color: #888787;
 }
+
+/* 사이드 메뉴 */
+.side {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	padding-top: 78px;
+	background: #0c306e;
+}
+.side .menu_list li ul {
+    display: none;
+}
+
 
 /* intro */
 .intro .inner {
@@ -917,6 +987,7 @@ button {
 }
 #section .section .cont .area img {
 	max-width: none;
+	height: 290px;
 	max-height: 290px;
 	overflow: hidden;
 }
@@ -1213,13 +1284,13 @@ button {
 	max-width: 100%;
 }
 .product_slider_area .main_slider {
-	width: 400px;
+	width: 282px;
 	margin: 0 auto;
 }
 .product_slider_area .main_slider .slick-slide {
 	position: relative;
-	height: 400px;
-	border: 1px solid #ddd;
+	height: 282px;
+	border: 1px solid #dbdbdb;
 	margin: 0 auto;
 	background: #fff;
 	text-align: center;
@@ -1239,8 +1310,8 @@ button {
 	margin: auto;
 }
 .product_slider_area .thumb_slider {
-	width: 400px;
-	padding: 0 80px;
+	width: 282px;
+	padding: 0 11px 0 16px;
 	margin: 0 auto;
 }
 .product_slider_area .thumb_slider .slick-prev {
@@ -1262,7 +1333,8 @@ button {
 	position: relative;
 	width: 80px;
 	height: 80px;
-	border: 1px solid #ddd;
+	margin-right: 5px;
+	border: 1px solid #dbdbdb;
 }
 
 
@@ -1274,11 +1346,11 @@ button {
 /* Ver.tablet */
 @media all and (max-width:1360px) {
 	html {font-size:62.5%;}
-	.intro_wrap .footer .inner .utill {
+	.footer .inner .utill {
 		position: static;
 		margin: 10px 0 0 0;
 	}
-	.intro_wrap .footer .inner .utill .utill_list li:first-child {
+	.footer .inner .utill .utill_list li:first-child {
 		margin-left: 0;
 	}
 
