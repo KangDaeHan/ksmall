@@ -16,11 +16,11 @@ function sideMenu(){
 	var side = $('.side .menu_list');
 	var sideLink = side.find('> li a');
 	var sideSubDep = side.find('ul ul');
-	var current = $('.local_navi li:last').text().trim();
+	var current = $('.menu_title').text().trim();
 
 	sideLink.each(function() {
-		if ( $(this).text() == current ) { // sub location 텍스트와 일치할 경우 lock 클래스 추가
-			$(this).addClass('active');
+		if ( $(this).text() == current ) { //텍스트와 일치할 경우 active 클래스 추가
+			$(this).addClass('active').next().slideDown();
 			if ( $(this).parent().parent().size() > 0) {
 				$(this).parent().parent().prev('a').addClass('active').next().slideDown();
 				$(this).parent().parent().parent().parent().prev('a').addClass('active').next().slideDown();
