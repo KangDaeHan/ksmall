@@ -19,13 +19,12 @@ function sideMenu(){
 	var current = $('.menu_title').text().trim();
 
 	sideLink.each(function() {
-		if ( $(this).text() == current ) { //텍스트와 일치할 경우 active 클래스 추가
+		if ( $(this).text() == current || $(this).hasClass('active')) {
 			$(this).addClass('active').next().slideDown();
 			if ( $(this).parent().parent().size() > 0) {
 				$(this).parent().parent().prev('a').addClass('active').next().slideDown();
 				$(this).parent().parent().parent().parent().prev('a').addClass('active').next().slideDown();
 			}
-			$(this).parents('.menu_list').prev().addClass('active');
 		}
     });
 
@@ -37,9 +36,10 @@ function sideMenu(){
 		} else {
 			side.find(' li > ul').slideUp();
 			$(this).next("ul").slideDown();
-			$(this).parent('li').siblings().find('a').removeClass('active');
-			$(this).addClass('active');
+			$(this).parent('li').siblings().find('a').removeClass('active on');
+			$(this).addClass('active').removeClass('on');
 		}
+		$(this).next('ul').find('li a').removeClass('active');
 	});
 
 	//2depth
@@ -47,10 +47,12 @@ function sideMenu(){
 		if ($(this).hasClass('active')) {
 			$(this).toggleClass('active').next("ul").slideUp();
 			$(this).parent('li').siblings().find('a').removeClass('active').next("ul").slideUp();
+			$(this).parents('ul').prev('a').addClass('on');
 		} else {
 			sideSubDep.slideUp();
 			$(this).next("ul").slideDown();
-			$(this).parent('li').siblings().find('a').removeClass('active');
+			$(this).parent('li').siblings().find('a').removeClass('active on');
+			$(this).parents('ul').prev('a').addClass('on');
 			$(this).addClass('active');
 		}
 	});
@@ -140,6 +142,22 @@ $(document).ready(function() {
 
 	//사이드 메뉴 실행
 	sideMenu();
+
+	
+	//메뉴 접기 / 펼치기
+	$(".expand a").click(function(){
+		$(this).toggleClass('active');
+		if ($(this).hasClass('active')) {
+			$(".side").stop().animate({
+				width : "112px"
+			},400).addClass('expansion');
+		} else {
+			$(".side").stop().animate({
+				width : "300px"
+			},400).removeClass('expansion');
+		}
+		return false;
+	});
 
 	//tooltip
 	var title_;
