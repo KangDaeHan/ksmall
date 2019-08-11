@@ -2268,11 +2268,15 @@ button {
 	width: 7px;
 	height: 6px;
 	margin-top: -3px;
-	background-position: -361px -109px;
+	background-position: -344px -109px;
 	overflow: hidden;
 	vertical-align: middle;
 }
+.today_view_area .top .title.on:after {
+	background-position: -361px -109px;
+}
 .today_view_area .today_slide_box {
+	display: none;
 	height: 100%;
 	border-top: 1px solid #737373;
 }

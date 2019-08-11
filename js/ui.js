@@ -104,11 +104,13 @@ function plus(el) {
 
 // today view 리스트 펼치기
 function todayList(id) {
-	var $item = $("." + id);
-	if ( $item.is(":visible") ) {
-		$item.slideUp();
+	var list_box = $("." + id);
+	if ( list_box.is(":visible") ) {
+		list_box.slideUp();
+		list_box.prev().children('.title').removeClass('on');
 	} else {
-		$item.slideDown();
+		list_box.slideDown();
+		list_box.prev().children('.title').addClass('on');
 	}
 }
 
