@@ -64,6 +64,54 @@ function sideMenu(){
 
 }
 
+// input 타입 숫자만 입력
+function onlyNumber(event){
+	event = event || window.event;
+	var keyID = (event.which) ? event.which : event.keyCode;
+	if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+		return;
+	else
+		return false;
+}
+function removeChar(event) {
+	event = event || window.event;
+	var keyID = (event.which) ? event.which : event.keyCode;
+	if ( keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+		return;
+	else
+		event.target.value = event.target.value.replace(/[^0-9]/g, "");
+}
+
+// 수량 감소
+function minus(el){
+	var expense = $("#" + el);
+	var expenseVal = expense.val();
+	expenseVal = (Number(expenseVal)-1);
+	if(expenseVal >= 0){
+		expense.val(expenseVal);
+	}
+};
+
+// 수량 증가
+function plus(el) {
+	var expense = $("#" + el);
+	var expenseVal = expense.val();
+	expenseVal = (Number(expenseVal)+1);
+	if(expense.val() <= 100){
+		expense.val(expenseVal);
+	}
+};
+
+// today view 리스트 펼치기
+function todayList(id) {
+	var $item = $("." + id);
+	if ( $item.is(":visible") ) {
+		$item.slideUp();
+	} else {
+		$item.slideDown();
+	}
+}
+
 // popup
 function layer_open(el, menuNum, title, addtxt, tel) {
 	var temp = $("#" + el);
@@ -111,30 +159,6 @@ function layer_open(el, menuNum, title, addtxt, tel) {
 	});
 }
 
-// 게시판 모양 변경 버튼
-function chgBoard(board) {
-	var listBtn = $(".chg_board .icon").find('a');
-		
-	if(board == 'card'){
-		listBtn.parent('.card').siblings().removeClass('active');
-		listBtn.parent('.card').addClass('active');
-
-		$('.list_result_wrap').removeClass('list');
-		$('.list_result_wrap').addClass(board);
-	} else {
-		listBtn.parent('.list').siblings().removeClass('active');
-		listBtn.parent('.list').addClass('active');
-
-		$('.list_result_wrap').removeClass('card');
-		$('.list_result_wrap').addClass(board);
-		
-		$(".txt_ellipsis").ellipsis({
-			responsive: true
-		});
-	}
-}
-
-
 $(document).ready(function() {
 
 	//이미지 미리로드
@@ -143,20 +167,33 @@ $(document).ready(function() {
 	//사이드 메뉴 실행
 	sideMenu();
 
-	
-	//메뉴 접기 / 펼치기
+	//사이드 메뉴 접기 / 펼치기
 	$(".expand a").click(function(){
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
+			$('.wrap').addClass('expansion');
 			$(".side").stop().animate({
 				width : "112px"
-			},400).addClass('expansion');
+			},200);
 		} else {
+			$('.wrap').removeClass('expansion');
 			$(".side").stop().animate({
 				width : "300px"
-			},400).removeClass('expansion');
+			},200);
 		}
 		return false;
+	});
+
+	//today slide
+	$('.today_slide').slick({
+		vertical: true,
+		verticalSwiping: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: false,
+		centerMode: false,
+		focusOnSelect: true
 	});
 
 	//tooltip

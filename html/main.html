@@ -104,30 +104,300 @@
 <div class="container">
 	<div class="inner">
 		<!-- <div class="menu_title">공지사항</div> -->
-		<!-- 제품이미지 영역 -->
-		<div class="product_slider_area">
-			<div class="slider main_slider">
-				<a href="../image/product/product1.jpg" data-lightbox="roadtrip"><img src="../image/product/product1.jpg" alt=""></a>
-				<a href="../image/product/default.jpg" data-lightbox="roadtrip"><img src="../image/product/default.jpg" alt=""></a>
-				<a href="../image/product/default.jpg" data-lightbox="roadtrip"><img src="../image/product/default.jpg" alt=""></a>
+		<div class="main">
+			<!-- 제품이미지 영역 -->
+			<div class="product_slider_area">
+				<div class="slider main_slider">
+					<a href="../image/product/product1.jpg" data-lightbox="roadtrip">
+						<img src="../image/product/product1.jpg" alt="">
+						<span class="over">
+							<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
+						</span>
+					</a>
+					<a href="../image/product/default.jpg" data-lightbox="roadtrip">
+						<img src="../image/product/default.jpg" alt="">
+						<span class="over">
+							<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
+						</span>
+					</a>
+					<a href="../image/product/default.jpg" data-lightbox="roadtrip">
+						<img src="../image/product/default.jpg" alt="">
+						<span class="over">
+							<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
+						</span>
+					</a>
+				</div>
+				<div class="slider thumb_slider">
+					<div><img src="../image/product/product1.jpg" alt=""></div>
+					<div><img src="../image/product/default.jpg" alt=""></div>
+					<div><img src="../image/product/default.jpg" alt=""></div>
+				</div>
 			</div>
-			<div class="slider thumb_slider">
-				<div><img src="../image/product/product1.jpg" alt=""></div>
-				<div><img src="../image/product/default.jpg" alt=""></div>
-				<div><img src="../image/product/default.jpg" alt=""></div>
-			</div>
-		</div>
-		<!-- //제품이미지 영역 -->
+			<!-- //제품이미지 영역 -->
 
-		<!-- 제품 선택 목록 -->
-		<div>
-			
+			<!-- 제품 선택 목록 / 공지사항 / 베너 -->
+			<div class="main_contents">
+				<div class="product_list_area">
+					<div class="choice_product_txt"><p>원하시는 제품의 기종을 선택해 주세요</p></div>
+					<!-- 제품 선택 목록 -->
+					<div class="product_list_wrap">
+						<div class="clearfix product_list_box">
+							<!-- 썸네일 이미지 -->
+							<div class="module thumb">
+								<a href="#"><img src="../image/product/product_thumb.jpg" alt="이미지 있을때"></a>
+							</div>
+							<!-- //썸네일 이미지 -->
+							<!-- 상품 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box" style="width: 170px;">
+									<option value=""><span>상품</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //상품 선택 -->
+
+							<!-- 연관상품 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box wide" style="width: 245px;">
+									<option value=""><span>연관상품</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //연관상품 선택 -->
+
+							<!-- 옵션 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box" style="width: 170px;">
+									<option value=""><span>옵션</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //옵션 선택 -->
+
+							<!-- 단가 -->
+							<div class="module" style="width: 140px;">
+								<div class="price">단가</div>
+							</div>
+							<!-- //단가 -->
+
+							<!-- 수량 -->
+							<div class="module number_count" style="width: 116px;">
+								<input type="text" class="inpt_number" name="" id="quantity1" value="" placeholder="수량 선택" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
+								<div class="num_control">
+									<button type="button" class="btn sprite plus" onclick="plus('quantity1'); return false;">+</button>
+									<button type="button" class="btn sprite minus" onclick="minus('quantity1'); return false;">-</button>
+								</div>
+							</div>
+							<!-- //수량 -->
+
+							<!-- 판매가격 -->
+							<div class="module" style="width: 140px;">
+								<div class="price">판매가격</div>
+							</div>
+							<!-- //판매가격 -->
+
+							<!-- 상세보기 -->
+							<div class="module">
+								<a href="#" class="btn icon_before detail_view">상세보기</a>
+							</div>
+							<!-- //상세보기 -->
+							<button type="button" class="btn sprite delete">삭제</button>
+						</div>
+
+						<div class="clearfix product_list_box">
+							<!-- 썸네일 이미지 -->
+							<div class="module thumb">
+								<a href="#"><img src="../image/product/product_thumb_default.jpg" alt="기본 이미지"></a>
+							</div>
+							<!-- //썸네일 이미지 -->
+							<!-- 상품 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box" style="width: 170px;">
+									<option value=""><span>상품</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //상품 선택 -->
+
+							<!-- 연관상품 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box wide" style="width: 245px;">
+									<option value=""><span>연관상품</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //연관상품 선택 -->
+
+							<!-- 옵션 선택 -->
+							<div class="module">
+								<select name="" id="" class="sel_box" style="width: 170px;">
+									<option value=""><span>옵션</span> 선택</option>
+									<option value="">상품1</option>
+									<option value="">상품2</option>
+								</select>
+							</div>
+							<!-- //옵션 선택 -->
+
+							<!-- 단가 -->
+							<div class="module" style="width: 140px;">
+								<div class="price">단가</div>
+							</div>
+							<!-- //단가 -->
+
+							<!-- 수량 -->
+							<div class="module number_count" style="width: 116px;">
+								<input type="text" class="inpt_number" name="" id="quantity2" value="" placeholder="수량 선택" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
+								<div class="num_control">
+									<button type="button" class="btn sprite plus" onclick="plus('quantity2'); return false;">+</button>
+									<button type="button" class="btn sprite minus" onclick="minus('quantity2'); return false;">-</button>
+								</div>
+							</div>
+							<!-- //수량 -->
+
+							<!-- 판매가격 -->
+							<div class="module" style="width: 140px;">
+								<div class="price">판매가격</div>
+							</div>
+							<!-- //판매가격 -->
+
+							<!-- 상세보기 -->
+							<div class="module">
+								<a href="#" class="btn icon_before detail_view">상세보기</a>
+							</div>
+							<!-- //상세보기 -->
+							<button type="button" class="btn sprite delete">삭제</button>
+						</div>
+					</div>
+					<!-- //제품 선택 목록 -->
+
+					<!-- 총 합계 -->
+					<div class="total_sum_box">
+						<div class="btn_pos">
+							<button type="button" class="btn mid add">제품추가 +</button>
+						</div>
+						<div class="product">
+							<span class="point">1</span>개 상품
+						</div>
+						<div class="total_price">
+							<span class="tit_label">총합계금액</span>
+							<div class="price">1,000,000</div>
+						</div>
+						<div class="payment_type">
+							<button type="button" class="btn mid cart">장바구니 담기</button>
+							<button type="button" class="btn mid buy">바로 구매하기</button>
+						</div>
+					</div>
+					<!-- //총 합계 -->
+
+					<!-- 상품 비교 -->
+					<div class="product_compare_area">
+						<div class="product_compare_box">
+							<div class="title sprite_after">
+								상품<br/>상세비교
+							</div>
+							<div class="desc">
+								<p class="tit">원하시는 제품들을 자세하고 꼼꼼하게 비교해 보세요</p>
+								<p class="txt">고객님께서 선택하신 제품은 ( <em>1</em> )개 입니다. <br/>제품 2개 이상 최대 3개까지 비교 가능합니다.<br/>연관상품은 포함되지 않습니다.</p>
+							</div>
+							<div class="go_link"><a href="#" class="btn round"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
+						</div>
+						<div class="separate_compare"><a href="#" class="btn round"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
+					</div>
+					<!-- //상품 비교 -->
+				</div>
+				<!-- 공지사항 / 베너 -->
+				<div class="section">
+					<div class="notice_area">
+						<div class="title">
+							<h2>NOTICE</h2>
+							<p>공지사항</p>
+						</div>
+						<ul class="notice_list">
+							<li class="list">
+								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="date">2019-09-09</span>
+								<a href="#" class="btn sprite_after download ">다운로드</a>
+							</li>
+							<li class="list">
+								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="date">2019-09-09</span>
+							</li>
+							<li class="list">
+								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="date">2019-09-09</span>
+							</li>
+						</ul>
+						<a href="#" class="btn sprite_after more">더보기</a>
+					</div>
+					<ul class="banner_area">
+						<li class="bn_mu">
+							<a href="#">
+								<span class="num">01</span>
+								<span class="name">프로젝트<br/>주문조회</span>
+								<span class="btn sprite_after go">GO</span>
+							</a>
+						</li>
+						<li class="bn_mu">
+							<a href="#">
+								<span class="num">02</span>
+								<span class="name">인수확인서<br/>조회</span>
+								<span class="btn sprite_after go">GO</span>
+							</a>
+						</li>
+						<li class="bn_mu">
+							<a href="#">
+								<span class="num">03</span>
+								<span class="name">정기전표<br/>주문</span>
+								<span class="btn sprite_after go">GO</span>
+							</a>
+						</li>
+						<li class="bn_mu">
+							<a href="#">
+								<span class="num">04</span>
+								<span class="name">정기전표주문<br/>조회</span>
+								<span class="btn sprite_after go">GO</span>
+							</a>
+						</li>
+						<li class="bn_mu qna">
+							<a href="#" class="sprite_after">
+								<span class="name">자주하시는 질문만을<br/>모아 놓았습니다</span>
+							</a>
+						</li>
+						<li class="bn_mu as">
+							<a href="#" class="sprite_after">
+								<span class="name">제조사 A/S 정보</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //공지사항 / 베너 -->
+			</div>
+			<!-- //제품 선택 목록 / 공지사항 / 베너 -->
 		</div>
-		<!-- //제품 선택 목록 -->
 
 	</div>
 </div>
 <!-- //메인 컨텐츠 영역 -->
+
+<!-- today view -->
+<div class="today_view_area">
+	<div class="top">
+		<h3 class="title sprite_after" onclick="todayList('today_slide_box'); return false;">TODAY VIEW</h3>
+	</div>
+	<div class="today_slide_box">
+		<div class="slider today_slide">
+			<div><a href="#"><img src="../image/product/product1.jpg" alt=""></a></div>
+			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+		</div>
+	</div>
+</div>
+<!-- //today view -->
 
 <!-- 하단 영역 -->
 <div class="footer">
@@ -209,6 +479,8 @@ $(document).ready(function() {
 		centerMode: false,
 		focusOnSelect: true
 	});
+
+	
 
 	lightbox.option({
       'showImageNumberLabel': false
