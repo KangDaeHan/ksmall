@@ -208,10 +208,10 @@
 			</div>
 
 			<!-- 상품상세정보 / 연관상품 -->
-			<div class="product_tab_area">
+			<div class="product_tab_area" id="product_detail_image">
 				<ul class="tab_menu">
-					<li class="active"><a href="#">상품상세정보</a></li>
-					<li><a href="#">연관상품</a></li>
+					<li class="active"><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
+					<li><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
 				</ul>
 			</div>
 			
@@ -221,10 +221,10 @@
 			</div>
 			<!-- //상세정보 -->
 			
-			<div class="product_tab_area">
+			<div class="product_tab_area" id="relation_product">
 				<ul class="tab_menu">
-					<li><a href="#">상품상세정보</a></li>
-					<li class="active"><a href="#">연관상품</a></li>
+					<li><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
+					<li class="active"><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
 				</ul>
 			</div>
 

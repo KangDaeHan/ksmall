@@ -114,6 +114,12 @@ function todayList(id) {
 	}
 }
 
+// 스크롤 메뉴 이동
+function scrollMove(seq){
+	var offset = $("#" + seq).offset();
+	$('html, body').animate({scrollTop : offset.top}, 400);
+}
+
 // popup
 function layer_open(el, menuNum, title, addtxt, tel) {
 	var temp = $("#" + el);
