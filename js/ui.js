@@ -192,18 +192,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//today slide
-	$('.today_slide').slick({
-		vertical: true,
-		verticalSwiping: false,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		infinite: false,
-		centerMode: false,
-		focusOnSelect: true
-	});
-
 	//tooltip
 	var title_;
 	var class_;

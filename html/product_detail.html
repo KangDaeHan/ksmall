@@ -113,6 +113,13 @@
 			</div>
 			<!-- //제품명 -->
 
+			<!-- 이전 / 다음 상품 -->
+			<div class="product_prev_next">
+				<a href="#" class="sprite prev">이전 상품</a>
+				<a href="#" class="sprite next">다음 상품</a>
+			</div>
+			<!-- //이전 / 다음 상품 -->
+
 			<div class="clearfix product_spec_wrap">
 				<!-- 제품이미지 영역 -->
 				<div class="product_slider_area">
@@ -379,6 +386,18 @@ $(document).ready(function() {
 	//연관상품 슬라이드
 	$('.relation_product_slider').slick({
 		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: false,
+		centerMode: false,
+		focusOnSelect: true
+	});
+
+	//today slide
+	$('.today_slide').slick({
+		vertical: true,
+		verticalSwiping: false,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
 		infinite: false,

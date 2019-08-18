@@ -312,9 +312,9 @@
 								<p class="tit">원하시는 제품들을 자세하고 꼼꼼하게 비교해 보세요</p>
 								<p class="txt">고객님께서 선택하신 제품은 ( <em>1</em> )개 입니다. <br/>제품 2개 이상 최대 3개까지 비교 가능합니다.<br/>연관상품은 포함되지 않습니다.</p>
 							</div>
-							<div class="go_link"><a href="#" class="btn round btn_hover"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
+							<div class="go_link"><a href="#" class="btn round"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
 						</div>
-						<div class="separate_compare"><a href="#" class="btn round btn_hover"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
+						<div class="separate_compare"><a href="#" class="btn round"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
 					</div>
 					<!-- //상품 비교 -->
 				</div>
@@ -484,6 +484,18 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.main_slider',
+		dots: false,
+		infinite: false,
+		centerMode: false,
+		focusOnSelect: true
+	});
+
+	//today slide
+	$('.today_slide').slick({
+		vertical: true,
+		verticalSwiping: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
 		dots: false,
 		infinite: false,
 		centerMode: false,
