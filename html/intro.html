@@ -8,7 +8,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" type="text/css" href="../css/revolution_slider.css">
-<!-- <link rel="stylesheet" type="text/css" href="../css/slick.css"> -->
 <link rel="stylesheet" type="text/css" href="../css/ui.css" />
 </head>
 <body>
@@ -43,39 +42,36 @@
 		<div class="tp-banner-container">
 			<div class="tp-banner">
 				<ul>
-					<!-- SLIDE1 -->
-					<li data-transition="fade" data-slotamount="3" data-masterspeed="0.1" backgroundColor="#fff">
-						<img src="../image/intro/visual1.jpg" usemap="#usaMap" alt="비주얼 이미지 1" data-bgfit="cover" data-bgposition="center center" backgroundColor="#fff" data-bgrepeat="no-repeat" />
-						<!-- <div class="tp-caption sfr" data-x="center" data-y="center"><a href="#"><img src="../image/intro/visual1.jpg" usemap="#usaMap" /></a></div> -->
+					<!-- slide1 -->
+					<li data-transition="fade" data-slotamount="0" data-masterspeed="300" style="background-color: #fff;">
+						<div class="intro_respson"><img src="../image/intro/visual1.jpg" usemap="#location1" /></div>
+						<map name="location1" id="location1">
+							<area shape="rect" coords="504,670,727,720" href="http://www.naver.com" target="_blank" title="제품 자세히 보기 링크이동">
+						</map>
 					</li>
+					<!-- //slide1 -->
 
-					<!-- SLIDE2  -->
-					<li data-transition="fade" data-slotamount="0" data-masterspeed="0.1" backgroundColor="#fff">
-						<!-- MAIN IMAGE -->
-						<img src="../image/intro/visual2.jpg" alt="darkblurbg" data-bgfit="cover" data-bgposition="center center" backgroundColor="#fff" data-bgrepeat="no-repeat" />
-						<!-- LAYERS -->
+					<!-- slide2  -->
+					<li data-transition="fade" data-slotamount="0" data-masterspeed="300" style="background-color: #fff;">
+						<div class="intro_respson"><img src="../image/intro/visual2.jpg" usemap="#location2" /></div>
+						<map name="location2" id="location2">
+							<area shape="rect" coords="967,641,1190,691" href="http://www.daum.net" target="_blank" title="제품 자세히 보기 링크이동">
+						</map>
 					</li>
+					<!-- //slide2  -->
 		
-					<!-- SLIDE  -->
-					<li data-transition="fade" data-slotamount="0" data-masterspeed="0.1">
-						<!-- MAIN IMAGE -->
-						<img src="../image/intro/visual3.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" backgroundColor="#00a1bd" data-bgrepeat="no-repeat" />
-						<!-- LAYERS -->
+					<!-- slide3  -->
+					<li data-transition="fade" data-slotamount="0" data-masterspeed="300" style="background-color: #00a1bd;">
+						<div class="intro_respson bg_white"><img src="../image/intro/visual3.jpg" usemap="#location3" /></div>
+						<map name="location3" id="location3">
+							<area shape="rect" coords="233,727,456,777" href="http://www.google.com" target="_blank" title="제품 자세히 보기 링크이동">
+						</map>
 					</li>
-
+					<!-- //slide3  -->
 				</ul>
 			</div>
 		</div>
 		<!-- //비주얼 이미지 영역 -->
-
-		
-		<map name="usaMap" id="usaMap">
-			<area shape="rect" coords="504,670,727,720" href="http://en.wikipedia.org/wiki/Delaware" title="링크이동">
-		</map>
-
-		<map name="usaMap" id="usaMap">
-			<area shape="rect" coords="504,670,727,720" href="http://en.wikipedia.org/wiki/Delaware" title="링크이동">
-		</map>
 
 		<!-- 인트로 하단 베너 -->
 		<div class="intro_banner">
@@ -202,7 +198,7 @@
 <script type="text/javascript" src="../js/text-overflow.js"></script>
 <script type="text/javascript" src="../js/jquery.themepunch.tools.min.js"></script>
 <script type="text/javascript" src="../js/jquery.themepunch.revolution.min.js"></script>
-<!-- <script type="text/javascript" src="../js/imageMapResizer.min.js"></script> -->
+<script type="text/javascript" src="../js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 //페이지 로딩 시작
@@ -235,7 +231,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// $('map').imageMapResize();
+	$('map').imageMapResize();
 
 });
 

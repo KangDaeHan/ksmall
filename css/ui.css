@@ -1359,26 +1359,35 @@ button {
 	text-align: center;
 }
 
-/* 인트로 롤링 테스트용 */
-.intro2 .inner {
-	height: auto !important;
-	padding: 0 0 76px;
+/* 인트로 롤링 이미지 링크 추가 */
+.intro_respson {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
-.intro_slider {
-	position: relative;
-	height: calc(100vh - 153px);
-	/* overflow: hidden; */
-	z-index: 1;
-}
-.intro_slider .slick-slide {
-	outline: none;
-}
-.intro_slider img {
+.intro_respson img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	margin: auto;
 	max-width: 100%;
+	z-index: 5;
 }
-.intro_slider .slick-slide:hover:after {
-	display: none;
+.tp-banner ul li .bg_white:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 58.2%;
+	background: #fff;
 }
+
 
 /* 페이지 로딩시 */
 .loading {
