@@ -1,1 +1,1 @@
-# ksmall 작업 리스트
+# ksmall 작업
