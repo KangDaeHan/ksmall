@@ -19,11 +19,17 @@
 	<div class="inner">
 		<h1 class="logo"><a href="#"><img src="../image/t_logo.png" alt="ksmall 로고"></a></h1>
 		<!-- 상단 로그인 -->
-		<div class="login">
+		<div class="login login_after"> <!-- ### 로그인 시 login_after 추가 -->
+			<p class="member_info"><span>케이에스몰 담당자</span> 님</p>
+			<!-- 로그인 후 hidden -->
 			<input type="text" name="" id="" class="inpt" value="" placeholder="아이디"/>
 			<input type="password" name="" id="" class="inpt" value="" placeholder="****"/>
-			<button type="button" class="btn xs">로그인</button>
-			<a href="#" class="btn xs">회원가입</a>
+			<!-- //로그인 후 hidden -->
+			<button type="button" class="btn xs">로그아웃</button>
+			<a href="#" class="btn xs">회원정보</a>
+			<a href="#" class="btn xs">주문배송</a>
+			<a href="#" class="btn xs">장바구니</a>
+			<a href="#" class="btn xs">결제이용방법안내</a>
 		</div>
 		<!-- //상단 로그인 -->
 
@@ -156,8 +162,8 @@
 							</div>
 							<!-- //썸네일 이미지 -->
 							<!-- 상품 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box" style="width: 170px;">
+							<div class="module flexible1">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>상품</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -166,8 +172,8 @@
 							<!-- //상품 선택 -->
 
 							<!-- 연관상품 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box wide" style="width: 227px;">
+							<div class="module flexible1_5">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>연관상품</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -176,8 +182,8 @@
 							<!-- //연관상품 선택 -->
 
 							<!-- 옵션 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box" style="width: 170px;">
+							<div class="module flexible1">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>옵션</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -192,7 +198,7 @@
 							<!-- //단가 -->
 
 							<!-- 수량 -->
-							<div class="module number_count" style="width: 116px;">
+							<div class="module number_count" style="width: 96px;">
 								<input type="text" class="inpt_number" name="" id="quantity1" value="" placeholder="수량 선택" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
 								<div class="num_control">
 									<button type="button" class="btn sprite plus" onclick="plus('quantity1'); return false;">+</button>
@@ -222,8 +228,8 @@
 							</div>
 							<!-- //썸네일 이미지 -->
 							<!-- 상품 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box" style="width: 170px;">
+							<div class="module flexible1">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>상품</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -232,8 +238,8 @@
 							<!-- //상품 선택 -->
 
 							<!-- 연관상품 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box wide" style="width: 227px;">
+							<div class="module flexible1_5">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>연관상품</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -242,8 +248,8 @@
 							<!-- //연관상품 선택 -->
 
 							<!-- 옵션 선택 -->
-							<div class="module">
-								<select name="" id="" class="sel_box" style="width: 170px;">
+							<div class="module flexible1">
+								<select name="" id="" class="sel_box wide">
 									<option value=""><span>옵션</span> 선택</option>
 									<option value="">상품1</option>
 									<option value="">상품2</option>
@@ -258,7 +264,7 @@
 							<!-- //단가 -->
 
 							<!-- 수량 -->
-							<div class="module number_count" style="width: 116px;">
+							<div class="module number_count" style="width: 96px;">
 								<input type="text" class="inpt_number" name="" id="quantity2" value="" placeholder="수량 선택" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
 								<div class="num_control">
 									<button type="button" class="btn sprite plus" onclick="plus('quantity2'); return false;">+</button>
@@ -390,24 +396,23 @@
 			<!-- //제품 선택 목록 / 공지사항 / 베너 -->
 		</div>
 
+		<!-- today view -->
+		<div class="today_view_area" id="today_view">
+			<div class="top">
+				<h3 class="title sprite_after" onclick="todayList('today_slide_box'); return false;">TODAY VIEW</h3>
+			</div>
+			<div class="today_slide_box">
+				<div class="slider today_slide">
+					<div><a href="#"><img src="../image/product/product1.jpg" alt=""></a></div>
+					<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+					<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+		<!-- //today view -->
 	</div>
 </div>
 <!-- //메인 컨텐츠 영역 -->
-
-<!-- today view -->
-<div class="today_view_area">
-	<div class="top">
-		<h3 class="title sprite_after" onclick="todayList('today_slide_box'); return false;">TODAY VIEW</h3>
-	</div>
-	<div class="today_slide_box">
-		<div class="slider today_slide">
-			<div><a href="#"><img src="../image/product/product1.jpg" alt=""></a></div>
-			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
-			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
-		</div>
-	</div>
-</div>
-<!-- //today view -->
 
 <!-- 하단 영역 -->
 <div class="footer">

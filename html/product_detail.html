@@ -19,11 +19,17 @@
 	<div class="inner">
 		<h1 class="logo"><a href="#"><img src="../image/t_logo.png" alt="ksmall 로고"></a></h1>
 		<!-- 상단 로그인 -->
-		<div class="login">
+		<div class="login login_after"> <!-- ### 로그인 시 login_after 추가 -->
+			<p class="member_info"><span>케이에스몰 담당자</span> 님</p>
+			<!-- 로그인 후 hidden -->
 			<input type="text" name="" id="" class="inpt" value="" placeholder="아이디"/>
 			<input type="password" name="" id="" class="inpt" value="" placeholder="****"/>
-			<button type="button" class="btn xs">로그인</button>
-			<a href="#" class="btn xs">회원가입</a>
+			<!-- //로그인 후 hidden -->
+			<button type="button" class="btn xs">로그아웃</button>
+			<a href="#" class="btn xs">회원정보</a>
+			<a href="#" class="btn xs">주문배송</a>
+			<a href="#" class="btn xs">장바구니</a>
+			<a href="#" class="btn xs">결제이용방법안내</a>
 		</div>
 		<!-- //상단 로그인 -->
 
@@ -282,24 +288,24 @@
 		</div>
 		<!-- //서브 컨텐츠 -->
 
+		<!-- today view -->
+		<div class="today_view_area" id="today_view">
+			<div class="top">
+				<h3 class="title sprite_after" onclick="todayList('today_slide_box'); return false;">TODAY VIEW</h3>
+			</div>
+			<div class="today_slide_box">
+				<div class="slider today_slide">
+					<div><a href="#"><img src="../image/product/product1.jpg" alt=""></a></div>
+					<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+					<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+		<!-- //today view -->
+
 	</div>
 </div>
 <!-- //메인 컨텐츠 영역 -->
-
-<!-- today view -->
-<div class="today_view_area">
-	<div class="top">
-		<h3 class="title sprite_after" onclick="todayList('today_slide_box'); return false;">TODAY VIEW</h3>
-	</div>
-	<div class="today_slide_box">
-		<div class="slider today_slide">
-			<div><a href="#"><img src="../image/product/product1.jpg" alt=""></a></div>
-			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
-			<div><a href="#"><img src="../image/product/default.jpg" alt=""></a></div>
-		</div>
-	</div>
-</div>
-<!-- //today view -->
 
 <!-- 하단 영역 -->
 <div class="footer">
@@ -364,6 +370,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
+	
 	// 상단 제품 슬라이드
 	$('.main_slider').slick({
 		slidesToShow: 1,
@@ -408,7 +415,7 @@ $(document).ready(function() {
 	//제품 이미지 클릭시 팝업
 	lightbox.option({
       'showImageNumberLabel': false
-    });
+	});
 });
 </script>
 </body>

@@ -186,6 +186,9 @@ select::-ms-expand {
 	color: #010101;
 	line-height: 46px;
 }
+.sel_box.wide {
+	width: 100%;
+}
 
 /* checkbox 디자인 */
 .checks {
@@ -805,6 +808,8 @@ button {
 }
 .wrap {
 	position: relative;
+	width: 100%;
+	min-width: 1427px;
 }
 .header {
 	position: relative;
@@ -851,7 +856,7 @@ button {
 }
 .header .inner .login {
 	padding-top: 39px;
-	margin-left: 299px;
+	margin-left: 258px;
 }
 .header .inner .login .inpt {
 	width: 120px;
@@ -859,6 +864,23 @@ button {
 	background: transparent;
 	border: 1px solid #969696;
 	color: #bec0c1;
+}
+.header .inner .login .member_info {
+	display: none;
+}
+/* 로그인 후 */
+.header .inner .login_after .inpt {
+	display: none;
+}
+.header .inner .login_after .member_info {
+	display: inline-block;
+	font-size: 12px;
+	color: #fff;
+	vertical-align: middle;
+}
+.header .inner .login_after .member_info span {
+	font-weight: 600;
+	color: #ffae00;
 }
 
 /* 인트로용 상단 스타일 */
@@ -894,18 +916,17 @@ button {
     border-color: #646464;
     color: #3c3d3e;
 }
-
+.container {
+	position: relative;
+}
 .container .inner {
-	min-width: 1900px;
 	padding: 0 120px 0 300px;
-	overflow-x: auto;
 }
 .container .inner:after {
 	content: '';
 	clear: both;
 	display: block;
 }
-
 .intro_wrap .footer {
 	position: fixed;
 	bottom: 0;
@@ -914,6 +935,7 @@ button {
 }
 .wrap .footer {
 	position: relative;
+	z-index: 50;
 }
 .footer {
 	width: 100%;
@@ -1337,6 +1359,7 @@ button {
 	text-align: center;
 }
 
+/* 인트로 롤링 테스트용 */
 .intro2 .inner {
 	height: auto !important;
 	padding: 0 0 76px;
@@ -1397,6 +1420,7 @@ button {
 	width: 300px;
 	padding: 78px 0 76px;
 	background: #0c306e;
+	z-index: 20;
 }
 .side .menu_list li ul {
 	display: none;
@@ -1483,12 +1507,12 @@ button {
 	position: relative;
 	display: flex;
 	width: 100%;
+	height: 30px;
 	background: #11459e;
 	overflow: hidden;
 }
 .side .side_type > div {
 	width: 127px;
-	height: 30px;
 	text-align: center;
 }
 .side .side_type > div a {
@@ -1636,31 +1660,25 @@ button {
 }
 
 /* 사이드 메뉴 접을 때 */
+.expansion .side .menu_list {
+	overflow: initial;
+}
 .expansion .side .menu_list > li .txt {
 	display: none;
 }
-.expansion .side .menu_list li a:after , .expansion .side .ad_box ,
-.expansion .side .menu_list li ul , .expansion .side .side_type > div.menu ,
-.expansion .side .side_type > div.admin {
+.expansion .side .menu_list li a:after , .expansion .side .ad_box , 
+.expansion .side .side_type > div.menu , .expansion .side .side_type > div.admin {
 	display: none !important;
 }
 .expansion .container .inner {
 	padding-left: 112px;
 }
-.expansion .side .side_type > div.on {
-	display: block !important;
-}
 .expansion .side .side_type .expand {
-	right: 7px;
+	right: 50%;
+	margin-right: -10px;
 }
 .expansion .side .side_type .expand a {
 	background-position: -253px -55px;
-}
-.expansion .product_list_box .sel_box {
-	width: 220px !important;
-}
-.expansion .product_list_box .sel_box.wide {
-	width: 315px !important;
 }
 .expansion .container .sub_contents {
 	width: 1188px;
@@ -1675,9 +1693,19 @@ button {
 .expansion .side .menu_list > li.menu5 .icon {
 	margin-left: -15.5px;
 }
-
-
-
+.expansion .side .menu_list li {
+	position: relative;
+}
+.expansion .side .menu_list li ul {
+	position: absolute;
+	top: 0;
+	left: 112px;
+	width: 150px;
+	z-index: 20;
+}
+.expansion .side .menu_list li li > a {
+	padding: 0 10px;
+}
 
 
 
@@ -1717,12 +1745,6 @@ button {
 	background: #fff url("../image/product/default.jpg") no-repeat;
 	background-size: contain;
 	text-align: center;
-	/* display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;  */
 }
 .product_slider_area .main_slider .slick-slide img , .product_slider_area .thumb_slider .slick-slide img {
 	position: absolute;
@@ -1845,10 +1867,11 @@ button {
 	line-height: 25px;
 }
 .product_list_wrap {
-	max-height: 138px;
-	overflow: auto;
+	margin-right: 32px;
 }
 .product_list_box {
+	display: flex;
+	justify-content: end;
 	position: relative;
 	padding-left: 50px;
 	top: -1px;
@@ -1856,13 +1879,16 @@ button {
 .product_list_wrap .product_list_box:first-child {
 	top: 0;
 }
-.product_list_box .module {
-	float: left;
+.product_list_box .module.flexible1 {
+	flex: 1;
+}
+.product_list_box .module.flexible1_5 {
+	flex: 1.5;
 }
 .product_list_box .btn.delete {
 	position: absolute;
 	top: 12px;
-	right: 0;
+	right: -33px;
 	min-width: auto;
 	width: 22px;
 	height: 22px;
@@ -1877,9 +1903,9 @@ button {
 .product_list_box .module .btn.detail_view {
 	position: relative;
 	min-width: auto;
-	width: 93px;
+	width: 73px;
 	height: 46px;
-	padding: 9px 10px 9px 57px;
+	padding: 9px 10px 9px 37px;
 	border: 1px solid #c9c9c9;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
@@ -1890,7 +1916,7 @@ button {
 .product_list_box .module .btn.detail_view:before {
 	position: absolute;
 	top: 50%;
-	left: 17px;
+	left: 10px;
 	width: 24px;
 	height: 26px;
 	margin-top: -13px;
@@ -2070,7 +2096,7 @@ button {
 	position: relative;
 	width: 100%;
 	max-width: 773px;
-	margin: 48px auto 188px;
+	margin: 48px auto;
 	overflow: hidden;
 }
 .product_compare_area .product_compare_box {
@@ -2298,13 +2324,14 @@ button {
 
 /* 메인 하단 베너영역 */
 .main_contents .section .banner_area {
+	display: flex;
+	justify-content: space-around;
 	width: 100%;
 	margin-top: 25px;
 	overflow: hidden;
 }
 .main_contents .section .banner_area .bn_mu {
-	float: left;
-	width: 180px;
+	width: 100%;
 	height: 106px;
 	margin: 0 0 0 8px;
 }
@@ -2339,7 +2366,7 @@ button {
 .main_contents .section .banner_area .bn_mu a .btn {
 	position: relative;
 	min-width: 40px;
-	width: auto;
+	width: 45px;
 	height: 14px;
 	padding: 0 20px 0 4px;
 	margin: 0 0 0 auto;
@@ -2394,8 +2421,8 @@ button {
 
 /* today view */
 .today_view_area {
-	position: fixed;
-	top: 146px;
+	position: absolute;
+	top: 68px;
 	right: 0;
 	width: 92px;
 	border: 1px solid #737373;
@@ -2748,7 +2775,6 @@ button {
 	width: 15px;
 	height: 25px;
 	text-indent: -9999px;
-	z-index: 10;
 }
 .product_prev_next .prev {
 	left: -35px;
@@ -2758,6 +2784,12 @@ button {
 	right: -35px;
 	background-position: -425px -141px;
 }
+
+
+
+
+
+
 
 
 

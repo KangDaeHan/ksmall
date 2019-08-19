@@ -102,6 +102,20 @@ function plus(el) {
 	}
 };
 
+// today view 스크롤
+function rightScroller(el) {
+	st = $(this).scrollTop();
+	quick = $("#" + el);
+	off = quick.offset();
+	th = quick.outerHeight();
+	cp = $(".container").offset();
+
+	if( $("body").height() - st - $(".footer").outerHeight() > th ) {
+		if( cp.top + 68 < st + 20 - 20 ) quick.css("top", st + 20 - cp.top - 20);
+		if( st + 20 < cp.top + 68 ) quick.css("top", 68);
+	}
+}
+
 // today view 리스트 펼치기
 function todayList(id) {
 	var list_box = $("." + id);
@@ -174,6 +188,11 @@ $(document).ready(function() {
 
 	//사이드 메뉴 실행
 	sideMenu();
+
+	// today view 스크롤
+	$(window).scroll(function() {
+		rightScroller('today_view');
+	});
 
 	//사이드 메뉴 접기 / 펼치기
 	$(".expand a").click(function(){
