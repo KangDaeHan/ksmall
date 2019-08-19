@@ -1670,7 +1670,7 @@ button {
 
 /* 사이드 메뉴 접을 때 */
 .expansion .side .menu_list {
-	overflow: initial;
+	overflow: visible;
 }
 .expansion .side .menu_list > li .txt {
 	display: none;
