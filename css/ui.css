@@ -553,23 +553,27 @@ button {
 	overflow: hidden;
 }
 
-/*.lightboxOverlay {
-	position: fixed !important;
+/* 제품 확대 보기 팝업 */
+.lightboxOverlay {
 	bottom: 0;
 	right: 0;
-	height: auto !important;
+	outline: 0;
 }
 .lightbox {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+	position: fixed !important;
 	top: 50% !important;
+	margin-top: -300px;
 }
  .lightbox .lb-outerContainer {
-	display: table-cell;
-	vertical-align: middle;
-} */
+	 width: 600px;
+	 height: 600px;
+	 border-radius: 0;
+	 overflow: hidden;
+}
+.lightbox .lb-image {
+	border: 0;
+	border-radius: 0;
+}
 
 /* 공통 class */
 .both {clear:both;}
@@ -907,12 +911,16 @@ button {
 .intro_wrap .header .inner .sch_box:after {
 	background-position: -323px -7px;
 }
+.intro_wrap .header .inner .sch_box .inpt {
+	background: #fff;
+}
 .intro_wrap .header .inner .login .inpt {
 	border: 0;
 	border-bottom: 1px solid #646464;
 	color: #3c3d3e;
 }
 .intro_wrap .btn.xs {
+	background: #fff;
     border-color: #646464;
     color: #3c3d3e;
 }
@@ -1078,20 +1086,21 @@ button {
 }
 
 /* 아코디언 메뉴 */
-#section .section {
+.intro_section .section {
 	position: relative;
 	display: flex;
-	width: 100%; 
+	width: 100%;
 	height: 290px;
 	padding: 0;
+	overflow: hidden;
 }
-#section .section .cont {
+.intro_section .section .cont {
 	position:relative;
 	width: 20%; 
 	height: 290px; 
 	overflow: hidden;
 }
-#section .section .cont .area {
+.intro_section .section .cont .area {
 	position:absolute; 
 	top:0; 
 	left:0;
@@ -1100,19 +1109,19 @@ button {
 	height: 290px;
 	overflow: hidden;
 }
-#section .section .cont .area img {
+.intro_section .section .cont .area img {
 	max-width: none;
 	height: 290px;
 	max-height: 290px;
 	overflow: hidden;
 }
-#section .section .cont.on .area img {
+.intro_section .section .cont.on .area img {
 	transition: transform .5s ease;
 } 
-#section .section .cont.on .area:hover img {
+.intro_section .section .cont.on .area:hover img {
 	transform: scale(1.1);
 }
-#section .section .cont .title_off {
+.intro_section .section .cont .title_off {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1129,11 +1138,11 @@ button {
 	opacity: 0.7;
 	z-index: 5;
 }
-#section .section .cont.on , #section .section .cont.active {
+.intro_section .section .cont.on , .intro_section .section .cont.active {
 	width: 40%;
 	overflow: hidden;
 }
-#section .section .cont.on .title_off , #section .section .cont.active.on .title_off , #section .section .cont .title_on , #section .section .cont.active.on .title_on {
+.intro_section .section .cont.on .title_off , .intro_section .section .cont.active.on .title_off , .intro_section .section .cont .title_on , .intro_section .section .cont.active.on .title_on {
 	display:none;
 	position: absolute;
 	top: 0;
@@ -1141,7 +1150,7 @@ button {
 	right: 0;
 	z-index: 100;
 }
-#section .section .cont.on .title_on , #section .section .cont.active.on .title_on {
+.intro_section .section .cont.on .title_on , .intro_section .section .cont.active.on .title_on {
 	position: absolute;
 	top: auto;
 	bottom: 0;
@@ -1150,7 +1159,7 @@ button {
 	display: block;
 	/* width: 100%; */
 }
-#section .section .cont.on .title_on .tit , #section .section .cont.active .title_on .tit {
+.intro_section .section .cont.on .title_on .tit , .intro_section .section .cont.active .title_on .tit {
 	position: absolute;
 	bottom: 60px;
 	left: 0;
@@ -1162,11 +1171,11 @@ button {
 	color: #000;
 	white-space: nowrap;
 }
-#section .section .cont.on .title_on .tit strong , #section .section .cont.active .title_on .tit strong {
+.intro_section .section .cont.on .title_on .tit strong , .intro_section .section .cont.active .title_on .tit strong {
 	font-family: "The160", arial, helvetica, serif , sans-serif;
 	color: #000;
 }
-#section .section .cont.on .title_on .name , #section .section .cont.active .title_on .name {
+.intro_section .section .cont.on .title_on .name , .intro_section .section .cont.active .title_on .name {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -1178,24 +1187,24 @@ button {
 	line-height: 60px;
 	color: #fff;
 }
-#section .section .cont.on .title_on.m1 .name , #section .section .cont.active .title_on.m1 .name {
+.intro_section .section .cont.on .title_on.m1 .name , .intro_section .section .cont.active .title_on.m1 .name {
 	background: #00dbb5;
 }
-#section .section .cont.on .title_on.m2 .name , #section .section .cont.active .title_on.m2 .name {
+.intro_section .section .cont.on .title_on.m2 .name , .intro_section .section .cont.active .title_on.m2 .name {
 	background: #fcba00;
 }
-#section .section .cont.on .title_on.m3 .name , #section .section .cont.active .title_on.m3 .name {
+.intro_section .section .cont.on .title_on.m3 .name , .intro_section .section .cont.active .title_on.m3 .name {
 	background: #00a9db;
 }
-#section .section .cont.on .title_on.m4 .name , #section .section .cont.active .title_on.m4 .name {
+.intro_section .section .cont.on .title_on.m4 .name , .intro_section .section .cont.active .title_on.m4 .name {
 	background: #bf53c8;
 }
-#section .section .cont.on .title_on .link , #section .section .cont.active .title_on .link {
+.intro_section .section .cont.on .title_on .link , .intro_section .section .cont.active .title_on .link {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 }
-#section .section .cont .title_on .link .btn:after {
+.intro_section .section .cont .title_on .link .btn:after {
 	content: '';
 	display: inline-block;
 	width: 6px;
@@ -1204,19 +1213,19 @@ button {
 	background: url("../image/sprite.png") no-repeat -40px -8px;
 	vertical-align: middle;
 }
-#section .section .cont.on .title_on.m1 .link .btn , #section .section .cont.active .title_on.m1 .link .btn {
+.intro_section .section .cont.on .title_on.m1 .link .btn , .intro_section .section .cont.active .title_on.m1 .link .btn {
 	background-color: #248c7a;
 }
-#section .section .cont.on .title_on.m2 .link .btn , #section .section .cont.active .title_on.m2 .link .btn {
+.intro_section .section .cont.on .title_on.m2 .link .btn , .intro_section .section .cont.active .title_on.m2 .link .btn {
 	background-color: #e98f09;
 }
-#section .section .cont.on .title_on.m3 .link .btn , #section .section .cont.active .title_on.m3 .link .btn {
+.intro_section .section .cont.on .title_on.m3 .link .btn , .intro_section .section .cont.active .title_on.m3 .link .btn {
 	background-color: #064da9;
 }
-#section .section .cont.on .title_on.m4 .link .btn , #section .section .cont.active .title_on.m4 .link .btn {
+.intro_section .section .cont.on .title_on.m4 .link .btn , .intro_section .section .cont.active .title_on.m4 .link .btn {
 	background-color: #9401b9;
 }
-#section .section .cont.on .title_on .link .btn , #section .section .cont.active .title_on .link .btn {
+.intro_section .section .cont.on .title_on .link .btn , .intro_section .section .cont.active .title_on .link .btn {
 	padding: 0 12px;
 	border: 0;
 	font-family: "Noto Sans Korean" , sans-serif;
@@ -2531,6 +2540,33 @@ button {
 	background-position: -325px -109px;
 }
 
+/* 스크롤 버튼 상단으로 이동 */
+#go_top { 
+	display:none; 
+	position:fixed; 
+	right: 30px; 
+	bottom: 100px; 
+	width: 70px; 
+	height: 70px; 
+	border: 1px solid #000;
+	text-align:center; 
+}
+#go_top:before {
+	width: 40px;
+	height: 21px;
+	margin: 14px auto 7px;
+	background-position: -10px -199px;
+}
+#go_top span {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color:#000; 
+	letter-spacing: -0.5px;
+}
+#go_top:hover, #go_top:focus, #go_top.hover {
+	background-color: #e5e5e5;
+}
+
 /* 제품 상세 페이지 */
 .product_name {
 	padding: 23px 0 19px;
@@ -2595,7 +2631,7 @@ button {
 .product_spec_wrap .product_spec_area .desc {
 	padding: 0 25px 26px;
 	border-bottom: 1px solid #000;
-	font-family: "맑은고딕" , "MalgunGothic" , serif , sans-serif;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
 	line-height: 1.2;
 	color: #656565;
@@ -2625,7 +2661,7 @@ button {
 	vertical-align: middle;
 }
 .product_spec_wrap .product_spec_area .price_download .product_price .price {
-	font-family: "맑은고딕" , "MalgunGothic" , serif , sans-serif;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
 	color: #656565;
 	text-align: center;
@@ -2639,7 +2675,7 @@ button {
 	display: inline-block;
 	padding-right: 28px;
 	margin-left: 9px;
-	font-family: "맑은고딕" , "MalgunGothic" , serif , sans-serif;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
 	color: #656565;
 	vertical-align: middle;
@@ -2668,6 +2704,7 @@ button {
 	width: 460px;
 	margin-top: -6px;
 	padding-right: 13px;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
 	color: #767676;
 	text-align: right;
@@ -2803,7 +2840,39 @@ button {
 
 
 
-/* Ver.tablet */
+
+/* 기본 반응형 */
+@media all and (max-width:1830px) {
+	.intro_section .section .cont.on .title_on .tit, .intro_section .section .cont.active .title_on .tit {
+		bottom: 50px;
+		font-size: 35px;
+	}
+	.intro_section .section .cont.on .title_on .name, .intro_section .section .cont.active .title_on .name {
+		font-size: 17px;
+		line-height: 50px;
+	}
+	.intro_section .section .cont.on .title_on .link .btn, .intro_section .section .cont.active .title_on .link .btn {
+		min-width: 70px;
+		font-size: 12px;
+		line-height: 50px;
+	}
+}
+
+@media all and (max-width:1600px) {
+	.ly .pop_intro {
+		width: 85%;
+	}
+	.intro_section .section , .intro_section .section .cont , .intro_section .section .cont .area , .intro_section .section .cont .area img {
+		height: 260px;
+	}
+	.intro_section .section .cont .area img {
+		max-height: 260px;
+	}
+	.intro_section .section .cont.on .title_on .tit, .intro_section .section .cont.active .title_on .tit {
+		font-size: 25px;
+	}
+}
+
 @media all and (max-width:1360px) {
 	html {font-size:62.5%;}
 	.footer .inner .utill {
@@ -2831,33 +2900,5 @@ button {
 }
 
 @media all and (max-width:768px) {
-	
-}
-
-/* Ver.mobile */
-@media all and (max-width:640px ) {
-	
-}
-
-@media all and (max-width:530px ) {
-
-}
-
-@media all and (max-width:430px ) {
-	
-}
-
-@media all and (-webkit-max-device-pixel-ratio :2) and (max-device-pixel-ratio :2) {
-
-}
-
-
-/*portrait mode*/
-@media all and (orientation:portrait) {
-	
-}
-
-/*landscape mode*/
-@media all and (max-width : 767px) and (orientation:landscape) {
 	
 }

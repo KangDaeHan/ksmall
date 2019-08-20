@@ -134,6 +134,48 @@ function scrollMove(seq){
 	$('html, body').animate({scrollTop : offset.top}, 400);
 }
 
+// 스크롤 top 버튼
+function goTop() {
+    var settings = {
+            button      : '#go_top',
+            text        : 'TOP',
+            min         : 100,
+            fadeIn      : 400,
+            fadeOut     : 400,
+            scrollSpeed : 800,
+            easingType  : 'easeInOutExpo'
+        },
+        oldiOS     = false,
+        oldAndroid = false;
+
+    if( /(iPhone|iPod|iPad)\sOS\s[0-4][_\d]+/i.test(navigator.userAgent) ) { oldiOS = true; }
+    if( /Android\s+([0-2][\.\d]+)/i.test(navigator.userAgent) ) { oldAndroid = true; }
+    $('body').append('<a href="#" class="sprite_before" id="' + settings.button.substring(1) + '" title="' + settings.text + '">' + '<span>' + settings.text + '</span>' + '</a>');
+    $( settings.button ).on('click', function( e ){
+        $('html, body').animate({ scrollTop : 0 }, settings.scrollSpeed, settings.easingType );
+        e.preventDefault();
+    })
+    .on('mouseenter', function() {
+        $( settings.button ).addClass('hover');
+    })
+    .on('mouseleave', function() {
+        $( settings.button ).removeClass('hover');
+    });
+
+    $(window).scroll(function() {
+        var position = $(window).scrollTop();
+        if( oldiOS || oldAndroid ) {
+            $( settings.button ).css({
+                'position' : 'absolute',
+                'top'      : position + $(window).height()
+            });
+        }
+        if ( position > settings.min ) { $( settings.button ).fadeIn( settings.fadeIn );}
+        else { $( settings.button ).fadeOut( settings.fadeOut );  }
+    });
+
+}
+
 // popup
 function layer_open(el, menuNum, title, addtxt, tel) {
 	var temp = $("#" + el);
@@ -193,6 +235,9 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		rightScroller('today_view');
 	});
+
+	// top버튼 이동
+	goTop();
 
 	//사이드 메뉴 접기 / 펼치기
 	$(".expand a").click(function(){

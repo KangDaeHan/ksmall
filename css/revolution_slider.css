@@ -1327,30 +1327,30 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 											}
 
 
-.tp-bullets.simplebullets.navbar						{ 	border:1px solid #666; border-bottom:1px solid #444; background:url(../assets/boxed_bgtile.png); height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
+.tp-bullets.simplebullets.navbar						{ 	border:1px solid #666; border-bottom:1px solid #444; height:40px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
 
-.tp-bullets.simplebullets.navbar-old					{ 	 background:url(../assets/navigdots_bgtile.png); height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
+.tp-bullets.simplebullets.navbar-old					{ 	 height:35px; padding:0px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
 
 
-.tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	background:url(../assets/bullet.png) no-Repeat top left;	width:20px;	height:20px;  margin-right:0px; float:left; margin-top:0px; margin-left:3px}
+.tp-bullets.simplebullets.round .bullet					{	cursor:pointer; position:relative;	width:20px;	height:20px;  margin-right:0px; float:left; margin-top:0px; margin-left:3px}
 .tp-bullets.simplebullets.round .bullet.last			{	margin-right:3px}
 
-.tp-bullets.simplebullets.round-old .bullet				{	cursor:pointer; position:relative;	background:url(../assets/bullets.png) no-Repeat bottom left;	width:23px;	height:23px;  margin-right:0px; float:left; margin-top:0px}
+.tp-bullets.simplebullets.round-old .bullet				{	cursor:pointer; position:relative;	width:23px;	height:23px;  margin-right:0px; float:left; margin-top:0px}
 .tp-bullets.simplebullets.round-old .bullet.last		{	margin-right:0px}
 
 
 /**	SQUARE BULLETS **/
-.tp-bullets.simplebullets.square .bullet				{	cursor:pointer; position:relative;	background:url(../assets/bullets2.png) no-Repeat bottom left;	width:19px;	height:19px;  margin-right:0px; float:left; margin-top:0px}
+.tp-bullets.simplebullets.square .bullet				{	cursor:pointer; position:relative;	width:19px;	height:19px;  margin-right:0px; float:left; margin-top:0px}
 .tp-bullets.simplebullets.square .bullet.last			{	margin-right:0px}
 
 
 /**	SQUARE BULLETS **/
-.tp-bullets.simplebullets.square-old .bullet			{	cursor:pointer; position:relative;	background:url(../assets/bullets2.png) no-Repeat bottom left;	width:19px;	height:19px;  margin-right:0px; float:left; margin-top:0px}
+.tp-bullets.simplebullets.square-old .bullet			{	cursor:pointer; position:relative;	width:19px;	height:19px;  margin-right:0px; float:left; margin-top:0px}
 .tp-bullets.simplebullets.square-old .bullet.last		{	margin-right:0px}
 
 
 /** navbar NAVIGATION VERSION **/
-.tp-bullets.simplebullets.navbar .bullet			{	cursor:pointer; position:relative;	background:url(../assets/bullet_boxed.png) no-Repeat top left;	width:18px;	height:19px;   margin-right:5px; float:left; margin-top:0px}
+.tp-bullets.simplebullets.navbar .bullet			{	cursor:pointer; position:relative;	width:18px;	height:19px;   margin-right:5px; float:left; margin-top:0px}
 
 .tp-bullets.simplebullets.navbar .bullet.first		{	margin-left:0px !important}
 .tp-bullets.simplebullets.navbar .bullet.last		{	margin-right:0px !important}
@@ -1358,7 +1358,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 /** navbar NAVIGATION VERSION **/
-.tp-bullets.simplebullets.navbar-old .bullet			{	cursor:pointer; position:relative;	background:url(../assets/navigdots.png) no-Repeat bottom left;	width:15px;	height:15px;  margin-left:5px !important; margin-right:5px !important;float:left; margin-top:10px}
+.tp-bullets.simplebullets.navbar-old .bullet			{	cursor:pointer; position:relative;	width:15px;	height:15px;  margin-left:5px !important; margin-right:5px !important;float:left; margin-top:10px}
 .tp-bullets.simplebullets.navbar-old .bullet.first		{	margin-left:0px !important}
 .tp-bullets.simplebullets.navbar-old .bullet.last		{	margin-right:0px !important}
 
@@ -1551,9 +1551,9 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 /*  CAPTION SLIDELINK   **/
 .caption.slidelink a div,
-.tp-caption.slidelink a div {	width:3000px; height:1500px;  background:url(../images/coloredbg.png) repeat}
+.tp-caption.slidelink a div {	width:3000px; height:1500px; }
 
-.tp-caption.slidelink a span	{	background:url(../images/coloredbg.png) repeat}
+.tp-caption.slidelink a span	{}
 
 
 
