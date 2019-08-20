@@ -813,7 +813,8 @@ button {
 .wrap {
 	position: relative;
 	width: 100%;
-	min-width: 1427px;
+	min-width: 1630px;
+	/* min-width: 1427px; */
 }
 .header {
 	position: relative;
