@@ -2550,7 +2550,9 @@ button {
 	width: 70px; 
 	height: 70px; 
 	border: 1px solid #000;
-	text-align:center; 
+	background: #fff;
+	text-align:center;
+	z-index: 100;
 }
 #go_top:before {
 	width: 40px;
