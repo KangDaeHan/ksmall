@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="../css/ui.css" />
 </head>
 <body>
-<div class="wrap">
+<div class="sub_wrap"><!-- 제품 리스트 메인일때 -->
 <!-- 상단 영역 -->
 <div class="header">
 	<div class="inner">
@@ -111,180 +111,113 @@
 	<div class="inner">
 		<!-- <div class="menu_title">공지사항</div> -->
 		<!-- 서브 컨텐츠 -->
-		<div class="sub_contents">
-			
-			<!-- 제품명 -->
-			<div class="product_name">
-				<h2 class="name">TITAN-S260(듀얼)(PN303)</h2>
-			</div>
-			<!-- //제품명 -->
-
-			<!-- 이전 / 다음 상품 -->
-			<div class="product_prev_next">
-				<a href="#" class="sprite prev">이전 상품</a>
-				<a href="#" class="sprite next">다음 상품</a>
-			</div>
-			<!-- //이전 / 다음 상품 -->
-
-			<div class="clearfix product_spec_wrap">
-				<!-- 제품이미지 영역 -->
-				<div class="product_slider_area">
-					<div class="slider main_slider">
-						<a href="../image/product/product1.jpg" data-lightbox="roadtrip">
-							<img src="../image/product/product1.jpg" alt="">
-							<span class="over">
-								<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
-							</span>
-						</a>
-						<a href="../image/product/default.jpg" data-lightbox="roadtrip">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="over">
-								<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
-							</span>
-						</a>
-						<a href="../image/product/default.jpg" data-lightbox="roadtrip">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="over">
-								<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
-							</span>
-						</a>
-						<a href="../image/product/default.jpg" data-lightbox="roadtrip">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="over">
-								<span class="zoom"><span class="txt">확대<span class="sprite icon"></span>보기</span></span>
-							</span>
-						</a>
-					</div>
-					<div class="slider thumb_slider">
-						<div><img src="../image/product/product1.jpg" alt=""></div>
-						<div><img src="../image/product/default.jpg" alt=""></div>
-						<div><img src="../image/product/default.jpg" alt=""></div>
-						<div><img src="../image/product/default.jpg" alt=""></div>
-					</div>
-				</div>
-				<!-- //제품이미지 영역 -->
-				
-				<!-- 제품 스펙 정보 -->
-				<div class="product_spec_area">
-					<h3 class="tit">제품스펙</h3>
-					<div class="desc">
-						CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
-						Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
-						HDD : SSD 64GB, SATA <br/>
-						LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
-						듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
-						I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
-						1 x VGA Port , 1 x Parallel <br/>
-						LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
-						Audio Line Output : 1 x Line Out <br/>
-						OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
-						KBD / MOUSE 마우스, Keyborad , Pad <br/>
-						GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
-						Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
-						Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
-						** 일체형 리더기 (KS CAT 1000QSM)
-					</div>
-					<h3 class="tit">주요기능</h3>
-					<div class="desc">
-						일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
-					</div>
-					<h3 class="tit">주의사항</h3>
-					<div class="desc">
-						본 제품은 사용전 반드시 서치메뉴얼을 숙지하시고 사용하십시오. 사용설명서의 지침대로 세팅하세요.
-					</div>
-					<h3 class="tit">제조사 및 연락처</h3>
-					<div class="desc">
-						케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
-					</div>
-					<div class="price_download">
-						<div class="product_price">
-							<h3 class="tit">제품단가</h3>
-							<p class="price">730,000원(VAT별도)</p>
-						</div>
-						<div class="download">
-							<h3 class="tit">다운로드</h3>
-							<div class="link">
-								<a href="#" class="sprite_after manual">메뉴얼</a>
-								<a href="#" class="sprite_after promotion">홍보자료</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //제품 스펙 정보 -->
-
-				<!-- 제품 선택 -->
-				<div class="product_choice">
-					<p class="txt">제품구매 선택시 제품비교를 할 수 있습니다.</p>
-					<button type="button" class="btn choice">제품선택</button>
-				</div>
-				<!-- //제품 선택 -->
-			</div>
-
-			<!-- 상품상세정보 / 연관상품 -->
-			<div class="product_tab_area" id="product_detail_image">
-				<ul class="tab_menu">
-					<li class="active"><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
-					<li><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
-				</ul>
-			</div>
-			
-			<!-- 상세정보 -->
-			<div class="product_detail_info">
-				<img src="../image/product_detail/detail_p1.jpg" alt="">
-			</div>
-			<!-- //상세정보 -->
-			
-			<div class="product_tab_area" id="relation_product">
-				<ul class="tab_menu">
-					<li><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
-					<li class="active"><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
-				</ul>
-			</div>
-
-			<!-- 연관상품 -->
-			<div class="relation_product_area">
-				<div class="slider relation_product_slider">
-					<div>
-						<a href="#">
-							<img src="../image/product/product1.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
-					<div>
-						<a href="#">
-							<img src="../image/product/default.jpg" alt="">
-							<span class="txt">TITAN-S260</span>
-						</a>
-					</div>
+		<div class="sub">
+			<div class="product_list_top">
+				<h2 class="product_tit">유선단말기</h2>
+				<div class="sort">
+					<a href="#" class="sprite row2" onclick="listRow('row2'); return false;">2열</a>
+					<a href="#" class="sprite row3" onclick="listRow('row3'); return false;">3열</a>
+					<a href="#" class="sprite row4" onclick="listRow('row4'); return false;">4열</a>
 				</div>
 			</div>
-			<!-- //연관상품 -->
+			<ul class="product_list"> <!-- 2열 : row2 / 3열 : row3 / 4열 : row4 -->
+				<!-- 1set -->
+				<li class="item">
+					<!-- 제품이미지 -->
+					<div class="thumb">
+						<img src="../image/product/product1.jpg" alt="">
+					</div>
+					<!-- //제품이미지 -->
 
-			<!-- //상품상세정보 / 연관상품 -->
+					<!-- 제품명/단가 -->
+					<div class="info">
+						<p class="name">KS1060(A1000)</p>
+						<p class="price">19,700,000 <em>won</em></p>
+					</div>
+					<div class="btns">
+						<a href="#" class="btn detail">제품상세보기</a>
+						<a href="#" class="btn buy">구매하기</a>
+					</div>
+					<!-- //제품명/단가 -->
+				</li>
+				<!-- //1set -->
+
+				<li class="item">
+					<!-- 제품이미지 -->
+					<div class="thumb">
+						<img src="../image/product/product1.jpg" alt="">
+					</div>
+					<!-- //제품이미지 -->
+
+					<!-- 제품명/단가 -->
+					<div class="info">
+						<p class="name">KS1060(A1000)</p>
+						<p class="price">19,700,000 <em>won</em></p>
+					</div>
+					<div class="btns">
+						<a href="#" class="btn detail">제품상세보기</a>
+						<a href="#" class="btn buy">구매하기</a>
+					</div>
+					<!-- //제품명/단가 -->
+				</li>
+
+				<li class="item">
+					<!-- 제품이미지 -->
+					<div class="thumb">
+						<img src="../image/product/product1.jpg" alt="">
+					</div>
+					<!-- //제품이미지 -->
+
+					<!-- 제품명/단가 -->
+					<div class="info">
+						<p class="name">KS1060(A1000)</p>
+						<p class="price">19,700,000 <em>won</em></p>
+					</div>
+					<div class="btns">
+						<a href="#" class="btn detail">제품상세보기</a>
+						<a href="#" class="btn buy">구매하기</a>
+					</div>
+					<!-- //제품명/단가 -->
+				</li>
+
+				<li class="item">
+					<!-- 제품이미지 -->
+					<div class="thumb">
+						<img src="../image/product/product1.jpg" alt="">
+					</div>
+					<!-- //제품이미지 -->
+
+					<!-- 제품명/단가 -->
+					<div class="info">
+						<p class="name">KS1060(A1000)</p>
+						<p class="price">19,700,000 <em>won</em></p>
+					</div>
+					<div class="btns">
+						<a href="#" class="btn detail">제품상세보기</a>
+						<a href="#" class="btn buy">구매하기</a>
+					</div>
+					<!-- //제품명/단가 -->
+				</li>
+
+				<li class="item">
+					<!-- 제품이미지 -->
+					<div class="thumb">
+						<img src="../image/product/product1.jpg" alt="">
+					</div>
+					<!-- //제품이미지 -->
+
+					<!-- 제품명/단가 -->
+					<div class="info">
+						<p class="name">KS1060(A1000)</p>
+						<p class="price">19,700,000 <em>won</em></p>
+					</div>
+					<div class="btns">
+						<a href="#" class="btn detail">제품상세보기</a>
+						<a href="#" class="btn buy">구매하기</a>
+					</div>
+					<!-- //제품명/단가 -->
+				</li>
+			</ul>
 		</div>
 		<!-- //서브 컨텐츠 -->
 
@@ -302,7 +235,6 @@
 			</div>
 		</div>
 		<!-- //today view -->
-
 	</div>
 </div>
 <!-- //서브 컨텐츠 영역 -->
@@ -370,8 +302,6 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	
-	// 상단 제품 슬라이드
 	$('.main_slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -381,19 +311,9 @@ $(document).ready(function() {
 		asNavFor: '.thumb_slider'
 	});
 	$('.thumb_slider').slick({
-		slidesToShow: 4,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.main_slider',
-		dots: false,
-		infinite: false,
-		centerMode: false,
-		focusOnSelect: true
-	});
-
-	//연관상품 슬라이드
-	$('.relation_product_slider').slick({
-		slidesToShow: 5,
-		slidesToScroll: 1,
 		dots: false,
 		infinite: false,
 		centerMode: false,
@@ -412,10 +332,9 @@ $(document).ready(function() {
 		focusOnSelect: true
 	});
 
-	//제품 이미지 클릭시 팝업
 	lightbox.option({
       'showImageNumberLabel': false
-	});
+    });
 });
 </script>
 </body>

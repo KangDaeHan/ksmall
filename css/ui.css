@@ -816,6 +816,11 @@ button {
 	min-width: 1630px;
 	/* min-width: 1427px; */
 }
+.sub_wrap {
+	position: relative;
+	width: 100%;
+	min-width: 1900px;
+}
 .header {
 	position: relative;
 	top: 0;
@@ -942,7 +947,7 @@ button {
 	left: 0;
 	z-index: 50;
 }
-.wrap .footer {
+.wrap .footer , .sub_wrap .footer {
 	position: relative;
 	z-index: 50;
 }
@@ -1742,6 +1747,10 @@ button {
 }
 
 /* 서브 컨텐츠 */
+.container .sub {
+	min-width: 1483px;
+	min-height: 800px;
+}
 .container .sub_contents {
 	position: relative;
 	width: 1000px;
@@ -2057,7 +2066,7 @@ button {
 	color: #fff;
 }
 .total_sum_box .product {
-	width: 300px;
+	width: 20%;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 23px;
 	color: #000;
@@ -2066,6 +2075,9 @@ button {
 .total_sum_box .product .point {
 	font-family: "Noto Sans Korean" , sans-serif;
 	color: #fc6c3a;
+}
+.total_sum_box .total_price {
+	flex: 1.6;
 }
 .total_sum_box .total_price .tit_label {
 	display: inline-block;
@@ -2086,6 +2098,10 @@ button {
 	line-height: 34px;
 	vertical-align: middle;
 	text-align: center;
+}
+.total_sum_box .payment_type {
+	flex: 2.1;
+	text-align: right;
 }
 .total_sum_box .payment_type .btn {
 	min-width: 140px;
@@ -2114,7 +2130,8 @@ button {
 .product_compare_area {
 	position: relative;
 	width: 100%;
-	max-width: 773px;
+	max-width: 805px;
+	padding-right: 32px;
 	margin: 48px auto;
 	overflow: hidden;
 }
@@ -2216,7 +2233,7 @@ button {
 .product_compare_area .separate_compare {
 	position: absolute;
 	top: 50%;
-	right: 0;
+	right: 32px;
 	width: 104px;
 	height: 104px;
 	margin-top: -52px;
@@ -2258,7 +2275,7 @@ button {
 	color: #000;
 }
 .main_contents .section .notice_area .notice_list {
-	max-height: 97px;
+	height: 97px;
 	padding-right: 186px;
 	overflow-y: auto;
 }
@@ -2412,6 +2429,7 @@ button {
 	justify-content: flex-end;
 	align-content: flex-end;
 	border-top: 2px solid #fc6c3a;
+	padding: 12px 17px 12px 10px;
 }
 .main_contents .section .banner_area .qna a .icon , 
 .main_contents .section .banner_area .as a .icon {
@@ -2833,6 +2851,151 @@ button {
 	right: -35px;
 	background-position: -425px -141px;
 }
+
+/* 제품 리스트 */
+.product_list_top {
+	position: relative;
+	padding: 22px 0 22px 32px;
+}
+.product_list_top .product_tit {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	color: #09306e;
+	text-align: center;
+}
+.product_list_top .sort {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -9px;
+}
+.product_list_top .sort .sprite {
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.product_list_top .sort .row2 {
+	background-position: -371px -192px;
+}
+.product_list_top .sort .row3 {
+	background-position: -402px -192px;
+}
+.product_list_top .sort .row4 {
+	background-position: -430px -192px;
+}
+.product_list {
+	width: 100%;
+	overflow: hidden;
+}
+.product_list .item {
+	float: left;
+	width: 345px;
+	margin: 0 0 30px 25px;
+	overflow: hidden;
+}
+.product_list .item .thumb {
+	position: relative;
+	width: 305px;
+	height: 305px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.product_list .item .thumb img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+.product_list .item .info {
+	position: relative;
+	width: 100%;
+	min-height: 39px;
+	padding: 9px 18px 12px;
+	overflow: hidden;
+}
+.product_list .item .info .name , .product_list .item .info .price {
+	float: left;
+	width: 60%;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #09306e;
+	letter-spacing: -1px;
+	text-align: left;
+}
+.product_list .item .info .price {
+	width: 40%;
+	color: #ffae00;
+	text-align: right;
+}
+.product_list .item .info .price em {
+	margin-left: 2px;
+	font-style: normal;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 11px;
+	color: #ffae00;
+}
+.product_list .item .btns {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.product_list .item .btns .btn {
+	float: left;
+	width: 50%;
+	height: 32px;
+	margin-left: -1px;
+	border: 1px solid #9e9d9d;
+	background: #fff;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 14px;
+	color: #706f6f;
+	line-height: 32px;
+}
+.product_list .item .btns .btn:first-child {
+	margin: 0;
+}
+.product_list .item .btns .btn.detail:hover {
+	background: #11459e;
+	border-color: #11459e;
+	color: #fff;
+}
+.product_list .item .btns .btn.buy:hover {
+	background: #ffae00;
+	border-color: #ffae00;
+	color: #000;
+}
+.product_list.row2 .item {
+	width: 716px;
+}
+.product_list.row3 .item {
+	width: 468px;
+	margin-left: 26px;
+}
+.product_list.row4 .item {
+	width: 345px;
+}
+.product_list.row2 .item .thumb {
+	width: 636px;
+	height: 636px;
+}
+.product_list.row3 .item .thumb {
+	width: 415px;
+	height: 415px;
+}
+.product_list.row4 .item .thumb {
+	width: 305px;
+	height: 305px;
+}
+
 
 
 

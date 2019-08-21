@@ -176,6 +176,11 @@ function goTop() {
 
 }
 
+// 제품 리스트 정렬 변경 (2열/3열/4열)
+function listRow(row) {
+	$('.product_list').removeClass().addClass('product_list ' + row);
+}
+
 // popup
 function layer_open(el, menuNum, title, addtxt, tel) {
 	var temp = $("#" + el);
