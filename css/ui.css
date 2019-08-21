@@ -1730,6 +1730,26 @@ button {
 .expansion .side .menu_list li li > a {
 	padding: 0 10px;
 }
+.expansion .product_list .item , .expansion .product_list.row4 .item {
+	width: 392px;
+}
+.expansion .product_list.row2 .item {
+	width: 810px;
+}
+.expansion .product_list.row3 .item {
+	width: 531px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

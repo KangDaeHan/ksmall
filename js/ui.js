@@ -248,12 +248,12 @@ $(document).ready(function() {
 	$(".expand a").click(function(){
 		$(this).toggleClass('active');
 		if ($(this).hasClass('active')) {
-			$('.wrap').addClass('expansion');
+			$('.wrap , .sub_wrap').addClass('expansion');
 			$(".side").stop().animate({
 				width : "112px"
 			},200);
 		} else {
-			$('.wrap').removeClass('expansion');
+			$('.wrap , .sub_wrap').removeClass('expansion');
 			$(".side").stop().animate({
 				width : "300px"
 			},200);
