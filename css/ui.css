@@ -605,11 +605,12 @@ button {
 	position: absolute;
 	background: #fff;
 	border: 1px solid #bbb;
-	padding: 1.1rem 1.3rem;
-	font-size: 1.4rem;
+	padding: 7px 15px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
 	font-weight: 600;
 	color: #3c3d3e;
-	z-index: 20;
+	z-index: 100;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
@@ -628,13 +629,13 @@ button {
 	border-color: rgba(255, 255, 255, 0);
 	border-top-color: #fff;
 	border-width: 8px;
-	margin-left: -3px;
+	margin-left: -8px;
 }
 #tooltip:before {
 	border-color: rgba(187, 187, 187, 0);
 	border-top-color: #bbbbbb;
 	border-width: 9px;
-	margin-left: -4px;
+	margin-left: -9px;
 }
 
 /* 달력 */

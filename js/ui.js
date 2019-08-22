@@ -229,7 +229,6 @@ function layer_open(el, menuNum, title, addtxt, tel) {
 }
 
 $(document).ready(function() {
-
 	//이미지 미리로드
 	$("img.preload").preload();
 
@@ -266,8 +265,7 @@ $(document).ready(function() {
 	var class_;
 	var imgTag;
 
-	$(".tag_tooltip").hover(function(e) {
-
+	$(".tooltip").hover(function(e) {
 		title_ = $(this).attr("title");
 		class_ = $(this).attr("class");
 		$(this).attr("title","");
@@ -276,25 +274,25 @@ $(document).ready(function() {
 			imgTag = "<img src='"+title_+"' width='100px' height:'100px' alt='' />"
 		}
 
-		$("body").append("<div id='tooltip'></div>");
+		$(".expansion").parent().append("<div id='tooltip'></div>");
 
-			if (class_ == "img") {
-				$("#tooltip").html(imgTag);
-				$("#tooltip").css("width","100px");
-			} else {
-				$("#tooltip").css("width","auto");
-				$("#tooltip").text(title_);
-			}
-
-			var pageX = $(this).offset().left - ($("#tooltip").innerWidth())/2;
-			var pageY = $(this).offset().top - $("#tooltip").innerHeight() - 10;
-			$("#tooltip").css({left : pageX + "px", top : pageY + "px"}).fadeIn(500);
+		if (class_ == "img") {
+			$("#tooltip").html(imgTag);
+			$("#tooltip").css("width","100px");
+		} else {
+			$("#tooltip").css("width","auto");
+			$("#tooltip").text(title_);
+		}
+		
+		var pageX = $(this).width() / 2;
+		var pageY = $(this).offset().top - $("#tooltip").innerHeight() - 10;
+		var posX = $("#tooltip").innerWidth() / 2;
+		
+		$("#tooltip").css({left : pageX + "px", top : pageY + "px" , marginLeft: "-"+ posX + "px"}).fadeIn(500);
 
 	}, function() {
-
 		$(this).attr("title", title_);
 		$("#tooltip").remove();
-
 	});
 
     $(".explanation , .txt_ellipsis").ellipsis({
