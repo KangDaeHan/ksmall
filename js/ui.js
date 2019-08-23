@@ -274,7 +274,11 @@ $(document).ready(function() {
 			imgTag = "<img src='"+title_+"' width='100px' height:'100px' alt='' />"
 		}
 
-		$(".expansion").parent().append("<div id='tooltip'></div>");
+		if($(this) != $(".side .menu_list li.tooltip")) {
+			$(".expansion").parent().append("<div id='tooltip'></div>");
+		} else {
+			$("body").append("<div id='tooltip'></div>");
+		}
 
 		if (class_ == "img") {
 			$("#tooltip").html(imgTag);
