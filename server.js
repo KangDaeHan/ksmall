@@ -9,7 +9,7 @@ app.set('port', 8080);
  
 //join은 __dirname : 현재 .js 파일의 path 와 public 을 합친다
 //이렇게 경로를 세팅하면 public 폴더 안에 있는것을 곧바로 쓸 수 있게된다
-app.use(serveStatic(path.join(__dirname, 'html_list.html')));
+app.use(serveStatic(path.join(__dirname, 'html')));
  
 ///users 를 붙이게 되면 특정 경로를 지정하는 것으로 특정 기능을 수행할떄 사용한다
 //localhost:3000/users
