@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="papers.css"/>
 </head>
 <body ng-app="gateApp">
@@ -191,8 +191,11 @@
         $scope.spreadsheetPage = "https://docs.google.com/spreadsheets/d/"+$scope.spreadsheetId;
 
         // 구글스프레드 시트 탭타이틀 가져옴.
+        
         $scope.$watch("response",function(){
-            $scope.sheetTitle = $scope.response.feed.title.$t;
+            $setTimeout(function(){
+                $scope.sheetTitle = $scope.response.feed.title.$t;
+            });
         });
 
         // 전체 진도률 계산함.
