@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>작업현황리스트</title>
+<style type="text/css">
+body {color:#666; font:12px/18px 'verdana', 'dotum';}
+h1 {padding:0 0 15px; color:#000; font-size:22px; text-align:center; font-family:'Malgun Gothic';}
+h2 {padding-left:5px; color:#000; font-size:18px; font-family:'Malgun Gothic';}
+p{margin:0;padding:0;}
+table {clear:both; width:100%; border-collapse:collapse; border-spacing:0; word-break:break-all; word-wrap:break-word;}
+caption {visibility:hidden; width:0; height:0; overflow:hidden; font:0/0 'arial';}
+table thead th {padding:10px 0 9px; color:#fff; border:1px solid #999; background:#666;}
+table tbody th {padding:4px 5px; border:1px solid #999;}
+table tbody td {padding:4px 5px; border:1px solid #999;}
+table tbody td.link {color:#999;font-style:italic;}
+table tbody td.path {font-weight:bold; text-align:center;}
+table tbody td.date {font-style:italic; text-align:center;}
+table tbody tr.cate th, table tbody tr.cate td {padding:6px 0; color:#000; background:#d8d8d8 !important;}
+table tbody tr.section th {padding-left:10px; background:#eee; !important;}
+table tbody tr.section td {background:#eee; !important;}
+table tbody tr.on th, table tbody tr.on td {background:#f6f6f6;}
+.fc {color:#ee0000;}
+a {color:#2277ee; text-decoration:none;}
+a:active, a:visited, a:focus, a:hover {color:#2277ee; text-decoration:underline;}
+em{color:#e83190;}
+.history{overflow:hidden;display:none;}
+.history .date{display:block;float:left;width:150px;}
+.history .con{margin-left:160px;}
+.btn-history{font-weight:bold;color:#0066ff !important;}
+hr{margin:3px 0;border:none;border-top:1px dashed #333333;}
+.line1{border-top:1px solid #767676;}
+.point1{color:#ff0000;background-color:#fff692;font-weight:bold;}
+.point2{background-color:#92c4ff;color:#000;font-weight:bold;}
+.point3{background-color:#ff9292;color:#000;font-weight:bold;}
+.point4{background-color:#92ffdc;color:#000;font-weight:bold;}
+.fwb{font-weight:bold;color:black;}
+.t_left {text-align:left;}
+.reg_date {font-style:italic; text-align:center; color:red;}
+.complete_date {font-style:italic; text-align:center; color:blue;}
+.t_center {text-align:center;}
+.ok:before {display:block; content:"●"; margin-top:-5px; font-size:25px; text-align:center; color:#5c9d16;}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.btn-history').click(function(){
+		var $hisCont = $(this).parent().parent().next('.history');
+		if($hisCont.hasClass('active')){
+			$hisCont.hide().removeClass('active');
+		}else{
+			$hisCont.show().addClass('active');
+		}
+	});
+
+	var okCount = $('table').find('.ok').length,
+	noCount = $('table').find('.state').length,
+	proG = okCount / (noCount) * 100;
+
+	$('.count .total').find('em').text(noCount);
+	$('.count .check').find('em').text(okCount);
+	$('.count .progress').find('em').text(proG.toFixed(1));
+
+});
+</script>
+</head>
+<body>
+
+<h1>퍼블리싱 작업 현황</h1>
+<div class="count">
+	<span class="total">총 페이지: <em></em></span>&nbsp;
+	<span class="check">완료된 페이지: <em></em></span>&nbsp;
+	<span class="progress">진행률: <em></em> %</span>
+</div>
+<table>
+	<caption>퍼블리싱작업현황</caption>
+	<colgroup>
+		<col width="250" />
+		<col width="250" />
+		<col width="250" />
+		<col width="250" />
+		<col width="100" />
+		<col width="100" />
+		<col width="100" />
+		<col width="50" />
+		<col width="*" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th>Depth1</th>
+			<th>Depth2</th>
+			<th>Depth3</th>
+			<th>파일명</th>
+			<th>시작일</th>
+			<th>완료일</th>
+			<th>수정일</th>
+			<th>상태</th>
+			<th>비고</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="section">
+			<th class="t_left" colspan="9">인트로</th>
+		</tr>
+
+		<tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td><a href="html/intro.html" target="_blank">intro.html</a></td>
+			<td class="date">2013-09-27</td>
+			<td class="complete_date">2013-09-27</td>
+			<td class="reg_date">2013-09-27</td>
+			<td class="state ok">
+				<!-- 수정 및 작업 완료시에만 ok 클래스 넣어주시면 됩니다. -->
+				<!-- <hr /><a href="#none" class="btn-history">→지난 수정 내역</a> -->
+			</td>
+			<td></td>
+		</tr>
+
+		<tr class="section">
+			<th class="t_left" colspan="9">메인</th>
+		</tr>
+
+		<tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td><a href="html/main.html" target="_blank">main.html</a></td>
+			<td class="date"></td>
+			<td class="complete_date"></td>
+			<td class="reg_date"></td>
+			<td class="state"></td>
+			<td></td>
+		</tr>
+	
+		<tr class="section">
+			<th class="t_left" colspan="9">제품상세</th>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td><a href="html/product_detail.html" target="_blank">product_detail.html</a></td>
+			<td class="date"></td>
+			<td class="complete_date"></td>
+			<td class="reg_date"></td>
+			<td class="state"></td>
+			<td></td>
+		</tr>
+	
+	</tbody>
+</table>
+
+</body>
+</html>
