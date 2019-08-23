@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Papers : 웹페이지 진행확인</title>
+    <title>작업진행확인</title>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -191,8 +191,8 @@
         $scope.spreadsheetPage = "https://docs.google.com/spreadsheets/d/"+$scope.spreadsheetId;
 
         // 구글스프레드 시트 탭타이틀 가져옴.
-        $scope.$watch("response",function(){
-            $scope.sheetTitle = response.feed.title.$t;
+        $scope.$watch("response",function($scope){
+            $scope.sheetTitle = $scope.response.feed.title.$t;
         });
 
         // 전체 진도률 계산함.
