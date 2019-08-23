@@ -1,0 +1,222 @@
+
+<!doctype html>
+<html lang="ko" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Papers : 웹페이지 진행확인</title>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="papers.css"/>
+</head>
+<body ng-app="gateApp">
+<!-- TODO 특정 버튼을 누르면 다 펼쳐지도록? -->
+<section ng-controller="papersCtrl">
+    <!-- 상단 패널 : 타이틀 , 구글시트링크 , 깃허브링크 , 진행상태, 검색바 -->
+    <div ng-controller="papers_topPanelCtrl">
+        <div class="papersHeader container-fluid">
+            <div class="row">
+                <div class="paersH1 col-md-6 col-xs-7"><h1><span>KSnet mall</span> <strong>{{sheetTitle}}</strong></h1></div>
+                <!-- <div class="btnSet col-md-2 col-xs-3 col-md-push-4">
+                    <a href="{{spreadsheetPage}}" title="Paper '{{sheetTitle}}' 스프레드 시트로 이동" target="_blank"><i class="fa fa-file-text-o fa-lg"></i></a>
+                    <a href="https://github.com/dstyle0210/papers" title="Papers GitHub" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
+                </div> -->
+                <div class="progressCaseDiv col-md-4 col-xs-12 col-md-pull-2">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-{{condition.className}}  progress-bar-striped" style="width:{{ totalCondition[condition.className+'Per'] }}%" ng-repeat="condition in conditionStats">
+                            <strong>{{ totalCondition[condition.className+'Per'] }}%</strong> <span class="sr-only">{{ totalCondition[condition.className+'Per'] }}% Complete ({{condition.name}})</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="iconGuide">
+                <strong ng-repeat="condition in conditionStats"><span class="hidden-xs">{{condition.name}}</span> <span class="ico {{condition.className}}">.{{condition.className}}</span></strong>
+            </div>
+        </div>
+    </div>
+    <!-- // 상단 패널 : 타이틀 , 구글시트링크 , 깃허브링크 , 진행상태, 검색바 -->
+
+    <!-- 페이퍼들 리스트 목록 -->
+    <div class="container-fluid">
+        <section class="gateSection" ng-controller="papers_ListCtrl">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default" ng-repeat="book in books">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading" role="tab">
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12"><a data-toggle="collapse" data-parent="#accordion" href="#{{ book.bookId }}Book">{{ book.bookTitle }}</a></div>
+                            <div class="col-md-8 col-xs-12">
+                                <!-- <div class="progress">
+                                    <div class="progress-bar progress-bar-{{condition.className}}  progress-bar-striped" style="width:{{ book.stats[condition.className+'Per'] }}%" ng-repeat="condition in conditionStats">
+                                        <strong>{{ book.stats[condition.className+'Per'] }}%</strong> <span class="sr-only">{{ book.stats[condition.className+'Per'] }}% Complete ({{condition.name}})</span>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="panel-body">
+                         <p>...</p>
+                     </div>-->
+                    <!-- Table -->
+                    <div id="{{ book.bookId }}Book" class="panel-collapse collapse">
+                        <table class="fileListTable table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="paper">페이지명</th>
+                                <th class="debug hidden-xs hidden-sm">1차 수정</th>
+                                <th class="debug hidden-xs hidden-sm">2차 수정</th>
+                                <!-- <th class="stats">진행상태(완료일)</th> -->
+                                <th class="debug hidden-xs hidden-sm">검수일</th>
+                                <th class="comment hidden-xs hidden-sm hidden-md">비고사항</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="paper in book.papers">
+                                <td class="paper">
+                                    <a href="{{ paper.file }}" ng-if="paper.file!=''">
+                                        <span>{{ paper.depth1 }}</span>
+                                        <span ng-show="paper.depth2"> &gt; {{ paper.depth2 }}</span>
+                                        <span ng-show="paper.depth3"> &gt; {{ paper.depth3 }}</span>
+                                    </a>
+                                    <span ng-if="paper.file==''">
+                                        <span>{{ paper.depth1 }}</span>
+                                        <span ng-show="paper.depth2"> &gt; {{ paper.depth2 }}</span>
+                                        <span ng-show="paper.depth3"> &gt; {{ paper.depth3 }}</span>
+                                    </span>
+                                </td>
+                                <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified1 }}</span></td>
+                                <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified2 }}</span></td>
+                                <!-- <td class="worker hidden-xs">{{ paper.worker }}</td> -->
+                                <!-- <td class="stats"><span class="ico {{paper.conditionClass}}">{{paper.enddate}}</span></td> -->
+                                <td class="debug hidden-xs hidden-sm"><span data-toggle="tooltip" data-placement="left" title="{{ paper.debuger }}">{{ paper.debugdate }}</span></td>
+                                <td class="comment hidden-xs hidden-sm hidden-md">{{ paper.comment }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- // 페이퍼들 리스트 목록 -->
+</section>
+<!-- javascript -->
+<!--<script data-main="js/papers" src="js/require.js"></script>-->
+
+<script src="jquery.js"></script>
+<script src="angular.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="underscore.js"></script>
+<script type="text/javascript">
+    var app = angular.module('gateApp', []);
+    app.controller("papersCtrl",function($scope,$http){
+        // Query을 위한 구글스프레드 ID 수급.
+        var query = ((location.href).split("papers=")[1]);
+        $scope.spreadsheetId = (!query) ? "11mfZtfFk2s0mlmD5XC6KDSmzDDOuTeoqJe3IRxjWCNM" : query.split("/")[0];
+        $scope.spreadsheetJsonUrl = "https://spreadsheets.google.com/feeds/list/"+$scope.spreadsheetId+"/od6/public/values?alt=json";
+
+        // Query시작.
+        $http.get($scope.spreadsheetJsonUrl).success(function(response){
+
+            var cells = _.map(response.feed.entry,function(data){
+                var o = {};
+                // 1차정제(스프레드시트 데이터)
+                for(key in data){
+                    if(key.indexOf("gsx$")!= -1){
+                        var nkey = key.split("gsx$")[1];
+                        o[nkey] = data[key].$t;
+                    }
+                }
+                return o;
+            });
+            cells = _.rest(cells); // 맨 처음 데이터를 지우고 리턴함.
+
+            // 2차정제 (실제로 사용할 데이터)
+            var conditionStats = {ready:"진행대기", edit:"1차수정", done:"2차수정", finish:"퍼블완료"};
+            var papers = _.map(cells,function(paper,idx){
+
+                if(paper.section == ""){
+                    paper.sect = cells[idx-1].sect;
+                }else{
+                    paper.sect = idx;
+                }
+
+                // 현재 상태를 보여주기 위핸 컨디션 변경.
+                _.each(conditionStats,function(cond,key){
+                    if(paper.condition==cond){
+                        paper.conditionClass = key;
+                    };
+                });
+
+                // 날짜를 별도로 구분하기 위한 정제.
+                paper.enddate_yyyymmdd = paper.enddate;
+                paper.enddate_mmdd = (paper.enddate).substring(5, 10);
+                paper.enddate = paper.enddate_yyyymmdd;
+
+                return paper;
+            });
+
+
+            // 3차정제 (section을 기준으로 BookGroup 재배치)
+            var paperGroups = _.groupBy(papers,function(paper){
+                return paper.sect;
+            });
+            var books = []; // 실제로 보여질 섹션별 paper들 (책으로 형상화 하여 명명)
+            _.each(paperGroups,function(paperGroup,key){
+                books.push({});
+                var book = books[(books.length-1)];
+                book.papers = _.rest(paperGroup); // 각 페이지별 정보.
+                book.bookTitle = paperGroup[0].section; // 책의 타이틀 (섹션 이름)
+                book.bookId = "sect"+key; // 책 고유 아이디
+                book.size = _.size(book.papers); // 책의 paper 갯수.
+                book.stats = _.extend((_.object(_.keys(conditionStats),[0,0,0,0])), _.countBy(book.papers,function(paper){ return paper.conditionClass; }) );
+                _.each(book.stats,function(item,key){ // 각 책의 페이퍼 진행상태 비율
+                    book.stats[key+"Per"] = (Math.floor((book.stats[key]/book.size)*10000))/100;
+                })
+            });
+
+            $scope.response = response; // 원본데이터를 통째로 가지고 다님.
+            $scope.papers = papers; // 페이지 단위로 생성된 데이터 던져쥼.
+            $scope.books = books; // 전체 데이터 던져쥼.
+            $scope.conditionStats = _.map(conditionStats,function(cond,key){ return {className:key,name:cond}; }); // 프로그래스 및 진행상태값 루프로 사용.
+        });
+    });
+    app.controller("papers_topPanelCtrl",function($scope){
+        // 구글스프레드시트 링크 생성
+        $scope.spreadsheetPage = "https://docs.google.com/spreadsheets/d/"+$scope.spreadsheetId;
+
+        // 구글스프레드 시트 탭타이틀 가져옴.
+        $scope.$watch("response",function(){
+            $scope.sheetTitle = $scope.response.feed.title.$t;
+        });
+
+        // 전체 진도률 계산함.
+        $scope.$watch("papers",function(){
+            var papers = _.filter($scope.papers,function(paper){return (paper.condition!="");});
+            var size = _.size(papers);
+            var count = _.countBy(papers,function(paper){ return paper.conditionClass; });
+            _.each(count,function(item,key){ // 각 책의 페이퍼 진행상태 비율
+                count[key+"Per"] = (Math.floor((item/size)*10000))/100;
+            });
+            $scope.totalCondition = count;
+        });
+    });
+    app.controller("papers_ListCtrl",function($scope){
+        $scope.$watch("conditionStats");
+    });
+</script>
+<script>
+    $(window).ready(function () {
+        setTimeout(function(){
+            console.log($('[data-toggle="tooltip"]').length);
+            $('[data-toggle="tooltip"]').tooltip();
+        },3000);
+    });
+</script>
+</body>
+</html>
