@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <title>작업현황리스트</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style type="text/css">
 body {color:#666; font:12px/18px 'verdana', 'dotum';}
 h1 {padding:0 0 15px; color:#000; font-size:22px; text-align:center; font-family:'Malgun Gothic';}
@@ -42,28 +42,6 @@ hr{margin:3px 0;border:none;border-top:1px dashed #333333;}
 .t_center {text-align:center;}
 .ok:before {display:block; content:"●"; margin-top:-5px; font-size:25px; text-align:center; color:#5c9d16;}
 </style>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.btn-history').click(function(){
-		var $hisCont = $(this).parent().parent().next('.history');
-		if($hisCont.hasClass('active')){
-			$hisCont.hide().removeClass('active');
-		}else{
-			$hisCont.show().addClass('active');
-		}
-	});
-
-	var okCount = $('table').find('.ok').length,
-	noCount = $('table').find('.state').length,
-	proG = okCount / (noCount) * 100;
-
-	$('.count .total').find('em').text(noCount);
-	$('.count .check').find('em').text(okCount);
-	$('.count .progress').find('em').text(proG.toFixed(1));
-
-});
-</script>
 </head>
 <body>
 
@@ -152,6 +130,26 @@ $(document).ready(function() {
 	
 	</tbody>
 </table>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.btn-history').click(function(){
+		var $hisCont = $(this).parent().parent().next('.history');
+		if($hisCont.hasClass('active')){
+			$hisCont.hide().removeClass('active');
+		}else{
+			$hisCont.show().addClass('active');
+		}
+	});
 
+	var okCount = $('table').find('.ok').length,
+	noCount = $('table').find('.state').length,
+	proG = okCount / (noCount) * 100;
+
+	$('.count .total').find('em').text(noCount);
+	$('.count .check').find('em').text(okCount);
+	$('.count .progress').find('em').text(proG.toFixed(1));
+
+});
+</script>
 </body>
 </html>
