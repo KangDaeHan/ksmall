@@ -191,8 +191,8 @@
         $scope.spreadsheetPage = "https://docs.google.com/spreadsheets/d/"+$scope.spreadsheetId;
 
         // 구글스프레드 시트 탭타이틀 가져옴.
-        $scope.$watch("response",function($scope){
-            $scope.sheetTitle = response.feed.title.$t;
+        $scope.$watch("response",function(){
+            $scope.sheetTitle = $scope.response.feed.title;
         });
 
         // 전체 진도률 계산함.
