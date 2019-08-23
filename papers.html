@@ -111,7 +111,8 @@
 <script src="https://code.jquery.com/jquery-migrate-3.1.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="underscore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
 <script type="text/javascript">
     var app = angular.module('gateApp', []);
     app.controller("papersCtrl",function($scope,$http){
@@ -191,11 +192,8 @@
         $scope.spreadsheetPage = "https://docs.google.com/spreadsheets/d/"+$scope.spreadsheetId;
 
         // 구글스프레드 시트 탭타이틀 가져옴.
-        
         $scope.$watch("response",function(){
-            $setTimeout(function(){
-                $scope.sheetTitle = $scope.response.feed.title.$t;
-            });
+            $scope.sheetTitle = $scope.response.feed.title.$t;
         });
 
         // 전체 진도률 계산함.
