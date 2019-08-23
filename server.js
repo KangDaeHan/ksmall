@@ -47,8 +47,8 @@ app.get('/', function (req, res) {
 // );
  
 //웹서버를 app 기반으로 생성
-var appServer = http.createServer(app);
-appServer.listen(app.get('port'),
+// var appServer = http.createServer(app);
+app.listen(app.get('port'),
     function () {
         console.log('express 웹서버 실행' + app.get('port'));
     }
