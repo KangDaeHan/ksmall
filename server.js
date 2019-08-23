@@ -5,7 +5,7 @@ var express = require('express'); //웹서버
 var fs = require('fs'); // 파일 로드 사용.
 var app = express();      //express 서버 객체
  
-app.set('port', 8080);
+// app.set('port', 8080);
  
 //join은 __dirname : 현재 .js 파일의 path 와 public 을 합친다
 //이렇게 경로를 세팅하면 public 폴더 안에 있는것을 곧바로 쓸 수 있게된다
@@ -48,8 +48,11 @@ app.get('/', function (req, res) {
  
 //웹서버를 app 기반으로 생성
 // var appServer = http.createServer(app);
-app.listen(app.get('port'),
-    function () {
-        console.log('express 웹서버 실행' + app.get('port'));
-    }
-);
+// app.listen(app.get('port'),
+//     function () {
+//         console.log('express 웹서버 실행' + app.get('port'));
+//     }
+// );
+app.listen(8080, function () { 
+    console.log('Server Start.');
+});
