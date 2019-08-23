@@ -195,7 +195,7 @@
                 </div> -->
                 <div class="progressCaseDiv col-md-4 col-xs-12 col-md-pull-2">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-{{condition.className}}  progress-bar-striped" ng-style="{ 'width': totalCondition[condition.className+'Per']% }" ng-repeat="condition in conditionStats">
+                        <div class="progress-bar progress-bar-{{condition.className}}  progress-bar-striped" style="width:{{ totalCondition[condition.className+'Per'] }}%" ng-repeat="condition in conditionStats">
                             <strong>{{ totalCondition[condition.className+'Per'] }}%</strong> <span class="sr-only">{{ totalCondition[condition.className+'Per'] }}% Complete ({{condition.name}})</span>
                         </div>
                     </div>
