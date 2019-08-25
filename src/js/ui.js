@@ -182,28 +182,28 @@ function listRow(row) {
 }
 
 // popup
-function layer_open(el, menuNum, title, addtxt, tel) {
+function layer_open(el, menuNum) {
 	var temp = $("#" + el);
 	var bg = temp.children().hasClass("bg");
 
-	setTimeout(function(){
+	// setTimeout(function(){
 
-		if($('#'+ el + ' ' + '.' + menuNum)) {
+	if($('#'+ el + ' ' + '.' + menuNum)) {
 		$('.section .cont').css('width','20%');
 		$('#'+ el + ' ' + '.' + menuNum).addClass('active on').css('width','40%');
 		$('.section .cont.active').children('.layer').css('display','none');
 	}
 
-    if (bg) {
+	if (temp.is('.no_compare')) {
+		temp.fadeOut();
+		alert('비교할 선택 상품이 없습니다.\n제품을 추가해 주세요.');
+	} else {
 		temp.fadeIn();
-        $("html").attr("style", "overflow:hidden;");
-    } else {
-		temp.fadeIn();
-        $("html").attr("style", "overflow:hidden;");
-    }
+		$("html").attr("style", "overflow:hidden;");
+	}
 
-    temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
-    temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
+	var resizeHeight= temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
+	var resizeWidth = temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
 
     $('#'+ el + ' ' + '.btn_pop_close' + ',' + '#' + el + ' ' + '.bg').click(function(e) {
         if (bg) {
@@ -219,12 +219,31 @@ function layer_open(el, menuNum, title, addtxt, tel) {
         }
         e.preventDefault();
 	});
+	
+	$('#'+ el + ' ' + '.btn_close').on('click', function() {
+		var list = temp.find('.product_spec_area');
+		$(this).parents('.product_spec_area').remove();
+		
+		if(list.length !== 0 && temp.find('.product_spec_area').is(':visible')){
+			temp.removeClass('no_compare');
+		} else {
+			temp.fadeOut();
+			temp.addClass('no_compare');
+			$("html").removeAttr("style");
+		}
 
-	},800);
+		temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
+		temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
+	});
+
+	resizeHeight;
+	resizeWidth;
+
+	// },800);
 
     $(window).on("resize", function() {
         temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
-        temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
+		temp.find('.pop_wrap').css("margin-left", "-" + temp.find('.pop_wrap').outerWidth() / 2 + "px");
 	});
 }
 
@@ -238,6 +257,12 @@ $(document).ready(function() {
 	// today view 스크롤
 	$(window).scroll(function() {
 		rightScroller('today_view');
+	});
+
+	// 확대 팝업 클릭시
+	lightbox.option({
+		'showImageNumberLabel': false,
+		'disableScrolling': true
 	});
 
 	// top버튼 이동

@@ -318,9 +318,9 @@
 								<p class="tit">원하시는 제품들을 자세하고 꼼꼼하게 비교해 보세요</p>
 								<p class="txt">고객님께서 선택하신 제품은 ( <em>1</em> )개 입니다. <br/>제품 2개 이상 최대 3개까지 비교 가능합니다.<br/>연관상품은 포함되지 않습니다.</p>
 							</div>
-							<div class="go_link"><a href="#" class="btn round"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
+							<div class="go_link"><a href="#" class="btn round" onclick="layer_open('pop_compare'); return false;"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
 						</div>
-						<div class="separate_compare"><a href="#" class="btn round"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
+						<div class="separate_compare"><a href="#" class="btn round" onclick="layer_open('pop_separate_compare'); return false;"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
 					</div>
 					<!-- //상품 비교 -->
 				</div>
@@ -445,19 +445,203 @@
 <!-- //하단영역 -->
 </div>
 
-<!-- 팝업 -->
-<div class="ly" id="pop_intro">
+<!-- 선택 상품 팝업 -->
+<div class="ly" id="pop_compare">
 	<div class="bg"></div>
-	<div class="pop_wrap pop_intro">
-		<a href="#" class="sprite btn_pop_close">팝업닫기</a>
+	<div class="pop_wrap pop_compare">
 		<!-- 팝업 내용 -->
-		<div>
-			sdsdsds
+		<div class="compare_area">
+			<!-- 선택상품정보 -->
+			<div class="product_spec_area">
+				<div class="product_tit">
+					<h3 class="name">TITAN-S260(듀얼)(PN303)</h3>
+					<a href="#" class="sprite btn_close">닫기</a>
+				</div>
+				<div class="product_img">
+					<img src="../image/product/product1.jpg" alt="">
+				</div>
+				<h3 class="tit">제조사 및 연락처</h3>
+				<div class="desc">
+					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+				</div>
+				<div class="price_download desc">
+					<div class="product_price">
+						<h3 class="tit">제품단가</h3>
+						<p class="price">730,000원(VAT별도)</p>
+					</div>
+				</div>
+				<h3 class="tit">주요기능</h3>
+				<div class="desc">
+					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
+				</div>
+				<h3 class="tit">제품스펙</h3>
+				<div class="desc no_line">
+					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+					HDD : SSD 64GB, SATA <br/>
+					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+					1 x VGA Port , 1 x Parallel <br/>
+					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+					Audio Line Output : 1 x Line Out <br/>
+					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+					KBD / MOUSE 마우스, Keyborad , Pad <br/>
+					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+					** 일체형 리더기 (KS CAT 1000QSM)
+				</div>
+			</div>
+			<!-- //선택상품정보 -->
+
+			<div class="product_spec_area">
+				<div class="product_tit">
+					<h3 class="name">TITAN-S260(듀얼)(PN303)</h3>
+					<a href="#" class="sprite btn_close">닫기</a>
+				</div>
+				<div class="product_img">
+					<img src="../image/product/product1.jpg" alt="">
+				</div>
+				<h3 class="tit">제조사 및 연락처</h3>
+				<div class="desc">
+					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+				</div>
+				<div class="price_download desc">
+					<div class="product_price">
+						<h3 class="tit">제품단가</h3>
+						<p class="price">730,000원(VAT별도)</p>
+					</div>
+				</div>
+				<h3 class="tit">주요기능</h3>
+				<div class="desc">
+					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
+				</div>
+				<h3 class="tit">제품스펙</h3>
+				<div class="desc no_line">
+					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+					HDD : SSD 64GB, SATA <br/>
+					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+					1 x VGA Port , 1 x Parallel <br/>
+					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+					Audio Line Output : 1 x Line Out <br/>
+					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+					KBD / MOUSE 마우스, Keyborad , Pad <br/>
+					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+					** 일체형 리더기 (KS CAT 1000QSM)
+				</div>
+			</div>
+
+			<div class="product_spec_area">
+				<div class="product_tit">
+					<h3 class="name">TITAN-S260(듀얼)(PN303)</h3>
+					<a href="#" class="sprite btn_close">닫기</a>
+				</div>
+				<div class="product_img">
+					<img src="../image/product/product1.jpg" alt="">
+				</div>
+				<h3 class="tit">제조사 및 연락처</h3>
+				<div class="desc">
+					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+				</div>
+				<div class="price_download desc">
+					<div class="product_price">
+						<h3 class="tit">제품단가</h3>
+						<p class="price">730,000원(VAT별도)</p>
+					</div>
+				</div>
+				<h3 class="tit">주요기능</h3>
+				<div class="desc">
+					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
+				</div>
+				<h3 class="tit">제품스펙</h3>
+				<div class="desc no_line">
+					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+					HDD : SSD 64GB, SATA <br/>
+					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+					1 x VGA Port , 1 x Parallel <br/>
+					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+					Audio Line Output : 1 x Line Out <br/>
+					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+					KBD / MOUSE 마우스, Keyborad , Pad <br/>
+					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+					** 일체형 리더기 (KS CAT 1000QSM)
+				</div>
+			</div>
 		</div>
 		<!-- //팝업 내용 -->
 	</div>
 </div>
-<!-- //팝업 -->
+<!-- //선택 상품 팝업 -->
+
+<!-- 별도 상품 팝업 -->
+<div class="ly" id="pop_separate_compare">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_separate_compare">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">별도상품 상세비교하기</h2>
+		</div>
+		<div class="pop_content">
+			<!-- 기종 선택 -->
+			<div class="kind_choice">
+				<p class="txt">기종을 선택해 주세요</p>	
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">유선단말기</option>
+						<option value="">무선단말기</option>
+						<option value="">POS</option>
+						<option value="">기타 제품</option>
+					</select>
+				</div>
+			</div>
+			<!-- //기종 선택 -->
+			<p class="info_txt">상품비교는 최소 2개 최대 3개까지 가능합니다.</p>
+			<div class="compare_choice">
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">유선단말기</option>
+						<option value="">무선단말기</option>
+						<option value="">POS</option>
+						<option value="">기타 제품</option>
+					</select>
+				</div>
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">유선단말기</option>
+						<option value="">무선단말기</option>
+						<option value="">POS</option>
+						<option value="">기타 제품</option>
+					</select>
+				</div>
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">유선단말기</option>
+						<option value="">무선단말기</option>
+						<option value="">POS</option>
+						<option value="">기타 제품</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm compare">상품비교</a>
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //별도 상품 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">
@@ -506,10 +690,6 @@ $(document).ready(function() {
 		centerMode: false,
 		focusOnSelect: true
 	});
-
-	lightbox.option({
-      'showImageNumberLabel': false
-    });
 });
 </script>
 </body>
