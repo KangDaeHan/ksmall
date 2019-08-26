@@ -3056,7 +3056,8 @@ button {
 	background-position: -430px -192px;
 }
 .product_list {
-	width: 100%;
+	width: 1483px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 .product_list .item {
