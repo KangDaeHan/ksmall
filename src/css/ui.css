@@ -313,7 +313,7 @@ table .read_box {
 	min-height: 200px;
 	font-family: "Noto Sans Korean" , sans-serif;
 }
-table .link {
+table .link , table .txt {
 	font-family: "Noto Sans Korean" , sans-serif;
 }
 .tbl_area {
@@ -671,6 +671,18 @@ button {
 .no_line {
 	border: 0 !important;
 }
+.align_abreast .sel_area {
+	display: inline-block;
+	vertical-align: middle;
+}
+.align_abreast .inpt {
+	display: inline-block;
+	width: 200px !important;
+}
+.f_red {
+	color: #ff1234;
+}
+
 
 #tooltip {
 	position: absolute;
@@ -3352,9 +3364,34 @@ button {
 	background-position: -275px -103px;
 }
 
-
-
-
+/* faq */
+.faq_tab {
+	overflow: hidden;
+}
+.faq_tab li {
+	display: table;
+	float: left;
+	width: 182px;
+	height: 60px;
+	margin-left: 22px;
+	background: #fff;
+	border: 1px solid #fab000;
+	text-align: center;
+}
+.faq_tab li:first-child {
+	margin: 0;
+}
+.faq_tab li a {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: #09306e;
+	letter-spacing: -1px;
+	vertical-align: middle;
+}
 
 
 

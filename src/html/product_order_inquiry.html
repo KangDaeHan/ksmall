@@ -115,63 +115,126 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">공지사항내용</h2>
+				<h2 class="sprite_before tit">프로젝트주문조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">공지사항 &nbsp;&gt;</a></li>
-					<li><a href="#">공지사항내용</a></li>
+					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
+					<li><a href="#">프로젝트주문조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				KSMALL에서 공지사항을 알려드립니다. 
+				KSMALL에서 프로젝트 단위로 주문된 총 수량, 주문환산수량, 주문가능 수량 및 단말기 지원현황을 조회하실 수 있습니다. <br/>
+				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
 			</div>
 
 			<div class="sub_comm_tit">
-				<h2>공지사항 상세조회</h2>
+				<h2>프로젝트주문내역 조회</h2>
 			</div>
-			<!-- 상세 -->
+
+			<!-- 조회 영역 -->
 			<div class="tbl_area">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">작성자</th>
+							<th style="width: 120px;">구분</th>
 							<td>
-								dsdsdsd
-							</td>
-							<th style="width: 120px;">공지구분</th>
-							<td>
-								sdsdsd
-							</td>
-						</tr>
-						<tr>
-							<th>제목</th>
-							<td colspan="3"></td>
-						</tr>
-						<tr>
-							<th>내용</th>
-							<td colspan="3">
-								<div class="read_box">
-									sdsdsdsdsdsds
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">제목</option>
+											<option value="">내용</option>
+										</select>
+									</div>
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>첨부파일</th>
-							<td colspan="3">
-								<a href="#" class="link">다운로드 파일명</a>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<!-- //상세 -->
 
 			<div class="btn_area">
-				<a href="#" class="btn sm blue">메인화면</a>
-				<a href="#" class="btn sm blue">목록</a>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
+			<!-- //조회 영역 -->
+
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 110px;">프로젝트코드</th>
+							<th style="width: auto;">프로젝트명</th>
+							<th style="width: 160px;">프로젝트총수량/금액</th>
+							<th style="width: 160px;">출고수량/금액(쇼핑몰)</th>
+							<th style="width: 160px">가능수량/금액(쇼핑몰)</th>
+							<th style="width: 170px;">프로젝트 단말기 지원현황</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link">173.77</a></td>
+							<td>7.23</td>
+							<td><span class="txt f_red">지원종료</span></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								1만건PJT2-태강밴
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link">173.77</a></td>
+							<td>7.23</td>
+							<td><span class="txt">지원가능</span></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								1만건PJT2-태강밴
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link">173.77</a></td>
+							<td>7.23</td>
+							<td><span class="txt">지원가능</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->

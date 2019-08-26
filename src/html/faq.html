@@ -115,63 +115,58 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">공지사항내용</h2>
+				<h2 class="sprite_before tit">자주하는 질문과 답변</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">공지사항 &nbsp;&gt;</a></li>
-					<li><a href="#">공지사항내용</a></li>
+					<li><a href="#">FAQ</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				KSMALL에서 공지사항을 알려드립니다. 
+				프로젝트 단위로 주문된 총 수량, 주문환산수량, 주문가능 수량 및 단말기 지원현황을 조회해 보실 수 있습니다. <br/>
+				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다
 			</div>
 
-			<div class="sub_comm_tit">
-				<h2>공지사항 상세조회</h2>
+			<!-- 탭메뉴 -->
+			<div class="">
+				<ul class="faq_tab">
+					<li><a href="#">주문관련 조회</a></li>
+					<li><a href="#">결재관련 문의</a></li>
+					<li><a href="#">제품사용 문의</a></li>
+					<li><a href="#">배송 및 A/S 문의</a></li>
+					<li><a href="#">주문취소 및 반품 환불 문의</a></li>
+				</ul>
+				<div class="faq_tab_con" id="tab_con">
+					<!-- 주문관련 조회 -->
+					<div class="con_box">
+						주문관련 조회
+					</div>
+					<!-- //주문관련 조회 -->
+					<!-- 결재관련 문의 -->
+					<div class="con_box">
+						결재관련 문의
+					</div>
+					<!-- //결재관련 문의 -->
+					<!-- 제품사용 문의 -->
+					<div class="con_box">
+						제품사용 문의
+					</div>
+					<!-- //제품사용 문의 -->
+					<!-- 배송 및 A/S 문의 -->
+					<div class="con_box">
+						배송 및 A/S 문의
+					</div>
+					<!-- //배송 및 A/S 문의 -->
+					<!-- 주문취소 및 반품 환불 문의 -->
+					<div class="con_box">
+						주문취소 및 반품 환불 문의 
+					</div>
+					<!-- //주문취소 및 반품 환불 문의 -->
+				</div>
+		
 			</div>
-			<!-- 상세 -->
-			<div class="tbl_area">
-				<table class="tbl_row">
-					<tbody>
-						<tr>
-							<th style="width: 120px;">작성자</th>
-							<td>
-								dsdsdsd
-							</td>
-							<th style="width: 120px;">공지구분</th>
-							<td>
-								sdsdsd
-							</td>
-						</tr>
-						<tr>
-							<th>제목</th>
-							<td colspan="3"></td>
-						</tr>
-						<tr>
-							<th>내용</th>
-							<td colspan="3">
-								<div class="read_box">
-									sdsdsdsdsdsds
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>첨부파일</th>
-							<td colspan="3">
-								<a href="#" class="link">다운로드 파일명</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- //상세 -->
-
-			<div class="btn_area">
-				<a href="#" class="btn sm blue">메인화면</a>
-				<a href="#" class="btn sm blue">목록</a>
-			</div>
+			<!-- //탭메뉴 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -244,7 +239,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	
+	tab('.faq_tab',0); //현재 활성화 시킬 탭메뉴
 });
 </script>
 </body>

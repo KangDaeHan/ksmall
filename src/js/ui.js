@@ -181,6 +181,34 @@ function listRow(row) {
 	$('.product_list').removeClass().addClass('product_list ' + row);
 }
 
+// 탭메뉴 
+function tab(e, num){
+    var num = num || 0;
+    var menu = $(e).children();
+    var con = $(e+'_con').children();
+    var select = $(menu).eq(num);
+    var i = num;
+
+    select.addClass('on');
+	con.hide();
+    con.eq(num).show();
+
+    menu.click('a' , function(){
+        if(select!==null){
+            select.removeClass("on");
+            con.eq(i).hide();
+        }
+
+        select = $(this);
+        i = $(this).index();
+
+        select.addClass('on');
+		con.eq(i).show();
+
+		return false;
+    });
+}
+
 // popup
 function layer_open(el, menuNum) {
 	var temp = $("#" + el);
@@ -257,6 +285,18 @@ $(document).ready(function() {
 	// today view 스크롤
 	$(window).scroll(function() {
 		rightScroller('today_view');
+	});
+
+	//today slide
+	$('.today_slide').slick({
+		vertical: true,
+		verticalSwiping: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		infinite: false,
+		centerMode: false,
+		focusOnSelect: true
 	});
 
 	// 확대 팝업 클릭시
@@ -354,31 +394,18 @@ $(document).ready(function() {
         return false;
 	});
 	
-    $(".btn_spread").on("click", function() {
-        if ($(this).hasClass("open")) {
-			$(".factory_sch_wrap").css('bottom','');
-			$(".factory_sch_list").hide();
-			$(this).removeClass("open");
-        } else {
-			$(".factory_sch_wrap").css('bottom','2rem');
-			$(".factory_sch_list").show();
-            $(this).addClass("open");
-        }
-        return false;
-	});
-	
-    $(".tab_content").hide();
-    $(".tab_content:first").show();
+    // $(".tab_content").hide();
+    // $(".tab_content:first").show();
 
-    $(".tabs li").click(function() {
-        $(".tabs li").removeClass("on");
-        $(this).addClass("on");
-        $(".tab_content").hide();
-        var activeTab = $(this)
-            .find("a")
-            .attr("href");
-        $(activeTab).fadeIn();
-        //collection();
-        return false;
-    });
+    // $(".tabs li").click(function() {
+    //     $(".tabs li").removeClass("on");
+    //     $(this).addClass("on");
+    //     $(".tab_content").hide();
+    //     var activeTab = $(this)
+    //         .find("a")
+    //         .attr("href");
+    //     $(activeTab).fadeIn();
+    //     //collection();
+    //     return false;
+    // });
 });
