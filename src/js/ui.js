@@ -1,3 +1,6 @@
+var chagtit = $(".question");
+var chagsubmu = $(".answer");
+
 // 이미지 미리 로드
 $.fn.preload = function() {
 	this.each(function(){
@@ -187,16 +190,18 @@ function tab(e, num){
     var menu = $(e).children();
     var con = $(e+'_con').children();
     var select = $(menu).eq(num);
-    var i = num;
+	var i = num;
 
     select.addClass('on');
 	con.hide();
     con.eq(num).show();
 
-    menu.click('a' , function(){
+    menu.click('a' , function(e){
         if(select!==null){
             select.removeClass("on");
-            con.eq(i).hide();
+			con.eq(i).hide();
+			chagsubmu.hide();
+			chagtit.removeClass('on');
         }
 
         select = $(this);
@@ -205,8 +210,8 @@ function tab(e, num){
         select.addClass('on');
 		con.eq(i).show();
 
-		return false;
-    });
+		e.preventDefault;
+	});
 }
 
 // popup
@@ -276,6 +281,56 @@ function layer_open(el, menuNum) {
 }
 
 $(document).ready(function() {
+	$.datepicker.setDefaults({
+		dateFormat: "yy-mm-dd",
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+	});
+	
+      from = $( "#from" )
+        .datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			showOn: "both",
+			buttonImageOnly: true,
+			buttonImage: "../image/icon_calendar.png",
+			buttonText: "날짜 선택",
+			numberOfMonths: 1
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			showOn: "both",
+			buttonImageOnly: true,
+			buttonImage: "../image/icon_calendar.png",
+			buttonText: "날짜 선택",
+			numberOfMonths: 1
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+	}
+	
 	//이미지 미리로드
 	$("img.preload").preload();
 
@@ -373,39 +428,21 @@ $(document).ready(function() {
         return false;
     });
 
-    var chagtit = $(".news_tit");
-    var chagsubmu = $(".news_content");
-
-    chagsubmu.hide();
-    chagtit.on("click", function() {
-        $(".news_content:visible").slideUp();
-        $(this)
-            .next(".news_content:hidden")
-            .slideDown();
-        if ($(this).hasClass("on")) {
-            $(this).toggleClass("on");
-        } else {
-            $(this)
-                .addClass("on")
-                .siblings()
-                .removeClass("on");
-        }
-
-        return false;
+	chagsubmu.hide();
+	chagtit.on("click", function(e) {
+		$(".answer:visible").slideUp();
+		$(this)
+			.next(".answer:hidden")
+			.slideDown();
+		if ($(this).hasClass("on")) {
+			$(this).toggleClass("on");
+		} else {
+			$(this)
+				.addClass("on")
+				.siblings()
+				.removeClass("on");
+		}
+		e.preventDefault;
 	});
-	
-    // $(".tab_content").hide();
-    // $(".tab_content:first").show();
 
-    // $(".tabs li").click(function() {
-    //     $(".tabs li").removeClass("on");
-    //     $(this).addClass("on");
-    //     $(".tab_content").hide();
-    //     var activeTab = $(this)
-    //         .find("a")
-    //         .attr("href");
-    //     $(activeTab).fadeIn();
-    //     //collection();
-    //     return false;
-    // });
 });

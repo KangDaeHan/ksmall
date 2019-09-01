@@ -191,6 +191,17 @@ select::-ms-expand {
 }
 
 /* checkbox 디자인 */
+input[type="checkbox"] , input[type="radio"] {
+	margin: 2px 0 0 0;
+	vertical-align: middle;
+}
+input[type="checkbox"] + label , input[type="radio"] + label {
+	margin-right: 12px;
+	font-family: 'Noto Sans Korean' , sans-serif;
+	font-size: 12px;
+	color: #000;
+	vertical-align: middle;
+}
 .checks {
 	position: relative;
 } 
@@ -277,6 +288,18 @@ select::-ms-expand {
 }
 
 /* 테이블 */
+.tbl_top_util {
+	margin-bottom: 10px;
+}
+.tbl_top_util:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.tbl_top_util .btn {
+	font-family: 'Noto Sans Korean' , sans-serif;
+	font-size: 12px;
+}
 table {
 	width: 100%;
 	border-bottom: 1px solid #ddd;
@@ -322,6 +345,10 @@ table .link , table .txt {
 }
 .tbl_area .checks.sm input[type="checkbox"] + label:before, .tbl_area .checks.sm input[type="radio"] + label:before {
 	margin-top: -0.8rem;
+}
+.tbl_area td .btn {
+	border-color: #3c3d3e;
+	font-family: "Noto Sans Korean" , sans-serif;
 }
 .tbl_row th {
 	background: #ededed;
@@ -618,6 +645,27 @@ button {
 	text-indent: -9999px;
 	overflow: hidden;
 }
+.ly .pop_footer .btn {
+	min-width: 100px;
+	border: 0;
+	background: #0f88ff;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+.ly .pop_footer .btn_pop_close {
+	position: static;
+	width: auto;
+	height: auto;
+	border: 0;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-indent: 0;
+}
+.ly .pop_wrap .paginate_box {
+	margin: 0;
+}
 
 /* 제품 확대 보기 팝업 */
 .lightboxOverlay {
@@ -722,6 +770,19 @@ button {
 }
 
 /* 달력 */
+.datepicker input {
+	width: 142px;
+	padding: 0 5px;
+	border: 1px solid #bfbfbf;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+}
+.datepicker input , .ui-datepicker-trigger {
+	vertical-align: middle;
+}
+.ui-datepicker-trigger {
+	margin-left: 4px;
+}
 .ui-datepicker {
     width: 17em;
 	padding: .2em .2em 0;
@@ -730,6 +791,9 @@ button {
 	display: none;
 	background: #fff;
 	z-index: 1000 !important;
+}
+.ui-datepicker * {
+	font-family: "Noto Sans Korean" , sans-serif;
 }
 .ui-helper-clearfix:before, .ui-helper-clearfix:after {
     content: "";
@@ -741,7 +805,8 @@ button {
 	padding: .2em 0;
 	border: 1px solid #dddddd;
     background: #e9e9e9;
-    color: #333333;
+	color: #333333;
+	font-family: "Noto Sans Korean" , sans-serif;
 	font-weight: bold;
 	border-radius: 3px;
 }
@@ -761,18 +826,19 @@ button {
 }
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
     display: block;
-    position: absolute;
+	position: absolute;
+	top: 50%;
     left: 50%;
-    margin-left: -8px;
-	width: 16px;
-	height: 16px;
+    margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
 	text-indent: -999rem;
 }
 .ui-datepicker .ui-datepicker-prev span {
-	background: url("../image/sprite.png") no-repeat -60.6rem -1.5rem;
+	background: url("../image/sprite.png") no-repeat -274px -244px;
 }
 .ui-datepicker .ui-datepicker-next span {
-	background: url("../image/sprite.png") no-repeat -57.4rem -1.5rem;
+	background: url("../image/sprite.png") no-repeat -254px -244px;
 }
 .ui-datepicker .ui-datepicker-title {
     margin: 0 2.3em;
@@ -785,12 +851,15 @@ button {
     text-align: center;
 }
 .ui-datepicker .ui-datepicker-title select {
-	height: 3rem;
-	background-color: #fff;
-	font-size: 1.4rem;
+	height: 23px;
+    padding-right: 26px;
+    background: #fff url(../image/bl_sel_arrow_down.png) no-repeat right 50%;
+    font-size: 12px;
+    line-height: 23px;
+    color: #010101;
 }
 .ui-datepicker table {
-    width: 100%;
+	width: 100%;
     font-size: .9em;
     border-collapse: collapse;
 	margin: 0 0 .4em;
@@ -802,6 +871,12 @@ button {
     font-weight: bold;
     border: 0;
 }
+.ui-datepicker th:first-child span , .ui-datepicker td.ui-datepicker-week-end:first-child a {
+	color: #ff1234;
+}
+.ui-datepicker th:last-child span , .ui-datepicker td.ui-datepicker-week-end:last-child a {
+	color: #0f88ff;
+}
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
     opacity: .35;
     filter: Alpha(Opacity=35);
@@ -812,8 +887,9 @@ button {
     pointer-events: none;
 }
 .ui-datepicker td {
+	height: auto;
     border: 0;
-    padding: 1px;
+	padding: 1px;
 }
 .ui-datepicker td span, .ui-datepicker td a {
     display: block;
@@ -1875,16 +1951,9 @@ button {
 .expansion .side .menu_list li li > a {
 	padding: 0 10px;
 }
-.expansion .product_list .item , .expansion .product_list.row4 .item {
-	width: 392px;
+.expansion .faq_tab li {
+	width: 220px;
 }
-.expansion .product_list.row2 .item {
-	width: 809px;
-}
-.expansion .product_list.row3 .item {
-	width: 530px;
-}
-
 
 
 
@@ -1914,12 +1983,12 @@ button {
 /* 서브 컨텐츠 */
 .container .sub {
 	min-width: 1483px;
-	min-height: calc(100vh - 169px);
+	min-height: calc(100vh - 154px);
 }
 .container .sub_contents {
 	position: relative;
 	width: 1000px;
-	min-height: calc(100vh - 169px);
+	min-height: calc(100vh - 154px);
 	margin: 0 auto;
 }
 
@@ -3324,24 +3393,6 @@ button {
 .pop_separate_compare .compare_choice .sel_area .sel_box {
 	width: 100%;
 }
-.pop_separate_compare .btn {
-	min-width: 100px;
-	border: 0;
-	background: #0f88ff;
-	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 16px;
-	color: #fff;
-}
-.pop_separate_compare .btn_pop_close {
-	position: static;
-	width: auto;
-	height: auto;
-	border: 0;
-	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 16px;
-	color: #fff;
-	text-indent: 0;
-}
 
 /* 공지사항 */
 .tbl_col .download {
@@ -3366,9 +3417,10 @@ button {
 
 /* faq */
 .faq_tab {
-	overflow: hidden;
+	margin-bottom: 21px;
 }
 .faq_tab li {
+	position: relative;
 	display: table;
 	float: left;
 	width: 182px;
@@ -3392,11 +3444,202 @@ button {
 	letter-spacing: -1px;
 	vertical-align: middle;
 }
+.faq_tab li.on a:after , .faq_tab li:hover a:after {
+	position: absolute;
+	bottom: -14px;
+	left: 50%;
+	content: '';
+	display:inline-block; 
+	width:0; 
+	height:0; 
+	border-style:solid; 
+	border-width:7px;
+	border-color:#3672da transparent transparent transparent;
+	margin-left: -3.5px;
+}
+.faq_tab li.on , .faq_tab li:hover {
+	background: #3672da;
+	border-color: #3672da;
+}
+.faq_tab li.on a , .faq_tab li:hover a {
+	color: #fff;
+}
+.faq_tab_con {
+	border-top: 2px solid #054fff;
+}
+.faq_tab_con .con_box {
+	padding: 0 35px;
+}
+.faq_tab_con .con_box .tit {
+	padding: 25px 0;
+	border-bottom: 1px solid #cbcbcb;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 20px;
+	color: #000;
+}
+.faq_tab_con .con_box .question {
+	position: relative;
+	padding: 18px 55px 18px 17px;
+	border-bottom: 1px solid #cbcbcb;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 15px;
+	color: #403f3e;
+	overflow: hidden;
+	cursor: pointer;
+}
+.faq_tab_con .con_box .question:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 51px;
+	height: 100%;
+	background: #fff url("../image/bl_arrow_type2.png") no-repeat -51px 50%;
+}
+.faq_tab_con .con_box .question.on {
+	background: #eae9e9;
+}
+.faq_tab_con .con_box .question.on:after {
+	background: #fff url("../image/bl_arrow_type2.png") no-repeat 0 50%;
+}
+.faq_tab_con .con_box .answer {
+	padding: 24px 17px;
+	border-bottom: 1px solid #cbcbcb;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 15px;
+	color: #000;
+	line-height: 26px;
+}
+.faq_tab_con .con_box .no_empty {
+	padding: 24px 17px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+}
 
+/* 주문배송조회 */
+.tbl_top_util .download {
+	position: relative;
+	min-width: 147px;
+	padding-right: 46px;
+	border-color: #605e5e;
+	background-color: #959595;
+	font-size: 12px;
+	line-height: 28px;
+	color: #fff;
+	text-align: right;
+}
+.tbl_top_util .download:after {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 20px;
+	height: 16px;
+	margin-top: -8px;
+	background-position: -215px -240px;
+}
+.pop_sch_wrap {
+	width: 600px;
+}
+.pop_sch_top {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 11px 27px;
+	border: 1px solid #565555;
+	background: #e6e6e6;
+}
+.pop_sch_top .name {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #000;
+	vertical-align: middle;
+}
+.pop_sch_top .sel_area {
+	margin: 0 24px;
+}
+.pop_sch_top .sel_area .sel_box {
+	width: 130px;
+	height: 36px;
+	background-color: #fff;
+	border-color: #fff;
+	line-height: 36px;
+}
+.pop_sch_top .inpt {
+	width: 315px;
+	height: 36px;
+	border-color: #fff;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	line-height: 36px;
+}
+.pop_sch_wrap .btn_area {
+	margin: 10px 0;
+}
+.list_btn {
+	position: relative;
+	padding-right: 45px;
+}
+.list_btn .btn {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	min-width: 40px;
+	margin-top: -11.5px;
+}
 
+/* 프로젝트 리스트 팝업 */
+.pop_list_wrap {
+	width: 800px;
+}
+.pop_list_wrap .tbl_area {
+	max-height: 500px;
+}
 
-
-
+/* 주문형식선택 */
+.order_form_box {
+	background: #e6e6e6;
+	border: 1px solid #ddd;
+}
+.order_form_box .sub_tit {
+	padding: 30px 0;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+}
+.order_form_box .order_sch {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+.order_form_box .order_sch dt {
+	width: 80px;
+	padding: 0 10px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-align: right;
+}
+.order_form_box .order_sch dd .inpt {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+}
+.order_form_box .btn_area {
+	margin-top: 40px;
+}
+.order_form_box .order_sch .btn {
+	height: 28px;
+	border-color: #3c3d3e;
+	font-family: "Noto Sans Korean" , sans-serif;
+	line-height: 28px;
+}
+.rd_area {
+	text-align: center;
+}
 
 
 

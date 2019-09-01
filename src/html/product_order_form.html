@@ -115,93 +115,58 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">자주하는 질문과 답변</h2>
+				<h2 class="sprite_before tit">주문형식선택</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">FAQ</a></li>
+					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
+					<li><a href="#">주문형식선택</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				프로젝트 단위로 주문된 총 수량, 주문환산수량, 주문가능 수량 및 단말기 지원현황을 조회해 보실 수 있습니다. <br/>
-				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다
+				주문하실 주문형식을 선택합니다. <br/>
+				궁금하신 사항이 있으시다면, 고객상담센터로 문의하시기 바랍니다.
 			</div>
 
-			<!-- 탭메뉴 -->
-			<div class="">
-				<ul class="faq_tab clearfix">
-					<li><a href="#">주문관련 조회</a></li>
-					<li><a href="#">결재관련 문의</a></li>
-					<li><a href="#">제품사용 문의</a></li>
-					<li><a href="#">배송 및 A/S 문의</a></li>
-					<li><a href="#">주문취소 및 반품 환불 문의</a></li>
-				</ul>
-				<div class="faq_tab_con" id="tab_con">
-					<!-- 주문관련 조회 -->
-					<div class="con_box">
-						<h3 class="tit">주문관련 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">A:답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
-						<!-- 내용 없을 시 -->
-						<!-- <div class="no_empty">
-							내용 없음.
-						</div> -->
-						<!-- //내용 없을 시 -->
-					</div>
-					<!-- //주문관련 조회 -->
-					<!-- 결재관련 문의 -->
-					<div class="con_box">
-						<h3 class="tit">결재관련 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
-					</div>
-					<!-- //결재관련 문의 -->
-					<!-- 제품사용 문의 -->
-					<div class="con_box">
-						<h3 class="tit">제품사용 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
-					</div>
-					<!-- //제품사용 문의 -->
-					<!-- 배송 및 A/S 문의 -->
-					<div class="con_box">
-						<h3 class="tit">배송 및 A/S 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
-					</div>
-					<!-- //배송 및 A/S 문의 -->
-					<!-- 주문취소 및 반품 환불 문의 -->
-					<div class="con_box">
-						<h3 class="tit">주문취소 및 반품 환불 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
-					</div>
-					<!-- //주문취소 및 반품 환불 문의 -->
-				</div>
-		
+			<div class="sub_comm_tit">
+				<h2>주문형식선택</h2>
 			</div>
-			<!-- //탭메뉴 -->
+
+			<!-- 주문형식선택 영역 -->
+			<div class="order_form_box">
+				<p class="sub_tit">아래의 주문형식을 선택해 주십시오</p>
+				<div class="rd_area">
+					<input type="radio" name="order_form" id="selling" checked>
+					<label for="selling">구매</label>
+					<input type="radio" name="order_form" id="rental">
+					<label for="rental">임대</label>
+					<input type="radio" name="order_form" id="credit">
+					<label for="credit">외상판매</label>
+				</div>
+				<dl class="order_sch">
+					<dt>주문처:</dt>
+					<dd>
+						<input type="text" name="" id="" class="inpt" />
+						<input type="text" name="" id="" class="inpt" style="width: 250px;" />
+						<button type="button" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
+					</dd>
+				</dl>
+				<dl class="order_sch">
+					<dt>프로젝트:</dt>
+					<dd>
+						<input type="text" name="" id="" class="inpt" />
+						<input type="text" name="" id="" class="inpt" style="width: 250px;" />
+						<button type="button" class="btn xs gray sch">검색</button>
+					</dd>
+				</dl>
+				<div class="btn_area">
+					<button type="button" class="btn sm sch">확인</button>
+				</div>
+			</div>
+
+			
+			<!-- //주문형식선택 영역 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -256,6 +221,86 @@
 <!-- //하단영역 -->
 </div>
 
+<!-- 팝업 -->
+<div class="ly" id="pop_order_sch">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_sch_wrap">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">주문처검색</h2>
+		</div>
+		<div class="pop_content">
+			<div class="pop_sch_top">
+				<span class="name">구분</span>
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">대리점코드</option>
+						<option value="">대리점명</option>
+					</select>
+				</div>
+				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
+			</div>
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">조회</button>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">대리점코드</th>
+							<th style="width: auto;">대리점명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //팝업 -->
+
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">
 	<img src="../image/loader.gif" alt="">
@@ -274,7 +319,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	tab('.faq_tab',0); //현재 활성화 시킬 탭메뉴
+	
 });
 </script>
 </body>
