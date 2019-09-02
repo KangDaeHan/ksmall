@@ -222,8 +222,8 @@ function layer_open(el, menuNum) {
 	// setTimeout(function(){
 
 	if($('#'+ el + ' ' + '.' + menuNum)) {
-		$('.section .cont').stop().animate({width:"20%"}, 100, 'easeOutCirc');
-		$('#'+ el + ' ' + '.' + menuNum).stop().animate({width:"40%"}, 100, 'easeOutCirc').addClass('active on');
+		$('.section .cont').stop().animate({width:"20%"}, 500, 'easeOutCirc');
+		$('#'+ el + ' ' + '.' + menuNum).stop().animate({width:"40%"}, 500, 'easeOutCirc').addClass('active on');
 		$('.section .cont.active').children('.layer').css('display','none');
 	}
 
@@ -272,7 +272,7 @@ function layer_open(el, menuNum) {
 	resizeHeight;
 	resizeWidth;
 
-	// },800);
+	// },500);
 
     $(window).on("resize", function() {
         temp.find('.pop_wrap').css("margin-top", "-" + temp.find('.pop_wrap').outerHeight() / 2 + "px");
