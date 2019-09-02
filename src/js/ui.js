@@ -222,8 +222,8 @@ function layer_open(el, menuNum) {
 	// setTimeout(function(){
 
 	if($('#'+ el + ' ' + '.' + menuNum)) {
-		$('.section .cont').css('width','20%');
-		$('#'+ el + ' ' + '.' + menuNum).addClass('active on').css('width','40%');
+		$('.section .cont').stop().animate({width:"20%"}, 100, 'easeOutCirc');
+		$('#'+ el + ' ' + '.' + menuNum).stop().animate({width:"40%"}, 100, 'easeOutCirc').addClass('active on');
 		$('.section .cont.active').children('.layer').css('display','none');
 	}
 
