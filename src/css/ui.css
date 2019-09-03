@@ -1003,9 +1003,8 @@ button {
 }
 .header .inner .sch_box {
 	position: absolute;
-	top: 50%;
+	top: 34px;
 	right: 77px;
-	margin-top: -14px;
 }
 .header .inner .sch_box:after {
 	position: absolute;
@@ -1074,7 +1073,7 @@ button {
 }
 .sub_comm_top .location {
 	position: absolute;
-	bottom: 37px;
+	bottom: 29px;
 	right: 0;
 	overflow: hidden;
 }
@@ -3551,6 +3550,7 @@ button {
 	background: #e6e6e6;
 }
 .pop_sch_top .name {
+	min-width: 50px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 18px;
 	font-weight: 500;
