@@ -2063,21 +2063,33 @@ button {
 }
 .slick-prev , .slick-next {
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 0;
-	width: 6px;
-	height: 11px;
-	margin-top: -6px;
+	width: 16px;
+	height: 80px;
 	padding: 0;
 	border: 0;
-	background: url("../image/sprite.png") no-repeat -286px -151px;
+	background: none;
+	/* background: url("../image/sprite.png") no-repeat -286px -151px; */
 	text-indent: -9999px;
 	overflow: hidden;
 	z-index: 10;
 }
+.slick-prev:after , .slick-next:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6px;
+	height: 11px;
+	margin: -5.5px 0 0 -3px;
+	background: url("../image/sprite.png") no-repeat -286px -151px;
+}
 .slick-next {
 	left: auto;
 	right: 0;
+}
+.slick-next:after {
 	background-position: -313px -151px;
 }
 .product_slider_area .thumb_slider .slick-list {
