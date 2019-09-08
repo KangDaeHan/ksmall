@@ -3653,6 +3653,47 @@ button {
 	text-align: center;
 }
 
+/* 회사소개 */
+.company_info {
+	padding: 0 37px;
+}
+.company_info .greetings_tit {
+	padding: 0 0 23px;
+	border-bottom: 2px solid #fab000;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 18px;
+	line-height: 1.3;
+	color: #000;
+}
+.company_info .greetings_txt {
+	padding: 25px 0;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
+	color: #646363;
+}
+.company_info .company_explan_tit {
+	margin: 13px 0 22px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	color: #1453be;
+	text-align: center;
+}
+.company_info .company_explan_tit span {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-weight: 300;
+	color: #1453be;
+}
+.company_info .company_explan_box {
+	margin-bottom: 24px;
+	border: 2px solid #92b2ff;
+	text-align: center;
+}
+.company_info .company_explan_box img {
+	max-width: 100%;
+}
+
 
 
 /* 기본 반응형 */
