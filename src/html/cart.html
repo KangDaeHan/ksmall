@@ -115,95 +115,229 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">인수확인서조회</h2>
+				<h2 class="sprite_before tit">장바구니조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
-					<li><a href="#">인수확인서조회</a></li>
+					<li><a href="#">장바구니조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				KSMALL에서 주문한 내역에 대한 인수확인내역을 보실수 있습니다. <br/>
-				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+				장바구니에 담긴 물품들을 주문하거나 장바구니 내역을 수정하실 수 있습니다. <br/>
+				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다
 			</div>
 
-			<!-- 조회 영역 -->
-			<div class="tbl_area">
-				<table class="tbl_row">
-					<tbody>
-						<tr>
-							<th style="width: 120px;">인수확인년월</th>
-							<td style="width: auto;">
-								<div class="datepicker">
-									<input type="text" class="monthpicker" name="month_from" id="month_from"/>
-									<label for="month_from" class="btn_monthpicker">선택</label>
-									<span>~</span>
-									<input type="text" class="monthpicker" name="month_to" id="month_to"/>
-									<label for="month_to" class="btn_monthpicker">선택</label>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="sub_comm_tit">
+				<h2>구매주문내역</h2>
 			</div>
 
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
-			<!-- //조회 영역 -->
-
-			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll">
+			<!-- 구매주문내역 리스트 -->
+			<div class="tbl_area tbl_scroll tbl_no_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">년월</th>
-							<th style="width: 200px;">대리점코드</th>
-							<th style="width: 200px;">대리점명</th>
-							<th style="width: 150px;">인수여부</th>
+							<th style="width: 50px;"><input type="checkbox" name="" id="" class="chk_box" /></th>
+							<th style="width: 100px;">모델명</th>
+							<th style="width: 120px;">제조원</th>
+							<th style="width: 160px;">판매가격</th>
+							<th style="width: 160px;">출고유형</th>
+							<th style="width: 100px;">PJT코드</th>
+							<th style="width: 130px;">프로젝트명</th>
+							<th style="width: 150px">주문처코드</th>
+							<th style="width: 110px;">주문처</th>
+							<th style="width: 100px;">주문수량</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="4" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="10" class="no_result">구매 장바구니 내역이 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>2019-09</td>
-							<td>
-								대리점 코드명
+							<td><input type="checkbox" name="" id="" class="chk_box" /></td>
+							<td>모델명</td>
+							<td>제조원</td>
+							<td><a href="#" class="link">판매가격</a></td>
+							<td>출고유형</td>
+							<td>PJT코드</td>
+							<td>프로젝트명</td>
+							<td>주문처코드</td>
+							<td>주문처</td>
+							<td>주문수량</td>
+						</tr>
+						<tr>
+							<td colspan="10">
+								<div class="btns">
+									<a href="#" class="btn sm blue">수정</a>
+									<a href="#" class="btn sm blue">삭제</a>
+									<a href="#" class="btn sm blue">주문하기</a>
+								</div>
 							</td>
-							<td>대리점명</td>
-							<td>Y</td>
 						</tr>
 					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="10" class="bg_tfoot">
+								<div class="total_price">
+									<div class="box right">
+										<span class="tit">금액합계</span>
+										<span class="price">0원</span>
+									</div>
+									<div class="box left">
+										<span class="tit">금액합계</span>
+										<span class="price">0대</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
-			<!-- //리스트 -->
+			<!-- //구매주문내역 리스트 -->
 
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
-				</div>
+			<div class="sub_comm_tit no_border">
+				<h2>대여주문내역</h2>
 			</div>
-			<!-- //페이징 -->
+
+			<!-- 대여주문내역 리스트 -->
+			<div class="tbl_area tbl_scroll tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 50px;"><input type="checkbox" name="" id="" class="chk_box" /></th>
+							<th style="width: 100px;">모델명</th>
+							<th style="width: 120px;">제조원</th>
+							<th style="width: 160px;">판매가격</th>
+							<th style="width: 160px;">출고유형</th>
+							<th style="width: 150px;">프로젝트 코드</th>
+							<th style="width: 130px;">프로젝트명</th>
+							<th style="width: 130px;">PJT<br/>총수량</th>
+							<th style="width: 130px;">PJT<br/>주문수량</th>
+							<th style="width: 150px">주문가능<br/>수량</th>
+							<th style="width: 120px;">주문처 코드</th>
+							<th style="width: 100px;">주문처</th>
+							<th style="width: 110px;">주문수량</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="13" class="no_result">임대 장바구니 내역이 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td><input type="checkbox" name="" id="" class="chk_box" /></td>
+							<td>모델명</td>
+							<td>제조원</td>
+							<td><a href="#" class="link">판매가격</a></td>
+							<td>출고유형</td>
+							<td>PJT코드</td>
+							<td>프로젝트명</td>
+							<td>주문처코드</td>
+							<td>주문처</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+						</tr>
+						<tr>
+							<td colspan="13">
+								<div class="btns">
+									<a href="#" class="btn sm blue">수정</a>
+									<a href="#" class="btn sm blue">삭제</a>
+									<a href="#" class="btn sm blue">주문하기</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="13" class="bg_tfoot">
+								<div class="total_price">
+									<div class="box">
+										<span class="tit">금액합계</span>
+										<span class="price">0원</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<!-- //대여주문내역 리스트 -->
+
+			<div class="sub_comm_tit no_border">
+				<h2>외상판매주문내역</h2>
+			</div>
+
+			<!-- 외상판매주문내역 리스트 -->
+			<div class="tbl_area tbl_scroll tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 50px;"><input type="checkbox" name="" id="" class="chk_box" /></th>
+							<th style="width: 100px;">모델명</th>
+							<th style="width: 120px;">제조원</th>
+							<th style="width: 160px;">판매가격</th>
+							<th style="width: 160px;">출고유형</th>
+							<th style="width: 150px;">프로젝트 코드</th>
+							<th style="width: 130px;">프로젝트명</th>
+							<th style="width: 130px;">PJT<br/>총수량</th>
+							<th style="width: 130px;">PJT<br/>주문수량</th>
+							<th style="width: 150px">주문가능<br/>수량</th>
+							<th style="width: 120px;">주문처 코드</th>
+							<th style="width: 100px;">주문처</th>
+							<th style="width: 110px;">주문수량</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="13" class="no_result">외상판매 장바구니 내역이 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td><input type="checkbox" name="" id="" class="chk_box" /></td>
+							<td>모델명</td>
+							<td>제조원</td>
+							<td><a href="#" class="link">판매가격</a></td>
+							<td>출고유형</td>
+							<td>PJT코드</td>
+							<td>프로젝트명</td>
+							<td>주문처코드</td>
+							<td>주문처</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+							<td>주문수량</td>
+						</tr>
+						<tr>
+							<td colspan="13">
+								<div class="btns">
+									<a href="#" class="btn sm blue">수정</a>
+									<a href="#" class="btn sm blue">삭제</a>
+									<a href="#" class="btn sm blue">주문하기</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="13" class="bg_tfoot">
+								<div class="total_price">
+									<div class="box">
+										<span class="tit">금액합계</span>
+										<span class="price">0원</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<!-- //외상판매주문내역 리스트 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -259,50 +393,40 @@
 </div>
 
 <!-- 팝업 -->
-<div class="ly" id="pop_sch">
+<div class="ly" id="pop_order_list">
 	<div class="bg"></div>
-	<div class="pop_wrap pop_sch_wrap">
+	<div class="pop_wrap pop_list_wrap">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">프로젝트조회</h2>
+			<h2 class="tit">주문상세정보</h2>
 		</div>
 		<div class="pop_content">
-			<div class="pop_sch_top">
-				<span class="name">구분</span>
-				<div class="sel_area">
-					<select name="" id="" class="sel_box">
-						<option value="">프로젝트명</option>
-						<option value="">프로젝트코드</option>
-					</select>
-				</div>
-				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
-			</div>
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
 			<!-- 리스트 -->
 			<div class="tbl_area tbl_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 170px;">프로젝트코드</th>
-							<th style="width: auto;">프로젝트명</th>
+							<th style="width: 150px;">프로젝트코드</th>
+							<th style="width: 170px;">주문번호</th>
+							<th style="width: 200px;">단말기모델명</th>
+							<th style="width: 100px;">단말기수량</th>
+							<th style="width: 150px;">단말기환산수량/금액</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="2" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="5" class="no_result">주문정보가 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>DV4005</td>
+							<td>AR1111080015723</td>
 							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
+								KS7600i(일반형)
 							</td>
+							<td>1</td>
+							<td>10,000</td>
 						</tr>
 					</tbody>
 				</table>
@@ -353,31 +477,10 @@
 <script type="text/javascript" src="../js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="../js/slick.min.js"></script>
 <script type="text/javascript" src="../js/lightbox.min.js"></script>
-<script type="text/javascript" src="../js/jquery.monthpicker.js"></script>
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	/* MonthPicker 옵션 */
-	options = {
-		pattern: 'yyyy-mm', // Default is 'mm/yyyy' and separator char is not mandatory
-		// selectedYear: 2000,
-		startYear: 2000,
-		// finalYear: 2019,
-		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
-	};
 	
-	/* MonthPicker Set */
-	$('.monthpicker').monthpicker(options);
-	
-	/* 버튼 클릭시 MonthPicker Show */
-	$('.btn_monthpicker').on('click', function () {
-		$('.monthpicker').monthpicker('show');
-	});
-	
-	/* MonthPicker 선택 이벤트 */
-	// $('.monthpicker').monthpicker().bind('monthpicker-click-month', function (e, month) {
-	// 	alert("선택하신 월은 : " + month + "월");
-	// });
 });
 </script>
 </body>
