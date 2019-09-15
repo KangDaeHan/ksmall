@@ -1975,10 +1975,19 @@ button {
 .expansion .faq_tab li {
 	width: 220px;
 }
-
-
-
-
+.expansion .customer_menu li {
+	width: 32%;
+    margin: 0 0 10px 1%;
+}
+.expansion .customer_menu li:first-child {
+	margin: 0;
+}
+.expansion .credit_card_inquiry {
+    width: 1211px;
+}
+.expansion .credit_card_inquiry li {
+    width: 219px;
+}
 
 
 
