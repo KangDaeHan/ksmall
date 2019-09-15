@@ -3749,6 +3749,181 @@ table .total_price .box .price {
 	text-align: center;
 }
 
+/* 고객상담 문의 */
+.customer_menu {
+	padding: 8px 0 28px 18px;
+	border-bottom: 2px solid #fab000;
+	overflow: hidden;
+}
+.customer_menu li {
+	float: left;
+	width: 315px;
+	height: 44px;
+	margin: 0 10px 10px 0;
+}
+.customer_menu li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #fab000;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 18px;
+	color: #5a5a5a;
+	line-height: 44px;
+	text-align: center;
+	letter-spacing: -1px;
+}
+.customer_menu li a span {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color: #898888;
+}
+.customer_inquiry {
+	margin-top: 58px;
+	border-top: 2px solid #054fff;
+}
+.customer_inquiry.bor_no {
+	margin: 0;
+	border-top: 0;
+}
+.customer_inquiry.bor_gray {
+	border-color: #b5b5b5;
+}
+.customer_inquiry .tit {
+	position: relative;
+	display: block;
+	padding-left: 30px;
+	margin: 29px 0 29px 30px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+	letter-spacing: -1px;
+}
+.customer_inquiry .tit:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin-top: -9px;
+	background: #fab000;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.inquiry {
+	overflow: hidden;
+}
+.credit_card_inquiry {
+	width: 1025px;
+	margin-left: -23px;
+}
+.inquiry .box {
+	float: left;
+	width: 18.4%;
+	margin-left: 2%;
+}
+.inquiry .box:first-child {
+	margin: 0;
+}
+.inquiry .box .department {
+	padding: 9px 5px;
+	border: 1px solid #fab000;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	color: #000;
+	line-height: 1.2;
+	letter-spacing: -1px;
+	text-align: center;
+}
+.inquiry .box p {
+	margin-top: 7px;
+}
+.inquiry .box p , .inquiry .box p a {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color: #000;
+	line-height: 1.2;
+	text-align: center;
+}
+.inquiry .box p span {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+.credit_card_inquiry .box {
+	width: 182px;
+	height: 178px;
+	margin-left: 23px;
+}
+.credit_card_inquiry .box:first-child {
+	margin-left: 23px;
+}
+.credit_card_inquiry .box .department {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	height: 54px;
+	border: 1px solid #1453be;
+	color: #1453be;
+}
+.customer_inquiry .name {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width: 245px;
+	height: 55px;
+	border: 1px solid #b5b5b5;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+	text-align: center;
+}
+.customer_inquiry .section {
+	position: relative;
+	margin-top: 4px;
+}
+.customer_inquiry .section .title {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 245px;
+	height: 55px;
+	border: 1px solid #b5b5b5;
+	background: #efefef;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+	text-align: center;
+}
+.customer_inquiry .section .tbl_box {
+	margin-left: 255px;
+}
+.customer_inquiry table {
+	table-layout: fixed;
+}
+.customer_inquiry .section .tbl_box table th {
+	height: 27px;
+	padding: 2px 10px;
+	text-align: center;
+}
+.customer_inquiry .section .tbl_box table td {
+	height: 27px;
+	padding: 2px 10px;
+}
+
+
+
 
 
 /* 기본 반응형 */
