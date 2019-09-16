@@ -354,31 +354,20 @@ $(document).ready(function() {
 	//MonthPicker 옵션
 	var currentYear = (d).getFullYear();
 	var startYear = currentYear - 20;
-	  
+	var startMonth = [startYear,'01'].join('-');
+	
 	monthOptions = {
-		pattern: 'yyyy-mm', // Default is 'mm/yyyy' and separator char is not mandatory
+		pattern: 'yyyy-mm', // Default 'mm/yyyy'
 		startYear: startYear,
-		// selectedMonth: null,
-		// selectedYear: null,
-    	finalYear: currentYear,
-		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
-	};
-
-	fromMonthOptions = {
-		pattern: 'yyyy-mm', // Default is 'mm/yyyy' and separator char is not mandatory
-		startYear: startYear,
-		selectedMonth: "1m",
-		selectedYear: startYear,
     	finalYear: currentYear,
 		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
 	};
 	
-	$('#month_from').val(schDate.substr(0,7));
+	$('#month_from').val(startMonth);
 	$('#month_to').val(schDate.substr(0,7));
-	$('#month_from').monthpicker(fromMonthOptions);
-	$('#month_to').monthpicker(monthOptions);
+	$('.monthpicker').monthpicker(monthOptions);
 	
-	/* 버튼 클릭시 MonthPicker Show */
+	//버튼 클릭시 MonthPicker Show 
 	$('.btn_monthpicker').on('click', function () {
 		$('.monthpicker').monthpicker('show');
 	});

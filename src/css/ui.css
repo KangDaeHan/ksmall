@@ -910,6 +910,10 @@ button {
     font-weight: normal;
     color: #454545;
 }
+.ui-widget-content .ui-state-highlight {
+	background: #368CFE;
+	color: #fff;
+}
 .ui-widget-content .ui-state-active {
     border: 1px solid #dad55e;
     background: #fffa90;
