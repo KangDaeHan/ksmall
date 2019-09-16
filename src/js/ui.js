@@ -281,6 +281,11 @@ function layer_open(el, menuNum) {
 }
 
 $(document).ready(function() {
+	var d = new Date();
+	var currMonth = d.getMonth();
+	var currYear = d.getFullYear();
+	var startDate = new Date(currYear, currMonth, 1);
+
 	$.datepicker.setDefaults({
 		dateFormat: "yy-mm-dd",
         prevText: '이전 달',
@@ -296,30 +301,32 @@ $(document).ready(function() {
 	
       from = $( "#from" )
         .datepicker({
-			defaultDate: "+1w",
+			defaultDate: startDate,
 			changeMonth: true,
 			showOn: "both",
 			buttonImageOnly: true,
 			buttonImage: "../image/icon_calendar.png",
 			buttonText: "날짜 선택",
 			numberOfMonths: 1
-        })
-        .on( "change", function() {
-          to.datepicker( "option", "minDate", getDate( this ) );
-        }),
+		})
+		.datepicker("setDate", startDate)
+		.on( "change", function() {
+			to.datepicker( "option", "minDate", getDate( this ) );
+		}),
       to = $( "#to" ).datepicker({
-			defaultDate: "+1w",
+			defaultDate: 'today',
 			changeMonth: true,
 			showOn: "both",
 			buttonImageOnly: true,
 			buttonImage: "../image/icon_calendar.png",
 			buttonText: "날짜 선택",
 			numberOfMonths: 1
-      })
-      .on( "change", function() {
-        from.datepicker( "option", "maxDate", getDate( this ) );
-      });
- 
+	  })
+		.datepicker("setDate", 'today')
+		.on( "change", function() {
+			from.datepicker( "option", "maxDate", getDate( this ) );
+		});
+
     function getDate( element ) {
       var date;
       try {
@@ -330,6 +337,52 @@ $(document).ready(function() {
  
       return date;
 	}
+
+	// MonthPicker 설정
+	Date.prototype.yyyymmdd = function() {
+		var mm = this.getMonth() + 1;
+		var dd = this.getDate();
+
+		return [this.getFullYear(),
+			(mm>9 ? '' : '0') + mm,
+			(dd>9 ? '' : '0') + dd
+		].join('-');
+	};
+
+	var schDate = d.yyyymmdd();
+
+	//MonthPicker 옵션
+	var currentYear = (d).getFullYear();
+	var startYear = currentYear - 20;
+	  
+	monthOptions = {
+		pattern: 'yyyy-mm', // Default is 'mm/yyyy' and separator char is not mandatory
+		startYear: startYear,
+		// selectedMonth: null,
+		// selectedYear: null,
+    	finalYear: currentYear,
+		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+	};
+
+	fromMonthOptions = {
+		pattern: 'yyyy-mm', // Default is 'mm/yyyy' and separator char is not mandatory
+		startYear: startYear,
+		selectedMonth: "1m",
+		selectedYear: startYear,
+    	finalYear: currentYear,
+		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
+	};
+	
+	$('#month_from').val(schDate.substr(0,7));
+	$('#month_to').val(schDate.substr(0,7));
+	$('#month_from').monthpicker(fromMonthOptions);
+	$('#month_to').monthpicker(monthOptions);
+	
+	/* 버튼 클릭시 MonthPicker Show */
+	$('.btn_monthpicker').on('click', function () {
+		$('.monthpicker').monthpicker('show');
+	});
+
 	
 	//이미지 미리로드
 	$("img.preload").preload();
