@@ -199,7 +199,7 @@ function tab(e, num){
     menu.click('a' , function(e){
         if(select!==null){
             select.removeClass("on");
-			con.eq(i).hide();
+			con.hide();
 			chagsubmu.hide();
 			chagtit.removeClass('on');
         }
@@ -280,6 +280,30 @@ function layer_open(el, menuNum) {
 	});
 }
 
+// 산출물 전달시 삭제처리
+// var ns = (document.layers)?true:false;
+// var ie = (document.all)?true:false;
+// if (ns) document.captureEvents(Event.MOUSEDOWN || Event.CLICK);
+// document.onclick = sourcecodeprotect;
+// document.onmousedown = sourcecodeprotect;
+// function sourcecodeprotect(e){
+// 	if (ns&&(e.which==3)) return false;
+// 	else if (ie&&(window.event.button==2)) alert('No rightClick22');
+// 	else return true;
+// }
+// document.onkeydown = function(){
+// 	if (event.keyCode == 123) {
+// 		alert('No rightClick');
+// 	}
+// }
+// function rightClick() {
+// 	if ((event.button==2) || (event.button==2)) {
+// 		alert('No rightClick');
+// 	}
+// }
+// document.onmousedown = rightClick;
+// 산출물 전달시 삭제처리
+	
 $(document).ready(function() {
 	var d = new Date();
 	var currMonth = d.getMonth();
@@ -469,6 +493,12 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, 500);
         return false;
     });
+
+	// 이용약관 전체보기
+	$('.terms_all_view').on('click', function(){
+		$('.terms').show();
+		$('.terms_tab li').removeClass('on');
+	});
 
 	chagsubmu.hide();
 	chagtit.on("click", function(e) {

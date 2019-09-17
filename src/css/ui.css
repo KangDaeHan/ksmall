@@ -439,6 +439,7 @@ table .link , table .txt {
 }
 .tbl_no_scroll .tbl_col {
 	table-layout: auto;
+	white-space: normal;
 }
 
 
@@ -3935,6 +3936,109 @@ table .total_price .box .price {
 	height: 27px;
 	padding: 2px 10px;
 }
+
+/* 개인정보처리방침 */
+.policy_area .policy_sch_box {
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 60px;
+	margin: 30px 35px;
+	background: #e6e6e6;
+	border: 1px solid #565555;
+}
+.policy_area .policy_sch_box .tit {
+	margin: 0 25px 0 35px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 18px;
+	color: #000;
+}
+.policy_area .policy_sch_box .align_sel select {
+	height: 36px;
+	background-color: #fff;
+	border: 0;
+	line-height: 36px;
+}
+.policy_area .policy_sch_box .btn_sch {
+	width: 36px;
+	height: 36px;
+	margin-left: 10px;
+	background-position: -311px -232px;
+	border: 0;
+	cursor: pointer;
+}
+.policy_box .txt , .terms .txt {
+	padding: 0 35px 23px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.2;
+}
+.policy_box .section , .terms .section {
+	border-top: 2px solid #fab000;
+	padding: 0 35px 27px;
+}
+.policy_box .section .tit , .terms .section .tit {
+	margin: 24px 0 17px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+}
+.policy_box .section h4 , .policy_box .section p , .policy_box .section div , .policy_box .section a , 
+.terms .section h4 , .terms .section p , .terms .section div , .terms .section a {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	color: #646363;
+	line-height: 1.2;
+}
+.policy_box .section h4 , .policy_box .section .num_desc , .terms .section h4 , .terms .section .num_desc {
+	margin-top: 15px;
+}
+.policy_box .section .tbl_area , .terms .section .tbl_area {
+	margin-top: 27px;
+	margin-bottom: 0;
+}
+.policy_box .section .tbl_area table th , .terms .section .tbl_area table th {
+	font-size: 16px;
+}
+.policy_box .section .desc , .terms .section .desc {
+	margin-top: 10px;
+}
+
+/* 이용약관 */
+.terms_area .terms_tab li {
+	float: left;
+	width: 50%;
+	padding: 0 0 0 50px;
+	margin-top: 8px;
+}
+.terms_area .terms_tab li a {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	color: #000;
+}
+.terms_area .terms_tab li.on a {
+	color: #f38f00;
+}
+.terms_area .terms_tab_con {
+	padding: 30px 0 15px;
+}
+.terms_area .terms_tab_con .terms {
+	display: none;
+}
+.terms_area .btn_area {
+	padding-top: 10px;
+	border-top: 2px solid #fab000;
+	text-align: right;
+}
+
+
+
+
+
+
+
 
 
 
