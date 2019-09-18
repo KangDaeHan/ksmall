@@ -425,11 +425,11 @@ table .link , table .txt {
 }
 .tbl_col td {
 	border: 1px solid #cdcdcd;
-	border-right: 0;
+	border-left: 0;
 	text-align: center;
 }
-.tbl_col td:first-child {
-	border-left: 0;
+.tbl_col td:last-child {
+	border-right: 0;
 }
 .tbl_col td.t_left {
 	text-align: left;
@@ -4007,6 +4007,9 @@ table .total_price .box .price {
 }
 
 /* 이용약관 */
+.terms_area .terms_tab {
+	margin-bottom: 30px;
+}
 .terms_area .terms_tab li {
 	float: left;
 	width: 50%;
@@ -4022,14 +4025,17 @@ table .total_price .box .price {
 	color: #f38f00;
 }
 .terms_area .terms_tab_con {
-	padding: 30px 0 15px;
+	padding: 0 0 15px;
+	border-top: 2px solid #fab000;
 }
 .terms_area .terms_tab_con .terms {
 	display: none;
 }
+.terms_area .terms_tab_con .terms .section {
+	border: 0;
+}
 .terms_area .btn_area {
 	padding-top: 10px;
-	border-top: 2px solid #fab000;
 	text-align: right;
 }
 

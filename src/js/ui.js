@@ -196,6 +196,8 @@ function tab(e, num){
 	con.hide();
     con.eq(num).show();
 
+	$('.terms_area .btn_area').css('border','0');
+	
     menu.click('a' , function(e){
         if(select!==null){
             select.removeClass("on");
@@ -207,6 +209,7 @@ function tab(e, num){
         select = $(this);
         i = $(this).index();
 
+		$('.terms_area .btn_area').css('border-top','2px solid #fab000');
         select.addClass('on');
 		con.eq(i).show();
 
