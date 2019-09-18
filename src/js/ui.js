@@ -499,6 +499,7 @@ $(document).ready(function() {
 
 	// 이용약관 전체보기
 	$('.terms_all_view').on('click', function(){
+		$('.terms_area .btn_area').css('border-top','2px solid #fab000');
 		$('.terms').show();
 		$('.terms_tab li').removeClass('on');
 	});
