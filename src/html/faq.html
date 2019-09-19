@@ -157,12 +157,68 @@
 					<!-- 결재관련 문의 -->
 					<div class="con_box">
 						<h3 class="tit">결재관련 질의응답</h3>
-						<p class="sprite_after question">Q:단말기 주문은 어떻게 합니까?</p>
-						<div class="answer">답변</div>
-						<p class="sprite_after question">Q:주문관련 질의응답2</p>
-						<div class="answer">sss2</div>
-						<p class="sprite_after question">Q:주문관련 질의응답3</p>
-						<div class="answer">sss3</div>
+						<p class="sprite_after question">1. 카드번호 입력 후 결제 요청을 한 후에 "1회사용 금액 초과"로 거절되었을 경우</p>
+						<div class="answer">카드사에서 승인이 거절이 난 경우이며 거절사유는 카드의 인터넷결제 1회 사용한도가 초과된 경우 입니다</div>
+						<p class="sprite_after question">2. 결제요청을 하였는데 "할부개월" 오류로 거절 되었을 경우</p>
+						<div class="answer">
+							▷ 카드가 직불형 카드인 경우<br />
+							&nbsp;&nbsp; : 직불형 카드의 경우 승인 즉시 통장에서 돈이 인출이 되기 때문에 할부 자체가 불가능합니다.<br /><br />
+							▷ 외국에서 발행된 신용카드의 경우 : 외국에서 발행된 카드는 할부가 불가능합니다.<br />
+							▷ 법인카드의 경우 : 법인카드의 경우 원칙적으로 할부가 불가능합니다.
+						</div>
+						<p class="sprite_after question">3. 결제요청을 하였는데 "비밀번호 상이"라는 메시지가 나왔습니다</p>
+						<div class="answer">인증거래시 카드비밀번호가 잘못된 경우입니다. 이 경우는 고객이 카드사에 직접 문의해서 확인해 보시기 바랍니다.</div>
+	
+						<p class="sprite_after question">4. 결제요청을 하였는데 비밀번호 오류 횟수 초과라는 메시지가 나왔습니다</p>
+						<div class="answer">
+							인증실패 횟수 과다로 인해 인증거래가 불가능하게 되었을 경우입니다<br />
+							이 경우 고객께서 카드사에 전화 또는 직접 지점으로 방문하여 인증거래 제한을 해지하셔야 사용이 가능합니다.
+						</div>
+	
+						<p class="sprite_after question">5. 결제요청을 하였는데 "주민번호 상이"라는 메시지가 나왔습니다</p>
+						<div class="answer">
+							인증거래시 주민번호가 잘못되었을 경우나 법인카드(공용)일 경우 사업자등록번호가 잘못 된 경우를 의미하므로 주민번호나 사업자등록번호를 재확인해 주시기 바랍니다
+						</div>
+	
+						<p class="sprite_after question">6. 결제요청을 하였는데 "유효기간 오류"라는 메시지가 나왔습니다</p>
+						<div class="answer">
+							입력한 카드번호에 대한 유효기간이 잘못 되었을 경우 카드사에 직접 문의해서 유효기간을 확인해 보시기 바랍니다. <br/>
+							(교체된 카드가 있을 경우 교체전 카드를 사용한 경우 교체 전 카드의 사용기간이 만료 되었을 경우에도 이 오류 메시지가 나올 수 있습니다)
+						</div>
+	
+						<p class="sprite_after question">7. 법인카드인데 비밀번호가 없습니다. 본인인증 서비스를 사용하고 있는데 결제가 가능합니까?</p>
+						<div class="answer">
+							비밀번호가 없는 법인카드는 비밀번호를 공란으로 비워놓고 사업자등록번호를 입력하셔야 인증이 가능합니다.<br />
+							단, 비밀번호가 있는 법인카드는 비밀번호를 기입해 주시기 바랍니다
+						</div>
+	
+						<p class="sprite_after question">8. 할부개월이 일시불로 고정이 되어 있어서 할부를 할 수가 없습니다</p>
+						<div class="answer">
+							금액이 5만원미만의 경우 카드사에서 할부가 불가능하기 때문에 할부개월수를 일시불로 고정시켜 놓는 것입니다. 금액을 5만원 이상으로 결제하시면 결제가능합니다.
+						</div>
+	
+						<p class="sprite_after question">9. ISP가 무엇입니까?</p>
+						<div class="answer">
+							ISP는 카드사에서 발행한 전자지불 서비스의 일종으로 인터넷안전결제서비스를 말합니다.<br />
+							예를 들면 인터넷 쇼핑몰에서 물건을 구입하실 경우 카드정보 유출에 대한 보안을 강화하기 위해 결제시 카드번호를 입력하는 것이 아니라 ISP번호를 입력하여 결제를 하는 것을 말합니다.
+						</div>
+	
+						<p class="sprite_after question">10. ISP번호는 어떻게 알 수 있나요?</p>
+						<div class="answer">
+							현재 ISP는 빘카드와 국민카드에서만 실행하고 있으며 비씨, 국민카드 홈페이지에서 ISP인증번호를 발급 받으셔야 사용이 가능합니다.
+						</div>
+	
+						<p class="sprite_after question">11. "ISP를 이용하실 수 없습니다."라는 메시지가 나옵니다</p>
+						<div class="answer">
+							ISP번호를 해당 카드사에서 발급받지 않은 경우는 ISP이용이 불가능합니다. <br />
+							ISP 인증을 받았더라도 카드를 재발급 받았거나 분실신고를 하였을 결우에는 ISP 재신청 하셔야 합니다. 또한 비밀번호 입력 3번 이상 실패했을 경우도 ISP재발급 대상이 됩니다.
+						</div>
+	
+						<p class="sprite_after question">12. 비씨, 국민 전체카드가 ISP결제가 가능한가요?</p>
+						<div class="answer">비씨카드는 기업공용카드는 제외이며 국민카드는 프리패스카드 및 가족회원 중 교통전용 카드 회원은 제외입니다.</div>
+	
+						<p class="sprite_after question">13. 거래 내역과 청구서는 어떻게 확인할 수 있나요?</p>
+						<div class="answer">ISP신청시 등록한 해당 신용카드 청구서에서 이용내역을 확인이 가능하시며 KSMALL에서도 거래내역과 현황 조회가 가능합니다.</div>
 					</div>
 					<!-- //결재관련 문의 -->
 					<!-- 제품사용 문의 -->

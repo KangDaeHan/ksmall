@@ -283,6 +283,64 @@ function layer_open(el, menuNum) {
 	});
 }
 
+// 파일 업로드
+function fileUpLoad(fileTarget,imgTarget) {
+	// var fileTarget = $('.filebox .upload-hidden');
+
+    $('#' + fileTarget).on('change', function(){
+        if(window.FileReader){
+            // 파일명 추출
+            var filename = $(this)[0].files[0].name;
+        } 
+
+        else {
+            // Old IE 파일명 추출
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        };
+
+        $(this).siblings('.upload_name').val(filename);
+    });
+
+    //preview image 
+    // var imgTarget = $('.preview_image .upload-hidden');
+
+    $("#" + imgTarget + " " + ".upload-hidden").on('change', function(){
+        var parent = $(this).parent();
+		parent.next('.upload_display').remove();
+		
+        if(window.FileReader){
+			
+			//image 파일만
+            if (!$(this)[0].files[0].type.match(/image\//)) return;
+            
+            var reader = new FileReader();
+            reader.onload = function(e){
+				parent.next('.upload_display').remove();
+                var src = e.target.result;
+				parent.after('<div class="upload_display"><div class="upload_thumb_wrap"><img src="'+src+'" alt="" class="upload_thumb"><span class="close">X</span></div></div>');
+			}
+			reader.readAsDataURL($(this)[0].files[0]);
+        }
+
+        else {
+            $(this)[0].select();
+            $(this)[0].blur();
+            var imgSrc = document.selection.createRange().text;
+            parent.after('<div class="upload_display"><div class="upload_thumb_wrap"><img class="upload_thumb"></div></div>');
+
+            var img = $(this).siblings('.upload_display').find('img');
+            img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";
+		}
+		
+	});
+
+	$(document).on('click', ".upload_display .close" , function(){
+		console.log('aaaa');
+		$(this).parents('.upload_display').prev('.preview_image').find('.upload_name').val('');
+		$(this).parents('.upload_display').remove();
+	});
+}
+
 // 산출물 전달시 삭제처리
 // var ns = (document.layers)?true:false;
 // var ie = (document.all)?true:false;
