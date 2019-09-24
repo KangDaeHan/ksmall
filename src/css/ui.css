@@ -440,6 +440,11 @@ table .link , table .txt {
 .tbl_col td.t_left {
 	text-align: left;
 }
+.tbl_col td .bold {
+	font-family: 'Noto Sans Korean' , sans-serif;
+	font-weight: 500;
+	color: #000;
+}
 .tbl_no_scroll {
 	overflow: hidden;
 }
@@ -1221,7 +1226,7 @@ button {
 }
 .sub_comm_top {
 	position: relative;
-	padding: 35px 0 29px;
+	padding: 35px 0 18px;
 }
 .sub_comm_top .tit {
 	position: relative;
@@ -1261,17 +1266,17 @@ button {
 .sub_comm_desc {
 	display: flex;
 	align-items: center;
-	height: 89px;
-	padding: 26px 37px;
-	margin-bottom: 30px;
+	height: 70px;
+	padding: 0 37px;
+	margin-bottom: 20px;
 	background: #fab000;
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 1.2;
 	color: #fff;
 }
 .sub_comm_tit {
-	padding: 25px 35px;
+	padding: 30px 35px;
 	border-top: 2px solid #fab000;
 }
 .sub_comm_tit h2 {

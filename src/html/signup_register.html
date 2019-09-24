@@ -115,10 +115,10 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">회원가입등록</h2>
+				<h2 class="sprite_before tit">회원정보등록</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">회원가입등록</a></li>
+					<li><a href="#">회원정보등록</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -132,7 +132,7 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;"><span class="point">사용자ID</span></th>
+							<th style="width: 120px;">사용자ID <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" placeholder="사용자 ID"/>
@@ -155,17 +155,20 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">비밀번호</span></th>
+							<th>비밀번호 <span class="point">*</span></th>
 							<td>
-								<input type="password" class="inpt" name="" id="" placeholder="****" />
+								<div class="align_abreast">
+									<input type="password" class="inpt" name="" id="" placeholder="****" />
+									<span class="txt"><span class="point">*</span> 영문,숫자조합 6자 이상</span>
+								</div>
 							</td>
-							<th><span class="point">비밀번호 확인</span></th>
+							<th>비밀번호 확인 <span class="point">*</span></th>
 							<td>
 								<input type="password" class="inpt" name="" id="" placeholder="****" />
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">연락처</span></th>
+							<th>연락처 <span class="point">*</span></th>
 							<td>
 								<input type="text" class="inpt" name="" id="" placeholder="연락처" />
 							</td>
@@ -175,14 +178,14 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">휴대폰 번호</span></th>
+							<th>휴대폰 번호 <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" placeholder="사용자 ID"/>
 									<a href="#" class="btn xs gray">인증</a>
 								</div>
 							</td>
-							<th><span class="point">이메일 주소</span></th>
+							<th>이메일 주소 <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" placeholder="사용자 ID"/>
@@ -191,7 +194,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">사인이미지</span></th>
+							<th>사인이미지 <span class="point">*</span></th>
 							<td colspan="3">
 								<div id="company_logo" class="filebox preview_image">
 									<input class="upload_name" placeholder="파일선택"/>
@@ -207,12 +210,18 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">회원 구분</span></th>
+							<th>회원 구분 <span class="point">*</span></th>
 							<td>
 								<div class="sel_area">
 									<select name="" id="" class="sel_box">
 										<option value="">본사직원</option>
-										<option value="">직원</option>
+										<option value="">통합대리점</option>
+										<option value="">포스제조사</option>
+										<option value="">자대리점</option>
+										<option value="">전표제조사</option>
+										<option value="">단말기체조사</option>
+										<option value="">악세사리제조사</option>
+										<option value="">장애SMS사용자</option>
 									</select>
 								</div>
 							</td>
@@ -227,7 +236,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">우편번호</span></th>
+							<th>우편번호 <span class="point">*</span></th>
 							<td colspan="3">
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" placeholder="우편번호"/>
@@ -236,13 +245,13 @@
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">주소</span></th>
+							<th>주소 <span class="point">*</span></th>
 							<td colspan="3">
 								<input type="text" class="inpt" name="" id="" placeholder="주소"/>
 							</td>
 						</tr>
 						<tr>
-							<th><span class="point">상세주소</span></th>
+							<th>상세주소 <span class="point">*</span></th>
 							<td colspan="3">
 								<input type="text" class="inpt" name="" id="" placeholder="상세주소"/>
 							</td>
