@@ -556,10 +556,20 @@ $(document).ready(function() {
     });
 
 	// 이용약관 전체보기
-	$('.terms_all_view').on('click', function(){
+	$('.terms_all_view').on('click', function(e){
 		$('.terms_area .btn_area').css('border-top','2px solid #fab000');
-		$('.terms').show();
+
+		if ($('.terms').is(":hidden")) {
+			$('.terms').show();
+			$(this).text('전체보기 접기');
+		} else {
+			$(this).text('세부항목 모두보기');
+			$('.terms').hide();
+			$("html, body").animate({ scrollTop: 0 } ,0);
+			$('.terms_area .btn_area').css('border-top','0');
+		}
 		$('.terms_tab li').removeClass('on');
+		e.preventDefault;
 	});
 
 	chagsubmu.hide();

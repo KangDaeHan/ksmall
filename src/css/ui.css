@@ -3698,15 +3698,18 @@ button {
 	background: #eae9e9;
 }
 .faq_tab_con .con_box .question.on:after {
-	background: #fff url("../image/bl_arrow_type2.png") no-repeat 0 50%;
+	background: #eae9e9 url("../image/bl_arrow_type2.png") no-repeat 0 50%;
 }
 .faq_tab_con .con_box .answer {
-	padding: 24px 17px;
+	padding: 24px 33px;
 	border-bottom: 1px solid #cbcbcb;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 15px;
 	color: #000;
 	line-height: 26px;
+}
+.faq_tab_con .con_box .answer .bullet {
+	color: #9d9d9c;
 }
 .faq_tab_con .con_box .no_empty {
 	padding: 24px 17px;
@@ -4173,7 +4176,7 @@ table .total_price .box .price {
 	color: #f38f00;
 }
 .terms_area .terms_tab_con {
-	padding: 0 0 15px;
+	padding: 0;
 	border-top: 2px solid #fab000;
 }
 .terms_area .terms_tab_con .terms {
@@ -4185,6 +4188,9 @@ table .total_price .box .price {
 .terms_area .btn_area {
 	padding-top: 10px;
 	text-align: right;
+}
+.terms_area .btn_area .terms_all_view {
+	min-width: 150px;
 }
 
 /* 회원가입 */
