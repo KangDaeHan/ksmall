@@ -324,7 +324,7 @@
             cells = _.rest(cells); // 맨 처음 데이터를 지우고 리턴함.
 
             // 2차정제 (실제로 사용할 데이터)
-            var conditionStats = {ready:"수정대기", edit:"1차수정", done:"검토완료", finish:"퍼블완료"};
+            var conditionStats = {ready:"수정대기", edit:"1차수정", done:"검토완료"}; //, finish:"퍼블완료"
             var papers = _.map(cells,function(paper,idx){
 
                 if(paper.section == ""){
