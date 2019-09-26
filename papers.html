@@ -263,7 +263,7 @@
                             <tbody>
                             <tr ng-repeat="paper in book.papers">
                                 <td class="paper">
-                                    <a href="/ksnetmall{{ paper.file }}" ng-if="paper.file!=''">
+                                    <a href="{{ paper.file }}" ng-if="paper.file!=''">
                                         <span>{{ paper.depth1 }}</span>
                                         <span ng-show="paper.depth2"> &gt; {{ paper.depth2 }}</span>
                                         <span ng-show="paper.depth3"> &gt; {{ paper.depth3 }}</span>
