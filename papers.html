@@ -240,7 +240,7 @@
                                 <th class="debug hidden-xs hidden-sm">1차 수정</th>
                                 <th class="debug hidden-xs hidden-sm">수정대기</th>
                                 <!-- <th class="stats">진행상태(완료일)</th> -->
-                                <th class="debug hidden-xs hidden-sm">검토완료</th>
+                                <th class="debug hidden-xs hidden-sm">상태</th>
                                 <th class="comment hidden-xs hidden-sm hidden-md">비고사항</th>
                             </tr>
                             </thead>
@@ -261,7 +261,7 @@
                                 <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified1 }}</span></td>
                                 <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified2 }}</span></td>
                                 <!-- <td class="worker hidden-xs">{{ paper.worker }}</td> -->
-                                <!-- <td class="stats"><span class="ico {{paper.conditionClass}}">{{paper.enddate}}</span></td> -->
+                                <td class="stats"><span class="ico {{paper.conditionClass}}">{{paper.enddate}}</span></td>
                                 <td class="debug hidden-xs hidden-sm"><span data-toggle="tooltip" data-placement="left" title="{{ paper.debuger }}">{{ paper.debugdate }}</span></td>
                                 <td class="comment hidden-xs hidden-sm hidden-md">{{ paper.comment }}</td>
                             </tr>
