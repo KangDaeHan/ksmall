@@ -4186,7 +4186,7 @@ table .total_price .box .price {
 	border: 0;
 }
 .terms_area .btn_area {
-	padding-top: 10px;
+	padding-top: 20px;
 	text-align: right;
 }
 .terms_area .btn_area .terms_all_view {
@@ -4245,8 +4245,24 @@ table .total_price .box .price {
 	text-align: center;
 }
 
-
-
+/* 휴먼개정 */
+.account_activation {
+	padding: 27px 35px;
+	border-top: 2px solid #fab000;
+	border-bottom: 2px solid #fab000;
+}
+.account_activation .tit {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+}
+.account_activation .txt {
+	margin-top: 18px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	color: #706f6f;
+}
 
 
 /* 기본 반응형 */
