@@ -11,173 +11,181 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
     <style>
         body {
-        font-family:"Nanum Barun Gothic";
-        font-weight:400;
+			font-family:"Nanum Barun Gothic";
+			font-weight:400;
         }
 
         span.ico {
-        display:inline-block;
-        background:#fff;
-        text-transform:uppercase;
-        font-size:11px;
-        font-family:"맑은 고딕";
-        border-radius:2px;
-        color:#333;
-        min-width:30px;
-        line-height:11px;
-        text-align:center;
-        vertical-align:middle;
-        margin:0 3px 0 0;
-        padding:5px;
+			display:inline-block;
+			background:#fff;
+			text-transform:uppercase;
+			font-size:11px;
+			font-family:"맑은 고딕";
+			border-radius:2px;
+			color:#333;
+			min-width:30px;
+			line-height:11px;
+			text-align:center;
+			vertical-align:middle;
+			margin:0 3px 0 0;
+			padding:5px;
         }
 
         span.ico * {
-        vertical-align:top;
+        	vertical-align:top;
         }
 
         span.ico.ready {
-        background:#777;
-        color:#FFF;
+			background:#777;
+			color:#FFF;
         }
 
         span.ico.done {
-        background:#337ab7;
-        color:#FFF;
+			background:#337ab7;
+			color:#FFF;
         }
 
         span.ico.edit {
-        background:#f0ad4e;
-        color:#FFF;
+			background:#f0ad4e;
+			color:#FFF;
         }
 
         span.ico.finish {
-        background:#5cb85c;
-        color:#FFF;
+			background:#5cb85c;
+			color:#FFF;
         }
 
         .iconGuide {
-        font-size:12px;
-        text-align:right;
-        padding:5px 0;
+			font-size:12px;
+			text-align:right;
+			padding:5px 0;
         }
 
         .iconGuide strong {
-        display:inline-block;
-        min-width:50px;
-        margin-right:8px;
-        font-size:12px;
-        color:#444;
-        font-weight:700;
+			display:inline-block;
+			min-width:50px;
+			margin-right:8px;
+			font-size:12px;
+			color:#444;
+			font-weight:700;
         }
 
         .iconGuide strong .ico {
-        margin-right:6px;
+        	margin-right:6px;
         }
 
         .iconGuide strong:last-child {
-        margin-right:0;
+        	margin-right:0;
         }
 
         .progress-bar-ready {
-        background-color:#777;
+        	background-color:#777;
         }
 
         .progress-bar-done {
-        background-color:#337ab7;
+        	background-color:#337ab7;
         }
 
         .progress-bar-edit {
-        background-color:#f0ad4e;
+        	background-color:#f0ad4e;
         }
 
         .progress-bar-finish {
-        background-color:#5cb85c;
+        	background-color:#5cb85c;
         }
 
         .papersHeader {
-        background:#333;
-        border-bottom:1px solid #ccc;
+			background:#333;
+			border-bottom:1px solid #ccc;
         }
 
         .papersHeader .paersH1 {
-        padding:10px;
+        	padding:10px;
         }
 
         .papersHeader h1 {
-        color:#fff;
-        margin:0;
-        padding:0;
+			color:#fff;
+			margin:0;
+			padding:0;
         }
 
         .papersHeader h1 span {
-        font-family:'Poiret One',cursive;
-        font-size:28px;
+			font-family:'Poiret One',cursive;
+			font-size:28px;
         }
 
         .papersHeader h1 strong {
-        font-size:16px;
+			font-size:16px;
         }
 
         .papersHeader .progressCaseDiv {
-        padding:20px 0;
+			padding:20px 0;
         }
 
         .papersHeader .btnSet {
-        padding-top:15px;
-        text-align:right;
-        min-width:110px;
+			padding-top:15px;
+			text-align:right;
+			min-width:110px;
         }
 
         .papersHeader .btnSet a {
-        display:inline-block;
-        border:1px solid #fff;
-        margin-left:8px;
-        padding:5px;
+			display:inline-block;
+			border:1px solid #fff;
+			margin-left:8px;
+			padding:5px;
         }
 
         .papersHeader .glyphicon,.papersHeader .fa {
-        color:#fff;
+        	color:#fff;
         }
 
         .fileListTable {
-        table-layout:fixed;
+       	 table-layout:fixed;
         }
 
         .fileListTable th {
-        font-size:11px;
+        	font-size:11px;
         }
 
         .fileListTable td {
-        font-size:12px;
+        	font-size:12px;
         }
 
         .fileListTable th.worker,.fileListTable th.debug,.fileListTable th.stats,.fileListTable td.worker,.fileListTable td.debug,.fileListTable td.stats,.fileListTable th.comment {
-        text-align:center;
+       	 	text-align:center;
         }
 
         .fileListTable .paper {
-        width:60%;
+			width:60%;
         }
 
         .fileListTable .worker {
-        width:80px;
+        	width:80px;
         }
 
         .fileListTable .debug {
-        width:100px;
+       	 	width:100px;
         }
 
         .fileListTable .stats {
-        width:120px;
+       	 	width:120px;
         }
 
         .fileListTable .comment {
-        width:auto;
+			width:auto;
+			vertical-align: middle;
         }
 
         .panel-heading .progress,.papersHeader .progressCaseDiv .progress {
-        margin-bottom:0;
-        }
+       	 margin-bottom:0;
+		}
+		.panelControl-fluid {
+			margin: 10px 0;
+		}
+		.btn-info.active, .btn-info:active , .btn-info:hover , .btn-info.active.focus {
+			background-color: #4331d5;
+			border-color: #4331d5;
+		}
     </style>
 </head>
 <body ng-app="gateApp">
@@ -202,11 +210,19 @@
 
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid panelControl-fluid">
+			<!-- 패널 토글기능 -->
+			<div class="panelControl col-xs-1" style="padding: 0;">
+				<button type="button" class="btn btn-info btn-sm" id="panelControlBtn" data-toggle="button" aria-pressed="false" autocomplete="off" title="패널열기">
+					<i class="fa fa-toggle-on"></i><span class="sr-only">패널열기</span>
+				</button>
+			</div>
+			<!-- // 패널 토글기능 -->
+
             <div class="iconGuide">
                 <strong ng-repeat="condition in conditionStats"><span class="hidden-xs">{{condition.name}}</span> <span class="ico {{condition.className}}">.{{condition.className}}</span></strong>
             </div>
-        </div>
+		</div>
     </div>
     <!-- // 상단 패널 : 타이틀 , 구글시트링크 , 깃허브링크 , 진행상태, 검색바 -->
 
@@ -236,10 +252,10 @@
                         <table class="fileListTable table table-hover">
                             <thead>
                             <tr>
-                                <th class="paper">페이지명</th>
-                                <th class="debug hidden-xs hidden-sm">1차 수정</th>
+								<th class="paper">페이지명</th>
+                                <!--<th class="debug hidden-xs hidden-sm">1차 수정</th>
                                 <th class="debug hidden-xs hidden-sm">수정대기</th>
-                                <!-- <th class="stats">진행상태(완료일)</th> -->
+                                 <th class="stats">진행상태(완료일)</th> -->
                                 <th class="debug hidden-xs hidden-sm">상태</th>
                                 <th class="comment hidden-xs hidden-sm hidden-md">비고사항</th>
                             </tr>
@@ -247,7 +263,7 @@
                             <tbody>
                             <tr ng-repeat="paper in book.papers">
                                 <td class="paper">
-                                    <a href="{{ paper.file }}" ng-if="paper.file!=''">
+                                    <a href="/ksnetmall{{ paper.file }}" ng-if="paper.file!=''">
                                         <span>{{ paper.depth1 }}</span>
                                         <span ng-show="paper.depth2"> &gt; {{ paper.depth2 }}</span>
                                         <span ng-show="paper.depth3"> &gt; {{ paper.depth3 }}</span>
@@ -258,11 +274,11 @@
                                         <span ng-show="paper.depth3"> &gt; {{ paper.depth3 }}</span>
                                     </span>
                                 </td>
-                                <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified1 }}</span></td>
+                                <!--<td class="debug hidden-xs hidden-sm"><span>{{ paper.modified1 }}</span></td>
                                 <td class="debug hidden-xs hidden-sm"><span>{{ paper.modified2 }}</span></td>
-                                <!-- <td class="worker hidden-xs">{{ paper.worker }}</td> -->
-                                <td class="stats"><span class="ico {{paper.conditionClass}}">{{paper.enddate}}</span></td>
-                                <td class="debug hidden-xs hidden-sm"><span data-toggle="tooltip" data-placement="left" title="{{ paper.debuger }}">{{ paper.debugdate }}</span></td>
+								 <td class="worker hidden-xs">{{ paper.worker }}</td> -->
+                                <td class="stats"><span class="ico {{paper.conditionClass}}">{{ paper.condition }}</span></td>
+                                <!-- <td class="debug hidden-xs hidden-sm"><span data-toggle="tooltip" data-placement="left" title="{{ paper.debuger }}">{{ paper.debugdate }}</span></td> -->
                                 <td class="comment hidden-xs hidden-sm hidden-md">{{ paper.comment }}</td>
                             </tr>
                             </tbody>
@@ -308,7 +324,7 @@
             cells = _.rest(cells); // 맨 처음 데이터를 지우고 리턴함.
 
             // 2차정제 (실제로 사용할 데이터)
-            var conditionStats = {ready:"진행대기", edit:"1차수정", done:"2차수정", finish:"퍼블완료"};
+            var conditionStats = {ready:"수정대기", edit:"1차수정", done:"검토완료", finish:"퍼블완료"};
             var papers = _.map(cells,function(paper,idx){
 
                 if(paper.section == ""){
@@ -387,6 +403,18 @@
             console.log($('[data-toggle="tooltip"]').length);
             $('[data-toggle="tooltip"]').tooltip();
         },3000);
+
+		$("#panelControlBtn").on("click",function(){
+			if($(this).attr("aria-pressed") == "true"){
+				// 전체 패널닫기
+				$('.panel-collapse').collapse("hide");
+				$(this).find("i").removeClass("fa-toggle-off").addClass("fa-toggle-on");
+			}else{
+				// 전체 패널열기
+				$('.panel-collapse').collapse("show");
+				$(this).find("i").removeClass("fa-toggle-on").addClass("fa-toggle-off");
+			};
+		});
     });
 </script>
 </body>
