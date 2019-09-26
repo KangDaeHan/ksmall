@@ -115,7 +115,7 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">공지사항</h2>
+				<h2 class="sprite_before tit">공지사항조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
 					<li><a href="#">공지사항</a></li>
@@ -138,14 +138,16 @@
 								<div class="">
 									<select name="" id="" class="sel_box" style="min-width: 140px;">
 										<option value="">전체</option>
-										<option value="">제목</option>
-										<option value="">내용</option>
+										<option value="">품절</option>
+										<option value="">입고</option>
+										<option value="">알림</option>
+										<option value="">전표</option>
 									</select>
 								</div>
 							</td>
-							<th style="width: 120px;">조회내용</th>
+							<th style="width: 120px;">제목검색</th>
 							<td style="width: 40%;">
-								<input type="text" class="inpt" name="" value="" placeholder="검색내용 입력하세요.">
+								<input type="text" class="inpt" name="" value="" placeholder="검색하려는 제목을 입력하세요.">
 							</td>
 						</tr>
 					</tbody>
@@ -163,58 +165,35 @@
 					<thead>
 						<tr>
 							<th style="width: 100px;">번호</th>
-							<th style="width: 420px;">제목</th>
-							<th style="width: 200px;">등록자ID</th>
+							<th style="width: 100px;">공지구분</th>
+							<th style="width: auto;">제목</th>
+							<th style="width: 200px;">등록자</th>
 							<th style="width: 100px;">등록일자</th>
-							<th style="width: 120px">조회수</th>
-							<th style="width: 110px;">공지구분</th>
-							<th style="width: 100px;">첨부</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
+							<td colspan="5" class="no_result">등록된 내용이 없습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>999</td>
+							<td>알림</td>
 							<td class="t_left">
 								<a href="#" class="ellip">공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.</a>
 							</td>
 							<td>테스트 아이디</td>
 							<td>2019-08-10</td>
-							<td>9,999</td>
-							<td>알림</td>
-							<td>
-								<a href="#" class="btn sprite_after download">다운로드</a>
-							</td>
 						</tr>
 						<tr>
 							<td>999</td>
+							<td>알림</td>
 							<td class="t_left">
 								<a href="#" class="ellip">공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.</a>
 							</td>
 							<td>테스트 아이디</td>
 							<td>2019-08-10</td>
-							<td>9,999</td>
-							<td>알림</td>
-							<td>
-								<a href="#" class="btn sprite_after download">다운로드</a>
-							</td>
-						</tr>
-						<tr>
-							<td>999</td>
-							<td class="t_left">
-								<a href="#" class="ellip">공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.공지사항 내용입니다.</a>
-							</td>
-							<td>테스트 아이디</td>
-							<td>2019-08-10</td>
-							<td>9,999</td>
-							<td>알림</td>
-							<td>
-								<a href="#" class="btn sprite_after download">다운로드</a>
-							</td>
 						</tr>
 					</tbody>
 				</table>
