@@ -130,37 +130,39 @@
 				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
 			</div>
 
-			<div class="sub_comm_tit">
-				<h2>전표주문조회</h2>
-			</div>
-
 			<!-- 조회 영역 -->
 			<div class="tbl_area">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">인수처코드</th>
-							<td style="width: 40%;">
+							<th style="width: 120px;">인수처</th>
+							<td>
 								<div class="">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 								</div>
 							</td>
-							<th style="width: 120px;">주문일자</th>
-							<td style="width: 40%;">
-								<div class="datepicker">
-									<input type="text" class="date_from" id="from" name="from">
-									<span>~</span>
-									<input type="text" class="date_to" id="to" name="to">
+							<th style="width: 120px;">배송지</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="코드" />
+									<input type="text" class="inpt" name="" id="" value="" placeholder="상호" />
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th style="width: 120px;">자대리점코드</th>
-							<td colspan="3">
+							<th style="width: 120px;">주문번호</th>
+							<td>
 								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<input type="text" class="inpt one" name="" id="" value="" placeholder=""/>
 									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_sch'); return false;">검색</button>
+								</div>
+							</td>
+							<th style="width: 120px;">주문일자</th>
+							<td>
+								<div class="datepicker">
+									<input type="text" class="date_from" id="from" name="from">
+									<span>~</span>
+									<input type="text" class="date_to" id="to" name="to">
 								</div>
 							</td>
 						</tr>
@@ -190,9 +192,18 @@
 				<div class="left">
 					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
 				</div>
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll">
+			<div class="tbl_area tbl_no_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>

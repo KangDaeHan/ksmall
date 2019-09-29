@@ -289,6 +289,7 @@ input[type="checkbox"] + label , input[type="radio"] + label {
 
 /* 테이블 */
 .tbl_top_util {
+	position: relative;
 	margin-bottom: 10px;
 }
 .tbl_top_util:after {
@@ -299,6 +300,11 @@ input[type="checkbox"] + label , input[type="radio"] + label {
 .tbl_top_util .btn {
 	font-family: 'Noto Sans Korean' , sans-serif;
 	font-size: 12px;
+}
+.tbl_top_util .right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 table {
 	width: 100%;
@@ -327,7 +333,7 @@ table td {
 	font-size: 12px;
 	vertical-align: middle;
 }
-table td .sel_box {
+table td .sel_box , .tbl_top_util .sel_box {
 	height: 23px;
 	font-size: 12px;
 	line-height: 23px;
@@ -892,6 +898,9 @@ button {
 .align_abreast .inpt {
 	display: inline-block;
 	width: 200px !important;
+}
+.align_abreast .one.inpt {
+	width: 228px !important;
 }
 .f_red {
 	color: #ff1234;
