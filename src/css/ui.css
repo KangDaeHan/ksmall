@@ -3410,17 +3410,17 @@ button {
 }
 .product_prev_next a {
 	position: absolute;
-	width: 15px;
-	height: 25px;
+	width: 33px;
+	height: 56px;
 	text-indent: -9999px;
 }
 .product_prev_next .prev {
-	left: -35px;
-	background-position: -385px -141px;
+	left: -68px;
+	background-position: -6px -310px;
 }
 .product_prev_next .next {
-	right: -35px;
-	background-position: -425px -141px;
+	right: -68px;
+	background-position: -59px -310px;
 }
 
 /* 제품 리스트 */
