@@ -73,7 +73,8 @@
 					<li><a href="#">제휴상품</a></li>
 				</ul>
 			</li>
-			<li class="menu5 tooltip" title="대리점업무"><a href="#" class=""><span class="sprite icon"></span><span class="txt">대리점업무</span></a>
+			<li class="menu5 tooltip" title="MD기획"><a href="#" class=""><span class="sprite icon"></span><span class="txt">MD기획</span></a></li>
+			<li class="menu6 tooltip" title="대리점업무"><a href="#" class=""><span class="sprite icon"></span><span class="txt">대리점업무</span></a>
 				<ul>
 					<li><a href="#">프로젝트주문 조회</a></li>
 					<li><a href="#">인수확인서 조회</a></li>
@@ -81,7 +82,7 @@
 					<li><a href="#">정기전표주문 조회</a></li>
 				</ul>
 			</li>
-			<li class="menu6 tooltip" title="고객지원"><a href="#"><span class="sprite icon"></span><span class="txt">고객지원</span></a>
+			<li class="menu7 tooltip" title="고객지원"><a href="#"><span class="sprite icon"></span><span class="txt">고객지원</span></a>
 				<ul>
 					<li><a href="#">공지사항</a></li>
 					<li><a href="#">FAQ</a></li>
@@ -98,7 +99,7 @@
 				<li class="menu1"><a href="#" class="sprite_after"><span>마이장부</span>길라잡이</a></li>
 				<li class="menu2"><a href="#" class="sprite_after"><span>세무서비스</span>길라잡이</a></li>
 				<li class="menu3"><a href="#" class="sprite_after"><span>단말기/KSPOS</span>기술지원</a></li>
-				<li class="menu4 img_menu"><a href="#"><img src="../image/sk_m&service.png" alt="SK m&service 사업성공의 동반자 비즈 메이트"></a></li>
+				<li class="menu4"><a href="#" class="sprite_after"><span>SK m&amp;service</span>비즈메이트</a></li>
 			</ul>
 		</div>
 		<!-- //ad -->
@@ -295,7 +296,7 @@
 							<button type="button" class="btn mid add">제품추가 +</button>
 						</div>
 						<div class="product">
-							<span class="point">1</span>개 상품
+							<span class="point">0</span>개 상품
 						</div>
 						<div class="total_price">
 							<span class="tit_label">총합계금액</span>
@@ -316,11 +317,11 @@
 							</div>
 							<div class="desc">
 								<p class="tit">원하시는 제품들을 자세하고 꼼꼼하게 비교해 보세요</p>
-								<p class="txt">고객님께서 선택하신 제품은 ( <em>1</em> )개 입니다. <br/>제품 2개 이상 최대 3개까지 비교 가능합니다.<br/>연관상품은 포함되지 않습니다.</p>
+								<p class="txt">고객님께서 선택하신 제품은 ( <em>0</em> )개 입니다. <br/>제품 2개 이상 최대 3개까지 비교 가능합니다.<br/>연관상품은 포함되지 않습니다.</p>
 							</div>
-							<div class="go_link"><a href="#" class="btn round" onclick="layer_open('pop_compare'); return false;"><span>선택상품<br/>상세비교<br/>바로가기</span></a></div>
+							<div class="go_link"><a href="#" class="btn round" onclick="layer_open('pop_compare'); return false;"><span>선택상품<br/>상세비교<br/>바로가기</span><span class="over">VS</span></a></div>
 						</div>
-						<div class="separate_compare"><a href="#" class="btn round" onclick="layer_open('pop_separate_compare'); return false;"><span>별도상품<br/>상세비교<br/>바로가기</span></a></div>
+						<div class="separate_compare"><a href="#" class="btn round" onclick="layer_open('pop_separate_compare'); return false;"><span>별도상품<br/>상세비교<br/>바로가기</span><span class="over">VS</span></a></div>
 					</div>
 					<!-- //상품 비교 -->
 				</div>
@@ -330,51 +331,50 @@
 						<div class="title">
 							<h2>NOTICE</h2>
 							<p>공지사항</p>
+							<span><a href="#" class="more">MORE +</a></span>
 						</div>
 						<ul class="notice_list">
 							<li class="list">
 								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="writer">작성자 아이디</span>
 								<span class="date">2019-09-09</span>
 								<a href="#" class="btn sprite_after download ">다운로드</a>
 							</li>
 							<li class="list">
 								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="writer">작성자 아이디</span>
 								<span class="date">2019-09-09</span>
 							</li>
 							<li class="list">
 								<a href="#" class="ellip"><span class="bold">알림</span>KSMALL 알림 - 기한한정 프로모션 진행 기한한정 프로모션 진행 기한한정 프로모션 진행</a>
+								<span class="writer">작성자 아이디</span>
 								<span class="date">2019-09-09</span>
 							</li>
 						</ul>
-						<a href="#" class="btn sprite_after more">더보기</a>
 					</div>
 					<ul class="banner_area">
-						<li class="bn_mu">
-							<a href="#" class="btn_hover right">
-								<span class="num">01</span>
+						<li class="bn_mu mu1">
+							<a href="#" class="btn_hover down">
+								<span class="sprite icon"></span>
 								<span class="name">프로젝트<br/>주문조회</span>
-								<span class="btn sprite_after go">GO</span>
 							</a>
 						</li>
-						<li class="bn_mu">
-							<a href="#" class="btn_hover right">
-								<span class="num">02</span>
+						<li class="bn_mu mu2">
+							<a href="#" class="btn_hover down">
+								<span class="sprite icon"></span>
 								<span class="name">인수확인서<br/>조회</span>
-								<span class="btn sprite_after go">GO</span>
 							</a>
 						</li>
-						<li class="bn_mu">
-							<a href="#" class="btn_hover right">
-								<span class="num">03</span>
+						<li class="bn_mu mu3">
+							<a href="#" class="btn_hover down">
+								<span class="sprite icon"></span>
 								<span class="name">정기전표<br/>주문</span>
-								<span class="btn sprite_after go">GO</span>
 							</a>
 						</li>
-						<li class="bn_mu">
-							<a href="#" class="btn_hover right">
-								<span class="num">04</span>
+						<li class="bn_mu mu4">
+							<a href="#" class="btn_hover down">
+								<span class="sprite icon"></span>
 								<span class="name">정기전표주문<br/>조회</span>
-								<span class="btn sprite_after go">GO</span>
 							</a>
 						</li>
 						<li class="bn_mu qna">
@@ -386,7 +386,7 @@
 						<li class="bn_mu as">
 							<a href="#" class="btn_hover down">
 								<span class="sprite icon"></span>
-								<span class="name">제조사 A/S 정보</span>
+								<span class="name">제조사 <br/>A/S 정보</span>
 							</a>
 						</li>
 					</ul>
@@ -460,37 +460,38 @@
 				<div class="product_img">
 					<img src="../image/product/product1.jpg" alt="">
 				</div>
-				<h3 class="tit">제조사 및 연락처</h3>
-				<div class="desc">
-					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
-				</div>
-				<div class="price_download desc">
-					<div class="product_price">
-						<h3 class="tit">제품단가</h3>
-						<p class="price">730,000원(VAT별도)</p>
+				<div class="desc_area">
+					<h3 class="tit">제조사 및 연락처</h3>
+					<div class="desc">
+						케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+					</div>
+					<div class="price_download desc">
+						<div class="product_price">
+							<h3 class="tit">제품단가</h3>
+							<p class="price">730,000원(VAT별도)</p>
+						</div>
+					</div>
+					<h3 class="tit">제품스펙</h3>
+					<div class="desc no_line">
+						CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+						Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+						HDD : SSD 64GB, SATA <br/>
+						LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+						듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+						I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+						1 x VGA Port , 1 x Parallel <br/>
+						LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+						Audio Line Output : 1 x Line Out <br/>
+						OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+						KBD / MOUSE 마우스, Keyborad , Pad <br/>
+						GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+						Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+						Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+						** 일체형 리더기 (KS CAT 1000QSM)
 					</div>
 				</div>
-				<h3 class="tit">주요기능</h3>
-				<div class="desc">
-					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
-				</div>
-				<h3 class="tit">제품스펙</h3>
-				<div class="desc no_line">
-					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
-					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
-					HDD : SSD 64GB, SATA <br/>
-					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
-					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
-					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
-					1 x VGA Port , 1 x Parallel <br/>
-					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
-					Audio Line Output : 1 x Line Out <br/>
-					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
-					KBD / MOUSE 마우스, Keyborad , Pad <br/>
-					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
-					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
-					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
-					** 일체형 리더기 (KS CAT 1000QSM)
+				<div class="btn_area">
+					<a href="#" class="btn sm view">제품스펙 자세히 보기</a>
 				</div>
 			</div>
 			<!-- //선택상품정보 -->
@@ -503,37 +504,38 @@
 				<div class="product_img">
 					<img src="../image/product/product1.jpg" alt="">
 				</div>
-				<h3 class="tit">제조사 및 연락처</h3>
-				<div class="desc">
-					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
-				</div>
-				<div class="price_download desc">
-					<div class="product_price">
-						<h3 class="tit">제품단가</h3>
-						<p class="price">730,000원(VAT별도)</p>
+				<div class="desc_area">
+					<h3 class="tit">제조사 및 연락처</h3>
+					<div class="desc">
+						케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+					</div>
+					<div class="price_download desc">
+						<div class="product_price">
+							<h3 class="tit">제품단가</h3>
+							<p class="price">730,000원(VAT별도)</p>
+						</div>
+					</div>
+					<h3 class="tit">제품스펙</h3>
+					<div class="desc no_line">
+						CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+						Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+						HDD : SSD 64GB, SATA <br/>
+						LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+						듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+						I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+						1 x VGA Port , 1 x Parallel <br/>
+						LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+						Audio Line Output : 1 x Line Out <br/>
+						OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+						KBD / MOUSE 마우스, Keyborad , Pad <br/>
+						GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+						Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+						Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+						** 일체형 리더기 (KS CAT 1000QSM)
 					</div>
 				</div>
-				<h3 class="tit">주요기능</h3>
-				<div class="desc">
-					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
-				</div>
-				<h3 class="tit">제품스펙</h3>
-				<div class="desc no_line">
-					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
-					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
-					HDD : SSD 64GB, SATA <br/>
-					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
-					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
-					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
-					1 x VGA Port , 1 x Parallel <br/>
-					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
-					Audio Line Output : 1 x Line Out <br/>
-					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
-					KBD / MOUSE 마우스, Keyborad , Pad <br/>
-					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
-					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
-					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
-					** 일체형 리더기 (KS CAT 1000QSM)
+				<div class="btn_area">
+					<a href="#" class="btn sm view">제품스펙 자세히 보기</a>
 				</div>
 			</div>
 
@@ -545,37 +547,38 @@
 				<div class="product_img">
 					<img src="../image/product/product1.jpg" alt="">
 				</div>
-				<h3 class="tit">제조사 및 연락처</h3>
-				<div class="desc">
-					케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
-				</div>
-				<div class="price_download desc">
-					<div class="product_price">
-						<h3 class="tit">제품단가</h3>
-						<p class="price">730,000원(VAT별도)</p>
+				<div class="desc_area">
+					<h3 class="tit">제조사 및 연락처</h3>
+					<div class="desc">
+						케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+					</div>
+					<div class="price_download desc">
+						<div class="product_price">
+							<h3 class="tit">제품단가</h3>
+							<p class="price">730,000원(VAT별도)</p>
+						</div>
+					</div>
+					<h3 class="tit">제품스펙</h3>
+					<div class="desc no_line">
+						CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
+						Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
+						HDD : SSD 64GB, SATA <br/>
+						LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
+						듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
+						I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
+						1 x VGA Port , 1 x Parallel <br/>
+						LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
+						Audio Line Output : 1 x Line Out <br/>
+						OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
+						KBD / MOUSE 마우스, Keyborad , Pad <br/>
+						GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
+						Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
+						Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
+						** 일체형 리더기 (KS CAT 1000QSM)
 					</div>
 				</div>
-				<h3 class="tit">주요기능</h3>
-				<div class="desc">
-					일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
-				</div>
-				<h3 class="tit">제품스펙</h3>
-				<div class="desc no_line">
-					CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
-					Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
-					HDD : SSD 64GB, SATA <br/>
-					LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
-					듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
-					I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
-					1 x VGA Port , 1 x Parallel <br/>
-					LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
-					Audio Line Output : 1 x Line Out <br/>
-					OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
-					KBD / MOUSE 마우스, Keyborad , Pad <br/>
-					GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
-					Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
-					Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
-					** 일체형 리더기 (KS CAT 1000QSM)
+				<div class="btn_area">
+					<a href="#" class="btn sm view">제품스펙 자세히 보기</a>
 				</div>
 			</div>
 		</div>

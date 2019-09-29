@@ -21,6 +21,10 @@ function sideMenu(){
 	var sideSubDep = side.find('ul ul');
 	var current = $('.menu_title').text().trim();
 
+	side.find('> li > a').each(function(){
+		(!$(this).next().is('ul')) ? $(this).addClass('depth1') : null;
+	});
+
 	sideLink.each(function() {
 		if ( $(this).text() == current || $(this).hasClass('active')) {
 			$(this).addClass('active').next().slideDown();
@@ -29,7 +33,7 @@ function sideMenu(){
 				$(this).parent().parent().parent().parent().prev('a').addClass('active').next().slideDown();
 			}
 		}
-    });
+	});
 
 	//1depth
 	side.find('> li > a').on("click", function(){
@@ -64,7 +68,6 @@ function sideMenu(){
 	side.find(' li li li > a').on("click", function(){
 		$(this).parents('ul').stop();
 	});
-
 }
 
 // input 타입 숫자만 입력
@@ -496,12 +499,12 @@ $(document).ready(function() {
 		if ($(this).hasClass('active')) {
 			$('.wrap , .sub_wrap').addClass('expansion');
 			$(".side").stop().animate({
-				width : "112px"
+				width : "63px"
 			},200);
 		} else {
 			$('.wrap , .sub_wrap').removeClass('expansion');
 			$(".side").stop().animate({
-				width : "300px"
+				width : "202px"
 			},200);
 		}
 		return false;
