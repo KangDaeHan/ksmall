@@ -304,7 +304,7 @@
 						</div>
 						<div class="payment_type">
 							<button type="button" class="btn mid cart">장바구니 담기</button>
-							<button type="button" class="btn mid buy">바로 구매하기</button>
+							<button type="button" class="btn mid buy" onclick="layer_open('product_order_form'); return false;">바로 구매하기</button>
 						</div>
 					</div>
 					<!-- //총 합계 -->
@@ -645,6 +645,136 @@
 	</div>
 </div>
 <!-- //별도 상품 팝업 -->
+
+<!-- 주문형식선택 팝업 -->
+<div class="ly" id="product_order_form">
+	<div class="bg"></div>
+	<div class="pop_wrap product_order_form">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">주문형식선택</h2>
+		</div>
+		<div class="pop_content">
+			<!-- 선택박스 -->
+			<div class="kind_choice">
+				<p class="txt">주문형식을 선택해 주십시오</p>	
+				<div class="rd_area">
+					<input type="radio" name="order_form" id="selling" checked>
+					<label for="selling">구매</label>
+					<input type="radio" name="order_form" id="rental">
+					<label for="rental">임대</label>
+					<input type="radio" name="order_form" id="credit">
+					<label for="credit">외상판매</label>
+					<input type="radio" name="order_form" id="RBB">
+					<label for="RBB">RBB</label>
+				</div>
+			</div>
+			<!-- //선택박스 -->
+			<dl class="order_sch">
+				<dt>주문처</dt>
+				<dd>
+					<input type="text" name="" id="" class="inpt" placeholder="대리점코드"/>
+					<input type="text" name="" id="" class="inpt" placeholder="대리점상호" style="width: 250px;" />
+					<button type="button" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
+				</dd>
+			</dl>
+			<dl class="order_sch">
+				<dt>프로젝트</dt>
+				<dd>
+					<input type="text" name="" id="" class="inpt" placeholder="프로젝트코드" />
+					<input type="text" name="" id="" class="inpt" placeholder="프로젝트명" style="width: 250px;" />
+					<button type="button" class="btn xs gray sch">검색</button>
+				</dd>
+			</dl>
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm compare">확인</a>
+			<a href="#" class="btn sm btn_pop_close">주문취소</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //주문형식선택 팝업 -->
+
+<!-- 주문처 검색 팝업 -->
+<div class="ly" id="pop_order_sch">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_sch_wrap">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">주문처검색</h2>
+		</div>
+		<div class="pop_content">
+			<div class="pop_sch_top">
+				<span class="name">구분</span>
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">대리점코드</option>
+						<option value="">대리점명</option>
+					</select>
+				</div>
+				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
+			</div>
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">조회</button>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">대리점코드</th>
+							<th style="width: auto;">대리점명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //주문처 검색 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">

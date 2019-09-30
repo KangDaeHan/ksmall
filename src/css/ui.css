@@ -786,7 +786,7 @@ button {
 	height: 90%;
 	overflow: auto;
 }
-.ly .pop_separate_compare {
+.ly .pop_separate_compare , .ly .product_order_form {
 	width: 100%;
 	max-width: 600px;
 }
@@ -3695,12 +3695,12 @@ button {
 }
 
 /* 별도 상품 상세 비교 */
-.pop_separate_compare .kind_choice {
+.pop_separate_compare .kind_choice , .product_order_form .kind_choice {
 	padding: 11px 18px;
 	background: #e6e6e6;
 	border: 1px solid #565555;
 }
-.pop_separate_compare .kind_choice .txt {
+.pop_separate_compare .kind_choice .txt , .product_order_form .kind_choice .txt {
 	display: inline-block;
 	margin-right: 30px;
 	font-family: "Noto Sans Korean" , sans-serif;
@@ -4444,6 +4444,48 @@ table .total_price .box .price {
 	font-size: 14px;
 	color: #706f6f;
 }
+
+/* 주문형식 선택 팝업 */
+.product_order_form .kind_choice {
+	padding: 20px 18px;
+}
+.product_order_form .kind_choice .rd_area {
+	display: inline-block;
+	vertical-align: middle;
+}
+.product_order_form .order_sch {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+.product_order_form .order_sch dt {
+	width: 80px;
+	padding: 0 10px 0 0;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-align: left;
+}
+.product_order_form .order_sch dd .inpt {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+}
+.product_order_form .btn_area {
+	margin-top: 40px;
+}
+.product_order_form .order_sch .btn {
+	height: 28px;
+	border-color: #3c3d3e;
+	font-family: "Noto Sans Korean" , sans-serif;
+	line-height: 28px;
+}
+
+
+
+
+
+
 
 
 /* 기본 반응형 */
