@@ -3414,13 +3414,16 @@ button {
 	margin: 0;
 }
 .product_detail_info {
-	padding: 20px 0;
+	padding: 20px 0 40px;
 	text-align: center;
 }
 .product_detail_info img {
 	width: 100%;
 	max-width: 100%;
 	margin: 0 auto;
+}
+.product_spec_box .tbl_area {
+	margin: 40px 0;
 }
 .product_spec_box .tbl_area table {
 	border: 1px solid #000;
