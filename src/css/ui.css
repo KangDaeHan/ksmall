@@ -1317,6 +1317,7 @@ button {
 }
 .intro_wrap .header .inner {
 	height: 82px;
+	border: 0;
 }
 .intro_wrap .header .inner .logo {
 	position: static;
