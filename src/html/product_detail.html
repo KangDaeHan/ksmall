@@ -167,41 +167,26 @@
 				
 				<!-- 제품 스펙 정보 -->
 				<div class="product_spec_area">
-					<h3 class="tit">제품스펙</h3>
-					<div class="desc">
-						CPU : Intel Celeron N3160(Dual core up to 2.24GHz) <br/>
-						Memory : 2GB, DDR3 1 Slots (Up to 4GB) <br/>
-						HDD : SSD 64GB, SATA <br/>
-						LCD : 15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬 <br/>
-						듀얼모니터 사양 : 9.7" LED Bult-in, LVDS, XVGA 1024x768	<br/>
-						I/O : 5 x Serial (Dsub-9 x 2 ,RJ-45 x 2) 6 x USB 2.0 <br/>
-						1 x VGA Port , 1 x Parallel <br/>
-						LAN : 1 Lan - Fast Ethernet 10/100/1,000 Mbps <br/>
-						Audio Line Output : 1 x Line Out <br/>
-						OS : Windows 10 IOT Enterprise(Retail) 및 복구솔루션 <br/>
-						KBD / MOUSE 마우스, Keyborad , Pad <br/>
-						GIANT-100 Printer : Printing Speed : Max. 250 mm/s <br/>
-						Interface : Serial(RS-232(9PIN or 25PIN) + USB + RJ45 <br/>
-						Cash Drawer : 동전보관 4칸, 지폐보관 4칸, 24V <br/>
-						** 일체형 리더기 (KS CAT 1000QSM)
-					</div>
-					<h3 class="tit">주요기능</h3>
-					<div class="desc">
-						일체형 리더기 탑재, 사용이 편리하고 관리가 손쉬운 모델
-					</div>
-					<h3 class="tit">주의사항</h3>
-					<div class="desc">
-						본 제품은 사용전 반드시 서치메뉴얼을 숙지하시고 사용하십시오. 사용설명서의 지침대로 세팅하세요.
+					<h3 class="tit">제품특징</h3>
+					<div class="desc feature">
+						제품 특징 영역입니다.
 					</div>
 					<h3 class="tit">제조사 및 연락처</h3>
-					<div class="desc">
-						케이에스넷트웍스(삼포스) : 1566-8920 / 010-6436-9422
+					<div class="desc company_info">
+						<div>업체명: 케이에스넷트웍스(삼포스)</div>
+						<div>연락처: 1566-8920 / 010-6436-9422</div>
 					</div>
 					<div class="price_download">
 						<div class="product_price">
 							<h3 class="tit">제품단가</h3>
 							<p class="price">730,000원(VAT별도)</p>
 						</div>
+						<div class="product_price">
+							<h3 class="tit">제고수량</h3>
+							<p class="price">1,000 개</p>
+						</div>
+					</div>
+					<div class="price_download bor_black">
 						<div class="download">
 							<h3 class="tit">다운로드</h3>
 							<div class="link">
@@ -210,21 +195,21 @@
 							</div>
 						</div>
 					</div>
+					<!-- 버튼 -->
+					<div class="btn_area">
+						<a href="#" class="btn cart">장바구니담기</a>
+						<a href="#" class="btn buy">제품구매하기</a>
+					</div>
+					<!-- //버튼 -->
 				</div>
 				<!-- //제품 스펙 정보 -->
-
-				<!-- 제품 선택 -->
-				<div class="product_choice">
-					<p class="txt">제품구매 선택시 제품비교를 할 수 있습니다.</p>
-					<button type="button" class="btn choice">제품선택</button>
-				</div>
-				<!-- //제품 선택 -->
 			</div>
 
-			<!-- 상품상세정보 / 연관상품 -->
+			<!-- 상품상세정보 / 제품 스펙 / 연관상품 -->
 			<div class="product_tab_area" id="product_detail_image">
 				<ul class="tab_menu">
-					<li class="active"><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
+					<li class="active"><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">제품주요기능</a></li>
+					<li><a href="#product_spec" onclick="scrollMove('product_spec');">제품스펙</a></li>
 					<li><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
 				</ul>
 			</div>
@@ -234,10 +219,128 @@
 				<img src="../image/product_detail/detail_p1.jpg" alt="">
 			</div>
 			<!-- //상세정보 -->
+
+			<!-- 제품스펙 -->
+			<div class="product_tab_area" id="product_spec">
+				<ul class="tab_menu">
+					<li><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">제품주요기능</a></li>
+					<li class="active"><a href="#product_spec" onclick="scrollMove('product_spec');">제품스펙</a></li>
+					<li><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
+				</ul>
+			</div>
+
+			<div class="product_spec_box">
+				<div class="tbl_area">
+					<table class="tbl_col">
+						<thead>
+							<tr>
+								<th style="width: 245px;" colspan="2">항목</th>
+								<th style="width: auto;">제품 사양 / SPECIFICATIONS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 등록된 내용 없을 시 -->
+							<!-- <tr>
+								<td colspan="3" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							</tr> -->
+							<!-- //등록된 내용 없을 시 -->
+							<tr>
+								<td class="bg" colspan="2">CPU</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">Memory</td>
+								<td class="t_left">
+									2GB, DDR3 1 Slots (Up to 4GB)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">LCD</td>
+								<td class="t_left">
+									15" LED Backlight LCD(1024 x 768), 평면 TRUE판넬
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">Printer</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg bor_gray" rowspan="2">Reader</td>
+								<td class="bg">I / C</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg">M / S</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg bor_gray" rowspan="2">Communication</td>
+								<td class="bg">LAN</td>
+								<td class="t_left">
+									1 Lan - Fast Ethernet 10/100/1,000 Mbps
+								</td>
+							</tr>
+							<tr>
+								<td class="bg">Modem</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg bor_gray" rowspan="2">Port</td>
+								<td class="bg">USB</td>
+								<td class="t_left">
+									USB + RJ45
+								</td>
+							</tr>
+							<tr>
+								<td class="bg">Serial</td>
+								<td class="t_left">
+									Serial(RS-232(9PIN or 25PIN)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">Key</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">Power</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">Product Code</td>
+								<td class="t_left">
+									Intel Celeron N3160(Dual core up to 2.24GHz)
+								</td>
+							</tr>
+							<tr>
+								<td class="bg" colspan="2">ETC</td>
+								<td class="t_left">
+									** 일체형 리더기 (KS CAT 1000QSM)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //제품스펙 -->
 			
 			<div class="product_tab_area" id="relation_product">
 				<ul class="tab_menu">
-					<li><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">상품상세정보</a></li>
+					<li><a href="#product_detail_image" onclick="scrollMove('product_detail_image');">제품주요기능</a></li>
+					<li><a href="#product_spec" onclick="scrollMove('product_spec');">제품스펙</a></li>
 					<li class="active"><a href="#relation_product" onclick="scrollMove('relation_product');">연관상품</a></li>
 				</ul>
 			</div>
@@ -282,10 +385,36 @@
 						</a>
 					</div>
 				</div>
+				<div class="shipping_info">
+					<h3>배송안내</h3>
+					<div class="info_box">
+						<span>배송업체</span> 한진택배(<a href="http://www.hanjin.co.kr/delivery_html/index.jsp">http://www.hanjin.co.kr/delivery_html/index.jsp</a>) <span class="ml14">배송기간</span> 온라인 주문 후 익일에 배송되며 지역에 따라서 2~3일정도 더 소요될 수 있습니다. <br/>
+						<span>배송지역</span> 전국배송가능 <span class="ml14">배송비</span> 품목에 따라 상이함
+						
+						<p>반품기간 및 반품비</p>
+						(전자상거래법 제 17조 및 약관 26조) <br/>
+						단순변심일경우 : 물품수령 후 7일이내 반품가능, 반품배송비는 구매자가 부담.<br/>
+						표시,광고 내용과 상이하거나 물품 하자인경우 : 물품수령 후 3개월이내, 또는 그 사실을 안날 또는 알수 있었던 날로부터 30일이내 반품가능, 반품배송비 판매자가부담<br/>
+						오주문일 경우 : 물품 수령수 7일이내 반품가능, 반품배송비 구매자가 부담. 오주문으로 인한 단말기 교체시는 반품배송비 및 재출고배송비 모두 구매자 부담
+						
+						<p>반품이 불가능한 경우</p>
+						1. 반품 요청기간이 지난경우 
+						&nbsp;&nbsp;- 단순변심일경우 : 물품수령 후 7일이내 반품가능, 반품배송비는 구매자가 부담<br/>
+						&nbsp;&nbsp;- 표시,광고 내용과 상이하거나 물품 하자인경우 : 물품수령 후 3개월이내, 또는 그 사실을 안날 또는 알수 있었던 날로부터 30일이내 반품가능, 반품배송비 판매자가부담<br/>
+						2. 구매자의 책임이 없는 사유로 인하여 상품등이 멸실 또는 훼손된 경우<br/>
+						&nbsp;&nbsp;- 단, 상품 내용을 확인하기 위해 포장들을 훼손한 경우는 제외<br/>
+						3. 포장을 개봉하였거나 포장이 훼손되어 상품의 가치가 현저하게 감소한 경우<br/>
+						&nbsp;&nbsp;- 케이블 및 소모품, 내부포장재를 분실한경우<br/>
+						4. 구매자의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한경우<br/><br/>
+						
+						※본사 영업담당자와 협의 없이 반품된 제품은 사유에 관계없이 반송합니다.<br/>
+						※더 궁금하신 사항은 홈페이지 FAQ 메뉴를 참조하시기 바랍니다.
+					</div>
+				</div>
 			</div>
 			<!-- //연관상품 -->
 
-			<!-- //상품상세정보 / 연관상품 -->
+			<!-- //상품상세정보 / 제품 스펙 / 연관상품 -->
 		</div>
 		<!-- //서브 컨텐츠 -->
 
