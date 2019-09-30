@@ -1256,7 +1256,7 @@ button {
 	font-size: 28px;
 	color: #000;
 }
-.sub_comm_top .tit:before {
+.sub_comm_top .tit:before , .product_list_top .product_tit:before {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -2214,6 +2214,18 @@ button {
 }
 .expansion .credit_card_inquiry li {
     width: 219px;
+}
+.expansion .product_list {
+	padding: 0;
+}
+.expansion .product_list .item , .expansion .product_list.row4 .item {
+	width: 370px;
+}
+.expansion .product_list.row2 .item {
+	width: 771px;
+}
+.expansion .product_list.row3 .item {
+	width: 508px;
 }
 
 
@@ -3427,14 +3439,16 @@ button {
 /* 제품 리스트 */
 .product_list_top {
 	position: relative;
-	padding: 22px 0 22px 32px;
+	padding: 22px 0 22px;
+	margin: 0 60px 0 73px;
 }
 .product_list_top .product_tit {
+	padding-left: 34px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 24px;
 	font-weight: 600;
 	color: #09306e;
-	text-align: center;
+	text-align: left;
 }
 .product_list_top .sort {
 	position: absolute;
@@ -3460,14 +3474,15 @@ button {
 	background-position: -430px -192px;
 }
 .product_list {
-	width: 1483px;
+	width: 1603px;
+	padding: 0 60px 0 43px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 .product_list .item {
 	float: left;
 	width: 345px;
-	margin: 0 0 30px 25px;
+	margin: 0 0 30px 30px;
 	overflow: hidden;
 }
 .product_list .item .thumb {
@@ -3494,27 +3509,35 @@ button {
 	padding: 9px 18px 12px;
 	overflow: hidden;
 }
-.product_list .item .info .name , .product_list .item .info .price {
-	float: left;
-	width: 60%;
+.product_list .item .info .name , .product_list .item .info .price , .product_list .item .info .company {
+	width: 100%;
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	font-size: 18px;
 	font-weight: 700;
-	color: #09306e;
+	color: #0a3e92;
 	letter-spacing: -1px;
-	text-align: left;
+	text-align: center;
+}
+.product_list .item .info .company {
+	margin: 12px 0;
+	font-size: 14px;
+	color: #000;
+}
+.product_list .item .info .company span {
+	margin-right: 7px;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 14px;
+	color: #6a6869;
 }
 .product_list .item .info .price {
-	width: 40%;
-	color: #ffae00;
-	text-align: right;
+	color: #626262;
 }
 .product_list .item .info .price em {
 	margin-left: 2px;
 	font-style: normal;
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	font-size: 11px;
-	color: #ffae00;
+	color: #b8b8b8;
 }
 .product_list .item .btns {
 	position: relative;
