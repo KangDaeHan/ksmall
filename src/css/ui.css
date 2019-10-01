@@ -3162,6 +3162,27 @@ button {
 	line-height: 58px;
 	text-align: center;
 }
+.product_name .cate1 {
+	background: #21c3a8;
+}
+.product_name .cate2 {
+	background: #19c365;
+}
+.product_name .cate3 {
+	background: #abc312;
+}
+.product_name .cate4 {
+	background: #ff6306;
+}
+.product_name .cate5 {
+	background: #ffa800;
+}
+.product_name .cate6 {
+	background: #57cdf1;
+}
+.product_name .cate7 {
+	background: #06a0d9;
+}
 .product_spec_wrap {
 	position: relative;
 	margin-bottom: 50px
