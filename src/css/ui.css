@@ -3164,7 +3164,7 @@ button {
 }
 .product_spec_wrap {
 	position: relative;
-	margin-bottom: 81px
+	margin-bottom: 50px
 }
 .product_spec_wrap .product_slider_area {
 	position: absolute;
@@ -3321,7 +3321,7 @@ button {
 }
 .product_spec_area .btn_area {
 	display: flex;
-	margin-top: 17px;
+	margin: 17px 0 0;
 }
 .product_spec_area .btn_area .btn {
 	width: 100%;
