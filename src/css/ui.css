@@ -784,7 +784,7 @@ button {
 .ly .pop_compare {
 	max-width: 95%;
 	height: 90%;
-	overflow: auto;
+	overflow: hidden;
 }
 .ly .pop_separate_compare , .ly .product_order_form {
 	width: 100%;
@@ -3210,7 +3210,7 @@ button {
 .product_spec_area .desc_area {
 	position: absolute;
 	top: 442px;
-	bottom: 49px;
+	bottom: 50px;
 	left: 0;
 	right: 0;
 	overflow: auto;
@@ -3787,6 +3787,9 @@ button {
 	position: relative;
 	float: none;
 	width: 400px;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 .product_spec_area .product_tit {
 	position: relative;
@@ -3832,20 +3835,23 @@ button {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	display: block;
 	width: 100%;
 	height: 50px;
 	margin: 0;
+	padding: 5px 10px;
 	border-top: 1px solid #000;
 }
 .compare_area .product_spec_area .btn_area .btn {
 	min-width: 200px;
-	margin-top: 9px;
+	height: 39px;
+	margin: 0;
 	background: #bcbaba;
 	border-radius: 7px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-weight: 400;
 	color: #fff;
-	line-height: 30px;
+	line-height: 39px;
 	overflow: hidden;
 }
 
