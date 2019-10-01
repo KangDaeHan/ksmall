@@ -3819,6 +3819,11 @@ button {
 .compare_area .product_spec_area .desc {
 	padding: 0 30px 26px;
 }
+.compare_area .product_spec_area .feature {
+	height: auto;
+	min-height: 145px;
+	max-height: 250px;
+}
 .compare_area .product_spec_area .price_download {
 	padding: 16px 7px 21px;
 }
