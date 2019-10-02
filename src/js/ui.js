@@ -344,29 +344,29 @@ function fileUpLoad(fileTarget,imgTarget) {
 	});
 }
 
-// 산출물 전달시 삭제처리
-// var ns = (document.layers)?true:false;
-// var ie = (document.all)?true:false;
-// if (ns) document.captureEvents(Event.MOUSEDOWN || Event.CLICK);
-// document.onclick = sourcecodeprotect;
-// document.onmousedown = sourcecodeprotect;
-// function sourcecodeprotect(e){
-// 	if (ns&&(e.which==3)) return false;
-// 	else if (ie&&(window.event.button==2)) alert('No rightClick22');
-// 	else return true;
-// }
-// document.onkeydown = function(){
-// 	if (event.keyCode == 123) {
-// 		alert('No rightClick');
-// 	}
-// }
-// function rightClick() {
-// 	if ((event.button==2) || (event.button==2)) {
-// 		alert('No rightClick');
-// 	}
-// }
-// document.onmousedown = rightClick;
-// 산출물 전달시 삭제처리
+// S:삭제처리예정
+var ns = (document.layers)?true:false;
+var ie = (document.all)?true:false;
+if (ns) document.captureEvents(Event.MOUSEDOWN || Event.CLICK);
+document.onclick = sourcecodeprotect;
+document.onmousedown = sourcecodeprotect;
+function sourcecodeprotect(e){
+	if (ns&&(e.which==3)) return false;
+	else if (ie&&(window.event.button==2)) alert('No rightClick22');
+	else return true;
+}
+document.onkeydown = function(){
+	if (event.keyCode == 123) {
+		alert('No rightClick');
+	}
+}
+function rightClick() {
+	if ((event.button==2) || (event.button==2)) {
+		alert('No rightClick');
+	}
+}
+document.onmousedown = rightClick;
+// E:삭제처리예정
 	
 $(document).ready(function() {
 	var d = new Date();
