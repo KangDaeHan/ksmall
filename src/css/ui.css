@@ -779,7 +779,7 @@ button {
 	bottom:168px; 
 	left:50%; 
 	width:80%; 
-	background: #fff;
+	background: transparent;
 }
 .ly .pop_compare {
 	max-width: 95%;
@@ -2105,7 +2105,7 @@ button {
 	display: block;
 	padding-left: 63px;
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 	color: #5c5a5b;
 	line-height: 34px;
 }
@@ -2944,7 +2944,7 @@ button {
 .main_contents .section .banner_area .bn_mu a .name {
 	height: 28px;
     margin: 0;
-	font-family: "The160", arial, helvetica, serif , sans-serif;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	font-size: 12px;
 	font-weight: 600;
 	line-height: 1.2;
@@ -3262,8 +3262,8 @@ button {
 	padding: 0 25px 25px;
 	border-bottom: 1px solid #cdcdcd;
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 12px;
-	line-height: 1.2;
+	font-size: 14px;
+	line-height: 23px;
 	color: #656565;
 }
 .product_spec_area .company_info {
@@ -3273,8 +3273,8 @@ button {
 	float: left;
 	width: 50%;
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 12px;
-	line-height: 1.2;
+	font-size: 14px;
+	line-height: 23px;
 	color: #656565;
 }
 .product_spec_area .feature {
@@ -3310,7 +3310,8 @@ button {
 }
 .product_spec_area .price_download .product_price .price {
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 23px;
 	color: #656565;
 	text-align: center;
 }
@@ -3324,7 +3325,8 @@ button {
 	padding-right: 28px;
 	margin-left: 100px;
 	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 23px;
 	color: #656565;
 	vertical-align: middle;
 }
@@ -3842,7 +3844,7 @@ button {
 }
 .compare_area .product_spec_area .feature {
 	height: auto;
-	min-height: 145px;
+	min-height: 105px;
 }
 .compare_area .product_spec_area .price_download {
 	padding: 16px 7px 21px;
