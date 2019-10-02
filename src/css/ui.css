@@ -3278,7 +3278,7 @@ button {
 	color: #656565;
 }
 .product_spec_area .feature {
-	height: 179px;
+	min-height: 179px;
 }
 .product_spec_wrap .product_slider_area .thumb_slider .slick-prev {
 	left: 13px;
@@ -3843,7 +3843,6 @@ button {
 .compare_area .product_spec_area .feature {
 	height: auto;
 	min-height: 145px;
-	max-height: 250px;
 }
 .compare_area .product_spec_area .price_download {
 	padding: 16px 7px 21px;
