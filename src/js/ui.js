@@ -575,6 +575,11 @@ $(document).ready(function() {
 		e.preventDefault;
 	});
 
+	$(".all_check").on('click', function(){ 
+		$("input[name=agree]").prop("checked",true);
+	});
+
+
 	chagsubmu.hide();
 	chagtit.on("click", function(e) {
 		$(".answer:visible").slideUp();
