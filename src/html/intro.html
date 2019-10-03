@@ -20,7 +20,7 @@
 		<div class="login">
 			<input type="text" name="" id="" class="inpt" value="" placeholder="아이디"/>
 			<input type="password" name="" id="" class="inpt" value="" placeholder="****"/>
-			<button type="button" class="btn xs">로그인</button>
+			<button type="button" class="btn xs" onclick="layer_open('pwd_change'); return false;">로그인</button>
 			<a href="#" class="btn xs">회원가입</a>
 		</div>
 		<!-- //상단 로그인 -->
@@ -184,6 +184,33 @@
 		<!-- //아코디언 메뉴 -->
 	</div>
 </div>
+
+<!-- 비밀번호 변경 안내 팝업 -->
+<div class="ly" id="pwd_change">
+	<div class="bg"></div>
+	<div class="pop_wrap pwd_change">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">비밀번호 변경 안내</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<div class="pwd_info_box">
+				안전한 사용자 정보를 위해 주기적인 비밀번호 변경이 필요합니다. <br/>
+				3개월동안 비밀번호 변경이 없었습니다.<br/><br/>
+	
+				비밀번호를 변경 하시겠습니까?
+			</div>
+			
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm compare">비밀번호 변경하기</a>
+			<a href="#" class="btn sm btn_pop_close">다음에 변경</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //비밀번호 변경 안내 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">

@@ -4891,7 +4891,14 @@ table .total_price .box .price {
 	margin: 0;
 }
 
-
+/* 비밀번호 변경 안내 팝업 */
+.pwd_change .pwd_info_box {
+	padding: 20px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #000;
+}
 
 
 
