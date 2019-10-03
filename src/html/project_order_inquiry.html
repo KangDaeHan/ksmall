@@ -115,83 +115,41 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">주문정보입력</h2>
+				<h2 class="sprite_before tit">프로젝트주문조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
-					<li><a href="#">주문정보입력</a></li>
+					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
+					<li><a href="#">프로젝트주문조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				주문정보를 입력하는 화면입니다. <br/>
-				제품의 상세정보를 확인하시고 주문하실 제품의 수량을 입력하십시요. <br/>
-				궁금하신 사항이 있으시다면, 고객상담센터로 문의하시기 바랍니다.
+				KSMALL에서 프로젝트 단위로 주문된 총 수량, 주문환산수량, 주문가능 수량 및 단말기 지원현황을 조회하실 수 있습니다. <br/>
+				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
 			</div>
 
 			<div class="sub_comm_tit">
-				<h2>주문정보입력</h2>
+				<h2>프로젝트주문내역 조회</h2>
 			</div>
 
-			<!-- 주문정보입력 영역 -->
+			<!-- 조회 영역 -->
 			<div class="tbl_area">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">모델명</th>
-							<td colspan="3">
-								KS1060
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">제조원</th>
-							<td colspan="3">
-								엠엔서비스
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">단가</th>
-							<td colspan="3">
-								155,650 원(부가세포함)
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">출고유형</th>
-							<td colspan="3">
-								판매
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">프로젝트코드</th>
+							<th style="width: 120px;">구분</th>
 							<td>
-								D50001
-							</td>
-							<th style="width: 120px;">프로젝트명</th>
-							<td>
-								일반판매
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">주문처코드</th>
-							<td>
-								DGT0000
-							</td>
-							<th style="width: 120px;">주문처명</th>
-							<td>
-								두리정보통신
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">재고수량</th>
-							<td colspan="3">
-								999
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">주문수량</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="order_num" value="" placeholder="수량 입력" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 100px;" />
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">제목</option>
+											<option value="">내용</option>
+										</select>
+									</div>
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
 							</td>
 						</tr>
 					</tbody>
@@ -199,9 +157,98 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">바로구매</button>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
-			<!-- //주문정보입력 영역  -->
+			<!-- //조회 영역 -->
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 110px;">프로젝트코드</th>
+							<th style="width: auto;">프로젝트명</th>
+							<th style="width: 160px;">프로젝트총수량/금액</th>
+							<th style="width: 160px;">출고수량/금액(쇼핑몰)</th>
+							<th style="width: 160px">가능수량/금액(쇼핑몰)</th>
+							<th style="width: 170px;">프로젝트 단말기 지원현황</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
+							<td>7.23</td>
+							<td><span class="txt f_red">지원종료</span></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								1만건PJT2-태강밴
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
+							<td><span class="bold">7.23</span></td> <!-- 지원 가능 항목만 bold 처리됨. -->
+							<td><span class="txt">지원가능</span></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								1만건PJT2-태강밴
+							</td>
+							<td>181</td>
+							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
+							<td><span class="bold">7.23</span></td>
+							<td><span class="txt">지원가능</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -257,50 +304,125 @@
 </div>
 
 <!-- 팝업 -->
-<div class="ly" id="pop_order_sch">
+<div class="ly" id="pop_order_list">
 	<div class="bg"></div>
-	<div class="pop_wrap pop_sch_wrap">
+	<div class="pop_wrap pop_list_wrap">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">주문처검색</h2>
+			<h2 class="tit">주문상세정보</h2>
+			<div class="code_box">
+				프로젝트 코드 : &nbsp;DWE231234
+			</div>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
-			<div class="pop_sch_top">
-				<span class="name">구분</span>
-				<div class="sel_area">
-					<select name="" id="" class="sel_box">
-						<option value="">대리점코드</option>
-						<option value="">대리점명</option>
-					</select>
-				</div>
-				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
-			</div>
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
 			<!-- 리스트 -->
 			<div class="tbl_area tbl_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">대리점코드</th>
-							<th style="width: auto;">대리점명</th>
+							<th style="width: 150px;">프로젝트코드</th>
+							<th style="width: 170px;">주문번호</th>
+							<th style="width: 200px;">단말기모델명</th>
+							<th style="width: 100px;">단말기수량</th>
+							<th style="width: 150px;">단말기환산수량/금액</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
+							<td colspan="5" class="no_result">주문정보가 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
 							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
+								KS7600i(일반형)
 							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
 						</tr>
 					</tbody>
 				</table>

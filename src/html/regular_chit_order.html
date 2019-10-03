@@ -115,83 +115,37 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">주문정보입력</h2>
+				<h2 class="sprite_before tit">정기전표주문</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
-					<li><a href="#">주문정보입력</a></li>
+					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
+					<li><a href="#">정기전표주문</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				주문정보를 입력하는 화면입니다. <br/>
-				제품의 상세정보를 확인하시고 주문하실 제품의 수량을 입력하십시요. <br/>
-				궁금하신 사항이 있으시다면, 고객상담센터로 문의하시기 바랍니다.
+				정기전표주문내역조회와 자대리점의 전표주문여부 및 자대리점 전표주문을 하실 수 있습니다. <br/>
+				궁금하긴 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
 			</div>
 
-			<div class="sub_comm_tit">
-				<h2>주문정보입력</h2>
-			</div>
-
-			<!-- 주문정보입력 영역 -->
+			<!-- 조회 영역 -->
 			<div class="tbl_area">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">모델명</th>
-							<td colspan="3">
-								KS1060
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">제조원</th>
-							<td colspan="3">
-								엠엔서비스
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">단가</th>
-							<td colspan="3">
-								155,650 원(부가세포함)
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">출고유형</th>
-							<td colspan="3">
-								판매
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">프로젝트코드</th>
+							<th style="width: 120px;">구분</th>
 							<td>
-								D50001
-							</td>
-							<th style="width: 120px;">프로젝트명</th>
-							<td>
-								일반판매
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">주문처코드</th>
-							<td>
-								DGT0000
-							</td>
-							<th style="width: 120px;">주문처명</th>
-							<td>
-								두리정보통신
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">재고수량</th>
-							<td colspan="3">
-								999
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">주문수량</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="order_num" value="" placeholder="수량 입력" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 100px;" />
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">대리점명</option>
+											<option value="">대리점코드</option>
+										</select>
+									</div>
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
 							</td>
 						</tr>
 					</tbody>
@@ -199,9 +153,157 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">바로구매</button>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
-			<!-- //주문정보입력 영역  -->
+			<!-- //조회 영역 -->
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: auto;">거래년월</th>
+							<th style="width: auto;">자대리점코드</th>
+							<th style="width: auto;">자대리점명</th>
+							<th style="width: auto;">주문여부</th>
+							<th style="width: auto;">승인여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="5" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold f_red" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>N</td>
+							<td>N</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								DV123000
+							</td>
+							<td><a href="#" class="bold" onclick="layer_open('pop_order_list'); return false;">sm정보통신</a></td>
+							<td>Y</td>
+							<td>Y</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -257,48 +359,103 @@
 </div>
 
 <!-- 팝업 -->
-<div class="ly" id="pop_order_sch">
+<div class="ly" id="pop_order_list">
 	<div class="bg"></div>
-	<div class="pop_wrap pop_sch_wrap">
+	<div class="pop_wrap pop_list_wrap">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">주문처검색</h2>
+			<h2 class="tit">대리점명(대리점코드)전표주문리스트</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
-			<div class="pop_sch_top">
-				<span class="name">구분</span>
-				<div class="sel_area">
-					<select name="" id="" class="sel_box">
-						<option value="">대리점코드</option>
-						<option value="">대리점명</option>
-					</select>
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
 				</div>
-				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
-			</div>
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">5개</option>
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll">
+			<div class="tbl_area tbl_scroll tbl_h292">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">대리점코드</th>
-							<th style="width: auto;">대리점명</th>
+							<th style="width: 100px;">거래년월</th>
+							<th style="width: auto;">전표모델명</th>
+							<th style="width: 150px;">수량</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
+							<td colspan="3" class="no_result">주문정보가 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
+							<td>2019-08</td>
+							<td>
+								<p class="ellip">79*80(KS7200i,KS7500i,KS7800i,KS7050i)</p>
+							</td>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" value="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 70% !important;"/>
+									<span class="txt">박스</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								<p class="ellip">79*80(KS7200i,KS7500i,KS7800i,KS7050i)</p>
+							</td>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" value="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 70% !important;"/>
+									<span class="txt">박스</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								<p class="ellip">79*80(KS7200i,KS7500i,KS7800i,KS7050i)</p>
+							</td>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" value="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 70% !important;"/>
+									<span class="txt">박스</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								<p class="ellip">79*80(KS7200i,KS7500i,KS7800i,KS7050i)</p>
+							</td>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" value="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 70% !important;"/>
+									<span class="txt">박스</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>2019-08</td>
+							<td>
+								<p class="ellip">79*80(KS7200i,KS7500i,KS7800i,KS7050i)</p>
+							</td>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" value="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" style="width: 70% !important;"/>
+									<span class="txt">박스</span>
 								</div>
 							</td>
 						</tr>
@@ -327,9 +484,47 @@
 				</div>
 			</div>
 			<!-- //페이징 -->
+
+			<!-- 전표배송지 정보 -->
+			<h2 class="pop_sub_tit">정기전표주문</h2>
+			<div class="tbl_area tbl_addr_info">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 120px;">우편번호</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 120px;">주소</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 120px;">번지</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 120px;">연락처</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //전표배송지 정보 -->
+
 		</div>
 		<div class="pop_footer">
 			<a href="#" class="btn sm btn_pop_close">닫기</a>
+			<a href="#" class="btn sm">신청</a>
 		</div>
 		<!-- //팝업 내용 -->
 	</div>

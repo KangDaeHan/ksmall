@@ -116,22 +116,18 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">프로젝트주문조회</h2>
+				<h2 class="sprite_before tit">상품주문 조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
-					<li><a href="#">프로젝트주문조회</a></li>
+					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
+					<li><a href="#">상품조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
-				KSMALL에서 프로젝트 단위로 주문된 총 수량, 주문환산수량, 주문가능 수량 및 단말기 지원현황을 조회하실 수 있습니다. <br/>
+				KSMALL에서 주문가능한 상품목록입니다. <br/>
 				궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
-			</div>
-
-			<div class="sub_comm_tit">
-				<h2>프로젝트주문내역 조회</h2>
 			</div>
 
 			<!-- 조회 영역 -->
@@ -144,9 +140,8 @@
 								<div class="align_abreast">
 									<div class="sel_area">
 										<select name="" id="" class="sel_box" style="min-width: 140px;">
-											<option value="">전체</option>
-											<option value="">제목</option>
-											<option value="">내용</option>
+											<option value="">전표모델명</option>
+											<option value="">전표코드</option>
 										</select>
 									</div>
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -181,49 +176,86 @@
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 110px;">프로젝트코드</th>
-							<th style="width: auto;">프로젝트명</th>
-							<th style="width: 160px;">프로젝트총수량/금액</th>
-							<th style="width: 160px;">출고수량/금액(쇼핑몰)</th>
-							<th style="width: 160px">가능수량/금액(쇼핑몰)</th>
-							<th style="width: 170px;">프로젝트 단말기 지원현황</th>
+							<th style="width: 150px;">전표코드</th>
+							<th style="width: auto;">전표모델명</th>
+							<th style="width: 160px;">주문하기</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
+							<td colspan="3" class="no_result">등록된 내용이 없습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>DV4005</td>
-							<td class="t_left">
+							<td>
 								<span class="ellip">1만건PJT2-태강밴</span>
 							</td>
-							<td>181</td>
-							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
-							<td>7.23</td>
-							<td><span class="txt f_red">지원종료</span></td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
 						</tr>
 						<tr>
 							<td>DV4005</td>
-							<td class="t_left">
-								1만건PJT2-태강밴
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
 							</td>
-							<td>181</td>
-							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
-							<td><span class="bold">7.23</span></td> <!-- 지원 가능 항목만 bold 처리됨. -->
-							<td><span class="txt">지원가능</span></td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
 						</tr>
 						<tr>
 							<td>DV4005</td>
-							<td class="t_left">
-								1만건PJT2-태강밴
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
 							</td>
-							<td>181</td>
-							<td><a href="#" class="link" onclick="layer_open('pop_order_list'); return false;">173.77</a></td>
-							<td><span class="bold">7.23</span></td>
-							<td><span class="txt">지원가능</span></td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td>
+								<span class="ellip">1만건PJT2-태강밴</span>
+							</td>
+							<td><a href="#" class="btn order_buy">주문하기</a></td>
 						</tr>
 					</tbody>
 				</table>
