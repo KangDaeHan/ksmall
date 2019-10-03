@@ -2257,7 +2257,7 @@ button {
 .expansion .side .side_type {
 	background: #1853bb;
 }
-.expansion .side .menu_list li a:after , .expansion .side .side_type > div.menu , .expansion .side .side_type > div.admin {
+.expansion .side .menu_list li a:after , .expansion .side .side_type > div.menu , .expansion .side .ad_box , .expansion .side .side_type > div.admin {
 	display: none !important;
 }
 .expansion .container .inner {
