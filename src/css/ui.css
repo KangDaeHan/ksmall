@@ -899,6 +899,9 @@ button {
 .ly .pop_wrap .tbl_h292 {
 	max-height: 292px;
 }
+.ly .pop_wrap .tbl_h262 {
+	max-height: 262px;
+}
 
 /* 제품 확대 보기 팝업 */
 .lightboxOverlay {
