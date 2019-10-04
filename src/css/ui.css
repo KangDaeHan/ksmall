@@ -1381,7 +1381,8 @@ button {
 }
 .sub_comm_top {
 	position: relative;
-	padding: 35px 0 18px;
+	height: 76px;
+	padding: 30px 0 18px;
 }
 .sub_comm_top .tit {
 	position: relative;
@@ -1451,7 +1452,8 @@ button {
 /* 인트로용 상단 스타일 */
 .intro_wrap .header {
 	position: fixed;
-	background: transparent;
+	height: 100px;
+	background: #fff;
 }
 .intro_wrap .header .inner {
 	height: 82px;
@@ -1875,7 +1877,7 @@ button {
 .tp-banner-container {
 	width: 100% !important;
 	max-width: 100%;
-	height: calc(100vh - 158px) !important;
+	height: 100vh !important;
 	max-height: 100% !important;
 	overflow: hidden !important;
 }
@@ -2395,7 +2397,7 @@ button {
 .container .sub {
 	min-width: 1483px;
 	min-height: calc(100vh - 154px);
-	padding-top: 8px;
+	padding-top: 11px;
 }
 .container .sub_contents {
 	position: relative;
@@ -3307,7 +3309,7 @@ button {
 
 /* 제품 상세 페이지 */
 .product_name {
-	padding: 23px 0 19px;
+	padding: 0 0 19px;
 }
 .product_name .name {
 	background: #00d4c3;
@@ -3688,7 +3690,7 @@ button {
 }
 .product_prev_next {
 	position: absolute;
-	top: 275px;
+	top: 335px;
 	width: 100%;
 }
 .product_prev_next a {
@@ -3865,7 +3867,7 @@ button {
 	float: left;
 	width: 50%;
 	height: 32px;
-	padding: 6px 0;
+	padding: 7px 0;
 	border: 1px solid #9e9d9d;
 	background: #fff;
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
