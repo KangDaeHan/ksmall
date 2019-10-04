@@ -819,6 +819,7 @@ button {
 	max-width: 95%;
 	height: 90%;
 	overflow: hidden;
+	overflow-x: auto;
 }
 .ly .pop_separate_compare , .ly .product_order_form {
 	width: 100%;
@@ -3963,6 +3964,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	width: 1200px;
 	height: 100%;
 }
 .compare_area .product_spec_area {
