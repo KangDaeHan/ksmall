@@ -989,6 +989,7 @@ button {
 	height: 100%;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	line-height: 1.1;
 }
 .ellip-line {
 	display: inline-block;
@@ -4863,6 +4864,7 @@ table .total_price .box .price {
 	text-align: left;
 }
 .product_order_form .order_sch dd .inpt {
+	max-width: 190px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 12px;
 }
