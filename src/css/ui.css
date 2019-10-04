@@ -2395,6 +2395,7 @@ button {
 .container .sub {
 	min-width: 1483px;
 	min-height: calc(100vh - 154px);
+	padding-top: 8px;
 }
 .container .sub_contents {
 	position: relative;
@@ -3864,12 +3865,12 @@ button {
 	float: left;
 	width: 50%;
 	height: 32px;
+	padding: 6px 0;
 	border: 1px solid #9e9d9d;
 	background: #fff;
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	font-size: 14px;
 	color: #706f6f;
-	line-height: 32px;
 }
 .product_list .item .btns .btn:first-child , .pop_product_wrap .btns .btn:first-child {
 	margin: 0;
