@@ -1673,6 +1673,7 @@ button {
 	right: 0;
 	bottom: 0;
 	height: 290px;
+	background: transparent;
 	overflow: hidden;
 }
 .intro_section .section .cont .area img {
@@ -2963,7 +2964,7 @@ button {
 }
 .main_contents .section .notice_area .title p {
 	margin-top: 7px;
-	font-family: "The160", arial, helvetica, serif , sans-serif;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	font-size: 12px;
 	font-weight: 600;
 	color: #000;
