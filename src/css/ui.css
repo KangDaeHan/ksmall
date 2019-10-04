@@ -2735,7 +2735,7 @@ button {
 	color: #fff;
 }
 .total_sum_box .product {
-	width: 45%;
+	width: 40%;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 23px;
 	color: #000;
@@ -2746,10 +2746,11 @@ button {
 	color: #fc6c3a;
 }
 .total_sum_box .total_price {
-	flex: 1.6;
+	min-width: 300px;
 }
 .total_sum_box .total_price .tit_label {
 	display: inline-block;
+	margin-right: 5px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
 	color: #000;
@@ -2760,6 +2761,7 @@ button {
 	display: inline-block;
 	min-width: 150px;
 	padding: 0 5px;
+	margin: 0;
 	background: #000;
 	font-family: "arial", serif , sans-serif;
 	font-size: 22px;
@@ -2769,11 +2771,12 @@ button {
 	text-align: center;
 }
 .total_sum_box .payment_type {
-	flex: 2.1;
+	min-width: 330px;
 	text-align: right;
 }
 .total_sum_box .payment_type .btn {
 	min-width: 140px;
+	margin: 0 0 0 5px;
 	border-color: #bababa;
 	background: #fff;
 	font-family: "Noto Sans Korean" , sans-serif;
@@ -4941,8 +4944,7 @@ table .total_price .box .price {
 	}
 }
 
-@media all and (max-width:1360px) {
-	html {font-size:62.5%;}
+@media all and (max-width:1410px) {
 	.footer .inner .utill {
 		position: static;
 		margin: 10px 0 0 0;
@@ -4952,7 +4954,7 @@ table .total_price .box .price {
 	}
 
 	.intro_banner {
-		bottom: 114px;
+		bottom: 114px !important;
 	}
 
 	.tp-banner-container .btn_detail {
