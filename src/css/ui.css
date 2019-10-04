@@ -2981,6 +2981,7 @@ button {
 	margin-right: 250px;
 	font-family: "돋움", "Dotum", arial, helvetica, serif , sans-serif;
 	font-size: 12px;
+	line-height: 32px;
 	color: #848383;
 }
 .main_contents .section .notice_area .notice_list li .ellip .bold {
