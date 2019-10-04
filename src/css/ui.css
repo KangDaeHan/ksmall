@@ -1418,16 +1418,20 @@ button {
 	color: #000;
 }
 .sub_comm_desc {
-	display: flex;
-	align-items: center;
+    display: table;
+	width: 100%;
 	min-height: 70px;
 	padding: 0 37px;
 	margin-bottom: 20px;
 	background: #fab000;
+}
+.sub_comm_desc .txt {
+	display: table-cell;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
 	line-height: 1.2;
 	color: #fff;
+	vertical-align: middle;
 }
 .sub_comm_tit {
 	padding: 30px 35px;
