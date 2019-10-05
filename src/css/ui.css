@@ -818,6 +818,7 @@ button {
 .ly .pop_compare {
 	max-width: 95%;
 	height: 90%;
+	background: transparent;
 	overflow: hidden;
 	overflow-x: auto;
 }
@@ -3971,8 +3972,8 @@ button {
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	width: 1200px;
 	height: 100%;
+	background: transparent;
 }
 .compare_area .product_spec_area {
 	position: relative;
@@ -3981,6 +3982,7 @@ button {
 	padding: 0;
 	margin: 0;
 	border: 0;
+	background: #fff;
 }
 .product_spec_area .product_tit {
 	position: relative;
