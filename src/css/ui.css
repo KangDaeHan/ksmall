@@ -903,6 +903,9 @@ button {
 .ly .pop_wrap .tbl_h262 {
 	max-height: 262px;
 }
+.ly .pop_idpw_find {
+	width: 500px;
+}
 
 /* 제품 확대 보기 팝업 */
 .lightboxOverlay {
@@ -4916,6 +4919,13 @@ table .total_price .box .price {
 	color: #000;
 }
 
+/* id/pw 찾기 팝업 */
+.pop_idpw_find .pop_content .tbl_area {
+	margin: 0;
+}
+.pop_rd_box {
+	margin: 0 0 15px 0;
+}
 
 
 /* 기본 반응형 */

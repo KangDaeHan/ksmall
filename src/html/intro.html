@@ -22,6 +22,7 @@
 			<input type="password" name="" id="" class="inpt" value="" placeholder="****"/>
 			<button type="button" class="btn xs" onclick="layer_open('pwd_change'); return false;">로그인</button>
 			<a href="#" class="btn xs">회원가입</a>
+			<a href="#" class="btn xs" onclick="layer_open('pop_idpw_find'); return false;">ID/PW 찾기</a>
 		</div>
 		<!-- //상단 로그인 -->
 
@@ -211,6 +212,61 @@
 	</div>
 </div>
 <!-- //비밀번호 변경 안내 팝업 -->
+
+<!-- ID/PW 찾기 팝업 -->
+<div class="ly" id="pop_idpw_find">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_idpw_find">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">ID / PW 찾기</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<!-- 리스트 -->
+			<div class="pop_rd_box">
+				<input type="radio" name="id_pw" id="find_id" checked>
+				<label for="find_id">아아디 찾기</label>
+				<input type="radio" name="id_pw" id="find_pw">
+				<label for="find_pw">비밀번호 찾기</label>
+			</div>
+			<div class="tbl_area">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 120px;">대리점명</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" />
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 120px;">연락처</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" />
+							</td>
+						</tr>
+						<!-- 비밀번호 찾기 일때 -->
+						<tr style="display: none;">
+							<th style="width: 120px;">이메일</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" />
+							</td>
+						</tr>
+						<!-- //비밀번호 찾기 일때 -->
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm compare">ID 찾기</a>
+			<!-- <a href="#" class="btn sm compare">비밀번호 찾기</a> -->
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //ID/PW 찾기 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">
