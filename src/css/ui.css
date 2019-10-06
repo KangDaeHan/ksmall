@@ -4518,6 +4518,7 @@ table .total_price .box .price {
 	border-top: 0;
 }
 .customer_inquiry.bor_gray {
+	margin-top: 30px;
 	border-color: #b5b5b5;
 }
 .customer_inquiry .tit {
