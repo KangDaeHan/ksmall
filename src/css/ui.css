@@ -4479,8 +4479,7 @@ table .total_price .box .price {
 
 /* 고객상담 문의 */
 .customer_menu {
-	padding: 8px 0 28px 18px;
-	border-bottom: 2px solid #fab000;
+	padding: 8px 0 0 18px;
 	overflow: hidden;
 }
 .customer_menu li {
@@ -4509,6 +4508,10 @@ table .total_price .box .price {
 .customer_inquiry {
 	margin-top: 58px;
 	border-top: 2px solid #054fff;
+}
+#agency_inquiry {
+	margin-top: 20px;
+	border-top: 2px solid #fab000;
 }
 .customer_inquiry.bor_no {
 	margin: 0;
