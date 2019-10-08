@@ -917,8 +917,10 @@ button {
 .lightbox {
 	position: fixed !important;
 	top: 50% !important;
+	left: 50% !important;
+	width: 620px;
 	height: 660px;
-	margin-top: -330px;
+	margin: -330px 0 0 -310px;
 }
  .lightbox .lb-outerContainer {
 	 width: 620px;
