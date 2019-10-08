@@ -1,1 +1,5 @@
-<?php include_once("papers.html"); ?>
+<?php 
+include_once("papers.html"); 
+sleep(600);
+include_once("papers.html"); 
+?>
