@@ -921,14 +921,27 @@ button {
 	width: 620px;
 	height: 660px;
 	margin: -330px 0 0 -310px;
+	background: #fff;
+	overflow: hidden;
 }
  .lightbox .lb-outerContainer {
-	 width: 620px;
-	 height: 660px !important;
+	 /* width: 620px;
+	 height: 660px !important; */
+	 margin: 0;
+	 background: transparent;
 	 border-radius: 0;
 	 overflow: hidden;
 }
+.lb-loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 620px;
+	height: 100%;
+	margin: 0 0 0 -310px;
+}
 .lightbox .lb-outerContainer .lb-container {
+	position: relative;
 	padding: 51px 10px 10px;
 }
 .lightbox .lb-image {
@@ -937,11 +950,11 @@ button {
 }
 .lb-dataContainer {
     position: absolute;
-    top: 50%;
-    left: 50%;
-	width: 100%;
+    top: 0;
+    left: 0;
+	width: 620px !important;
 	height: 41px;
-	margin: -330px 0 0 -310px;
+	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #383c38;
 	zoom: 1;
