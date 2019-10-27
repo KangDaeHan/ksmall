@@ -115,84 +115,61 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">인수처정보입력</h2>
+				<h2 class="sprite_before tit">인수확인서상세조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
-					<li><a href="#">인수처정보입력</a></li>
+					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
+					<li><a href="#">인수확인서상세조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
 				<div class="txt">
-					주문하신 전표의 인수처 및 배송지를 입력하는 화면입니다. 인수처를 선택하신 후 배송지를 입력하여 주십시오. <br/>
-					궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+					KSMALL에서 해당월의 인수확인내역에 대해 총수량, 거래처명, 인수처명 등 인수확인내역을 자세하게 조회하실 수 있습니다. <br/>
+					궁금하신 사항이 있으시다면, 고객상담센터로 문의하시기 바랍니다.
 				</div>
 			</div>
 
 			<div class="sub_comm_tit">
-				<h2>인수처정보입력</h2>
+				<h2>인수확인상세조회</h2>
 			</div>
 
 			<!-- 조회 영역 -->
-			<div class="tbl_area">
-				<table class="tbl_row">
+			<div class="tbl_area tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: auto;">인수확인</th>
+							<th style="width: 270px;">SMS본인인증</th>
+							<th style="width: 200px;">전자서명</th>
+						</tr>
+					</thead>
 					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="3" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<th style="width: 120px;">주문처</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
+								<div class="mrb15">
+									<input type="radio" name="certification" id="certification1" checked>
+									<label for="certification1">본인인증</label>
+									<input type="radio" name="certification" id="certification2">
+									<label for="certification2">전자서명</label>
+								</div>
+								<div>
+									<a href="#" class="btn order_buy acknowledgment print">인수확인</a>
 								</div>
 							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">인수처</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_undertaking_sch'); return false;">검색</button>
-									<span class="txt"><span class="point">*</span> 인수처코드 미존재시 KSNET 담당자에게 등록요청을 해 주세요.</span>
+								<a href="#" class="btn order_buy acknowledgment" onclick="layer_open('pop_sms'); return false;">인증확인</a>
+							</td>
+							<td>
+								<div class="signature_box">
+									<img src="../image/t_logo_blue.png" alt="">
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>배송지</th>
-							<td>
-								<input type="radio" name="addr_delivery" id="delivery1" checked>
-								<label for="delivery1">직접입력</label>
-								<input type="radio" name="addr_delivery" id="delivery2">
-								<label for="delivery2">인수처와 동일주소</label>
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">전화번호</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;" rowspan="3">주소</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 							</td>
 						</tr>
 					</tbody>
@@ -200,75 +177,228 @@
 			</div>
 			<!-- //조회 영역 -->
 
-			<!-- 전표추가 목록 -->
-			<div class="undertaking_list">
-				<div class="sub_comm_tit">
-					<h2>전표주문내역</h2>
-				</div>
-				<div class="btn_right">
-					<button type="button" class="btn sm blue add" name="">+ 추가</button>
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">저장</button>
+				<button type="button" class="btn sm sch">목록</button>
+			</div>
+
+			<div class="tbl_top_util">
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
 				</div>
 			</div>
-			<div class="tbl_area tbl_no_scroll tbl_undertaking">
+			<div class="tbl_area tbl_no_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 200px;">전표코드</th>
-							<th style="width: auto;">전표모델명</th>
-							<th style="width: 200px;">주문수량</th>
-							<th style="width: 120px;">삭제</th>
+							<th style="width: 130px;">일자</th>
+							<th style="width: 130px;">입출고지</th>
+							<th style="width: 200px;">품명</th>
+							<th style="width: 100px;">수량</th>
+							<th style="width: 200px;">거래처</th>
+							<th style="width: 200px;">거래처명</th>
+							<th style="width: 130px;">인수처</th>
+							<th style="width: 150px;">인수처명</th>
+							<th style="width: 100px;">유형</th>
+							<th style="width: 200px;">프로젝트명</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="4" class="no_result">등록된 내용이 없습니다.</td>
+							<td colspan="10" class="no_result">등록된 내용이 없습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								2019-10-05
 							</td>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								안성창고
 							</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
-							</td>
-							<td>
-
-							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
 						</tr>
-						<!-- 추가 버튼 클릭시 -->
-						<!-- <tr>
+						<tr>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								2019-10-05
 							</td>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
 							</td>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
 							</td>
 							<td>
-								<a href="#" class="btn order_buy">삭제</a>
+								안성창고
 							</td>
-						</tr> -->
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
+						<tr>
+							<td>
+								2019-10-05
+							</td>
+							<td>
+								안성창고
+							</td>
+							<td>품명</td>
+							<td>10</td>
+							<td>D501234</td>
+							<td>본사의뢰</td>
+							<td>DFD1000</td>
+							<td>인수처명</td>
+							<td>약정대여</td>
+							<td>프로젝트명</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
-			<!-- //전표추가 목록 -->
 
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">주문</button>
-				<button type="button" class="btn sm sch">취소</button>
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
 			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -750,6 +880,46 @@
 </div>
 <!-- //인수처 검색 팝업 -->
 
+<!-- SMS 본인인증 팝업 -->
+<div class="ly" id="pop_sms">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_idpw_find">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">SMS 인증처리</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<!-- 리스트 -->
+			<div class="tbl_area">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 120px;">남은 시간</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="3:00"/>
+							</td>
+						</tr>
+						<tr>
+							<th>인증번호</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm compare">확인</a>
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //SMS 본인인증 팝업 -->
+
 <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-3.1.0.min.js"></script>
 <script type="text/javascript" src="../js/jquery-ui-1.12.1.min.js"></script>
@@ -762,8 +932,117 @@
 <script type="text/javascript" src="../js/jquery.monthpicker.js"></script>
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
+function makeHtml(){
+	var obj = {html : ''};
+	var html = '<div class="pop_print">';
+	html += '<h2>임대단말기 인수확인서</h2>';
+	html += '<div class="print_top">';
+	html += '	<p>(주) 케이에스넷 귀중</p>';
+	html += '	<p class="txt">이 인수확인서에 명시한 임대 단말기의 품명과 수량에 대하여 정히 인수하였음을 확인합니다.</p>';
+	html += '	<p class="txt">기간 : 2019년 10월 03일 ~ 2019년 10월 03일</p>';
+	html += '</div>';
+	html += '<div class="sign_area">';
+	html += '	<div class="box">';
+	html +=	'		<p class="tit">SMS본인인증</p>';
+	html +=	'		<div class="number_txt"><p>인증번호 : 56789</p><p>휴대폰번호 : 010-1234-1234</p></div>';
+	html += '	</div>';
+	html += '	<div class="box">';
+	html +=	'		<p class="tit">전자서명</p>';
+	html +=	'		<div class="signature_box"><img src="../image/t_logo_blue.png" alt="서명"/></div>';
+	html += '	</div>';
+	html += '</div>';
+	html += '<div class="clearfix tbl_area tbl_no_scroll">';
+	html += '	<table class="tbl_col">';
+	html += '		<thead>';
+	html += '			<tr>';		
+	html += '				<th style="width: 100px;">일자</th>';
+	html += '				<th style="width: 100px;">입출고지</th>';
+	html += '				<th style="width: 200px;">품명</th>';
+	html += '				<th style="width: 90px;">수량</th>';
+	html += '				<th style="width: 100px;">거래처</th>';
+	html += '				<th style="width: 120px;">거래처명</th>';
+	html += '				<th style="width: 120px;">인수처명</th>';
+	html += '				<th style="width: 150px;">인수처</th>';
+	html += '				<th style="width: 100px;">유형</th>';
+	html += '				<th style="width: 250px;">프로젝트명</th>';
+	html += '			</tr>';	
+	html += '		</thead>';	
+	html += '		<tbody>';	
+	html += '			<tr>';	
+	html += '				<td>2019-10-05</td>';
+	html += '				<td>안성창고</td>';	
+	html += '				<td>TITAN-S260(듀얼)</td>';	
+	html += '				<td>10</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>본사의뢰</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>케이에스네트웍스</td>';	
+	html += '				<td>약정임대</td>';	
+	html += '				<td>[D25023] 커피마마-채널영업팀</td>';	
+	html += '			</tr>';
+	html += '			<tr>';	
+	html += '				<td>2019-10-05</td>';
+	html += '				<td>안성창고</td>';	
+	html += '				<td>TITAN-S260(듀얼)</td>';	
+	html += '				<td>10</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>본사의뢰</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>케이에스네트웍스</td>';	
+	html += '				<td>약정임대</td>';	
+	html += '				<td>[D25023] 커피마마-채널영업팀</td>';	
+	html += '			</tr>';	
+	html += '			<tr>';	
+	html += '				<td>2019-10-05</td>';
+	html += '				<td>안성창고</td>';	
+	html += '				<td>TITAN-S260(듀얼)</td>';	
+	html += '				<td>10</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>본사의뢰</td>';	
+	html += '				<td>DV4005</td>';	
+	html += '				<td>케이에스네트웍스</td>';	
+	html += '				<td>약정임대</td>';	
+	html += '				<td>[D25023] 커피마마-채널영업팀</td>';	
+	html += '			</tr>';	
+	html += '		</tbody>';	
+	html += '	</table>';	
+	html += '</div>';
+	html += '<p class="print_date">2019년 10월 10일</p>';	
+
+
+	html += '</div>';
+	obj.html = html;
+	return obj;
+}
+
+function reportPrint(param){
+	var setting = "width=850, height=800";
+	var objWin = window.open('', 'print', setting);
+	objWin.document.open();
+	objWin.document.write('<!DOCTYPE html>');
+	objWin.document.write('<html lang="ko">');
+	objWin.document.write('<head>');
+	objWin.document.write('<title>인수확인서 출력</title>');
+	objWin.document.write('<meta charset="utf-8">');
+	objWin.document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
+	objWin.document.write('<link rel="stylesheet" type="text/css" href="../css/ui.css"/>');
+	objWin.document.write('</head><body>');
+	objWin.document.write(param.html);
+	objWin.document.write('</body></html>');
+	objWin.focus(); 
+	objWin.document.close();
+
+	setTimeout(function(){
+		objWin.print();
+		// objWin.close();
+	}, 1000);
+}
+
 $(document).ready(function() {
-	
+	$('.print').on('click', function(){
+		var completeParam = makeHtml();
+		reportPrint(completeParam);
+	});
 });
 </script>
 </body>

@@ -118,7 +118,7 @@
 				<h2 class="sprite_before tit">인수처정보입력</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
+					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
 					<li><a href="#">인수처정보입력</a></li>
 				</ul>
 			</div>
@@ -126,8 +126,8 @@
 
 			<div class="sub_comm_desc">
 				<div class="txt">
-					주문하신 전표의 인수처 및 배송지를 입력하는 화면입니다. 인수처를 선택하신 후 배송지를 입력하여 주십시오. <br/>
-					궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+					주문하신 제품의 인수처 및 배송지를 입력하는 화면입니다. 인수처를 확인하신 후 배송지를 입력해 주세요. <br/>
+					궁금하신 사항이 있으시면 고객상담센타로 문의하시길 바랍니다.
 				</div>
 			</div>
 
@@ -136,21 +136,68 @@
 			</div>
 
 			<!-- 조회 영역 -->
+			<p class="vat_txt">[VAT별도]</p>
+			<div class="tbl_area tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">모델명</th>
+							<th style="width: 130px;">판매가격</th>
+							<th style="width: 200px;">출고유형</th>
+							<th style="width: 130px;">프로젝트코드</th>
+							<th style="width: 200px;">프로젝트명</th>
+							<th style="width: 130px;">주문처코드</th>
+							<th style="width: 200px;">주문처</th>
+							<th style="width: 100px;">주문수량</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="8" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>
+								KS1060
+							</td>
+							<td>
+								1,000,000
+							</td>
+							<td>판매</td>
+							<td>프로젝트코드</td>
+							<td>일반판매</td>
+							<td>주문처코드</td>
+							<td>주문처</td>
+							<td>10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl_area tbl_layout_fix tbl_total mrb60">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 210px;">총주문수량</th>
+							<td>
+								<span class="f_bold f_blue">1개</span>
+							</td>
+							<th style="width: 210px;">금액합계</th>
+							<td>
+								<span class="f_bold f_red">100,000원</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //조회 영역 -->
+
 			<div class="tbl_area">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">주문처</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">인수처</th>
+							<th style="width: 130px;">인수처</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -161,7 +208,48 @@
 							</td>
 						</tr>
 						<tr>
-							<th>배송지</th>
+							<th>상호명</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="3">주소</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl_area">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 130px;">배송지정보</th>
 							<td>
 								<input type="radio" name="addr_delivery" id="delivery1" checked>
 								<label for="delivery1">직접입력</label>
@@ -170,7 +258,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="width: 120px;">전화번호</th>
+							<th>배송지상호</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -178,7 +266,15 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="width: 120px;" rowspan="3">주소</th>
+							<th>배송지 전화번호</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="3">주소</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -198,72 +294,6 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- //조회 영역 -->
-
-			<!-- 전표추가 목록 -->
-			<div class="undertaking_list">
-				<div class="sub_comm_tit">
-					<h2>전표주문내역</h2>
-				</div>
-				<div class="btn_right">
-					<button type="button" class="btn sm blue add" name="">+ 추가</button>
-				</div>
-			</div>
-			<div class="tbl_area tbl_no_scroll tbl_undertaking">
-				<table class="tbl_col">
-					<thead>
-						<tr>
-							<th style="width: 200px;">전표코드</th>
-							<th style="width: auto;">전표모델명</th>
-							<th style="width: 200px;">주문수량</th>
-							<th style="width: 120px;">삭제</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 등록된 내용 없을 시 -->
-						<!-- <tr>
-							<td colspan="4" class="no_result">등록된 내용이 없습니다.</td>
-						</tr> -->
-						<!-- //등록된 내용 없을 시 -->
-						<tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
-							</td>
-							<td>
-
-							</td>
-						</tr>
-						<!-- 추가 버튼 클릭시 -->
-						<!-- <tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
-							</td>
-							<td>
-								<a href="#" class="btn order_buy">삭제</a>
-							</td>
-						</tr> -->
-					</tbody>
-				</table>
-			</div>
-			<!-- //전표추가 목록 -->
 
 			<div class="btn_area">
 				<button type="button" class="btn sm sch">주문</button>

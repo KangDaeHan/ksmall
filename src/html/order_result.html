@@ -115,20 +115,25 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">정기전표주문조회</h2>
+				<h2 class="sprite_before tit">주문결과내역</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">마이페이지 &nbsp;&gt;</a></li>
-					<li><a href="#">정기전표주문조회</a></li>
+					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
+					<li><a href="#">주문결과내역</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
 				<div class="txt">
-					전표주문에 관하여 요청수량, 승인수량 및 전표 지원현황에 대해 조회해 보실 수 있습니다. <br/>
-					궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+					주문하신 내역의 상세내역입니다. <br/>
+					주문현황, 주문내역 및 배송지 정보입니다. <br/>
+					궁금하신 사항이 있으시면, 고객상담센터로 문의하시기 바랍니다.
 				</div>
+			</div>
+
+			<div class="sub_comm_tit">
+				<h2>주문결과내역</h2>
 			</div>
 
 			<!-- 조회 영역 -->
@@ -136,169 +141,108 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">인수처</th>
-							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" value="" placeholder="코드" />
-									<input type="text" class="inpt wid177" name="" id="" value="" placeholder="상호" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>배송지</th>
-							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" value="" placeholder="" />
-									<input type="radio" name="addr_delivery" id="delivery1" checked>
-									<label for="delivery1">직접입력</label>
-									<input type="radio" name="addr_delivery" id="delivery2">
-									<label for="delivery2">인수처와 동일주소</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>전화번호</th>
-							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th rowspan="3">주소</th>
-							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주문번호</th>
+							<th style="width: 120px;">주문처코드</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt one" name="" id="" value="" placeholder=""/>
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_sch'); return false;">검색</button>
-								</div>
+								KS1060
 							</td>
-							<th style="width: 120px;">주문일자</th>
+							<th style="width: 120px;">주문처명</th>
 							<td>
-								<div class="datepicker">
-									<input type="text" class="date_from" id="from" name="from">
-									<span>~</span>
-									<input type="text" class="date_to" id="to" name="to">
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>승인여부</th>
-							<td colspan="3">
-								<div class="">
-									<input type="radio" name="admission" id="all_okay" checked>
-									<label for="all_okay">전체</label>
-									<input type="radio" name="admission" id="okay">
-									<label for="okay">승인</label>
-									<input type="radio" name="admission" id="no">
-									<label for="no">거절</label>
-								</div>
+								검수 info
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
 			<!-- //조회 영역 -->
 
-			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
-				<div class="right">
-					<div class="sel_area">
-						<select name="" id="" class="sel_box">
-							<option value="">10개</option>
-							<option value="">20개</option>
-							<option value="">30개</option>
-						</select>
-					</div>
-				</div>
+			<!-- 전표추가 목록 -->
+			<div class="sub_comm_tit">
+				<h2>배송지</h2>
 			</div>
-			<!-- 리스트 -->
+
+			<!-- 조회 영역 -->
 			<div class="tbl_area tbl_no_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">주문번호</th>
-							<th style="width: 120px;">주문<br/>일자</th>
-							<th style="width: 120px;">주문<br/>시간</th>
-							<th style="width: 200px;">자대리점</th>
-							<th style="width: 200px;">전표명</th>
-							<th style="width: 110px">주문요청수량</th>
-							<th style="width: 110px;">주문승인수량</th>
-							<th style="width: 100px;">거래<br/>상태</th>
-							<th style="width: 120px;">출고<br/>일자</th>
-							<th style="width: 200px;">거절사유</th>
-							<th style="width: 150px;">송장번호</th>
+							<th style="width: 130px;">인수처코드</th>
+							<th style="width: 170px;">인수처명</th>
+							<th style="width: 200px;">배송지상호</th>
+							<th style="width: 120px;">배송지전화번호</th>
+							<th style="width: 250px;">배송지주소</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="11" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="6" class="no_result">등록된 내용이 없습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>DV4005</td>
 							<td>
-								2019-09-02
+								KS12345(단품)
 							</td>
-							<td>09:00:00</td>
-							<td>대리점명</td>
-							<td>전표명</td>
-							<td>20</td>
-							<td>10</td>
-							<td>승인</td>
-							<td>2019-09-02</td>
-							<td>거절 사유 표시</td>
-							<td><a href="#" class="t_bold">송장번호</a></td>
+							<td>
+								인수처명
+							</td>
+							<td>
+								배송지상호
+							</td>
+							<td>
+								010-1234-1234
+							</td>
+							<td>
+								서울시 서울구 서울로 123길
+							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<!-- //리스트 -->
+			<!-- //조회 영역 -->
 
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
-				</div>
+			<div class="sub_comm_tit">
+				<h2>주문내역</h2>
 			</div>
-			<!-- //페이징 -->
+
+			<!-- 조회 영역 -->
+			<div class="tbl_area tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 200px;">주문번호</th>
+							<th style="width: 170px;">전표코드</th>
+							<th style="width: 200px;">전표모델명</th>
+							<th style="width: 100px;">주문수량</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="6" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>
+								AD1234561234
+							</td>
+							<td>
+								KS12345(단품)
+							</td>
+							<td>
+								전표모델명
+							</td>
+							<td>
+								100
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //조회 영역 -->
+
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">확인</button>
+			</div>
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -354,20 +298,182 @@
 </div>
 
 <!-- 팝업 -->
-<div class="ly" id="pop_sch">
+<div class="ly" id="pop_order_list">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_list_wrap">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">주문상세정보</h2>
+			<div class="code_box">
+				프로젝트 코드 : &nbsp;DWE231234
+			</div>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">프로젝트코드</th>
+							<th style="width: 170px;">주문번호</th>
+							<th style="width: 200px;">단말기모델명</th>
+							<th style="width: 100px;">단말기수량</th>
+							<th style="width: 150px;">단말기환산수량/금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="5" class="no_result">주문정보가 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td><a href="#" class="t_bold">AR1111080015723</a></td>
+							<td class="t_left">
+								KS7600i(일반형)
+							</td>
+							<td>1</td>
+							<td>10,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //팝업 -->
+
+<!-- 페이지 로딩 필요시 -->
+<div class="loading">
+	<img src="../image/loader.gif" alt="">
+</div>
+<!-- //페이지 로딩 필요시 -->
+
+<!-- 주문처 검색 팝업 -->
+<div class="ly" id="pop_order_sch">
 	<div class="bg"></div>
 	<div class="pop_wrap pop_sch_wrap">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">주문처 검색</h2>
+			<h2 class="tit">주문처검색</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
 			<div class="pop_sch_top">
 				<span class="name">구분</span>
 				<div class="sel_area">
 					<select name="" id="" class="sel_box">
-						<option value="">대리점명</option>
 						<option value="">대리점코드</option>
+						<option value="">대리점명</option>
 					</select>
 				</div>
 				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
@@ -396,14 +502,14 @@
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 170px;">대리점코드</th>
+							<th style="width: 150px;">대리점코드</th>
 							<th style="width: auto;">대리점명</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="2" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
@@ -483,13 +589,140 @@
 		<!-- //팝업 내용 -->
 	</div>
 </div>
-<!-- //팝업 -->
+<!-- //주문처 검색 팝업 -->
 
-<!-- 페이지 로딩 필요시 -->
-<div class="loading">
-	<img src="../image/loader.gif" alt="">
+<!-- 인수처 검색 팝업 -->
+<div class="ly" id="pop_undertaking_sch">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_sch_wrap">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">인수처검색</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<div class="pop_sch_top">
+				<span class="name">구분</span>
+				<div class="sel_area">
+					<select name="" id="" class="sel_box">
+						<option value="">대리점코드</option>
+						<option value="">대리점명</option>
+					</select>
+				</div>
+				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
+			</div>
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">조회</button>
+			</div>
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">5개</option>
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll tbl_h262">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">대리점코드</th>
+							<th style="width: auto;">대리점명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="2" class="no_result">주문정보가 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>DV4005</td>
+							<td class="t_left">
+								<div class="list_btn">
+									<p class="ellip">15년2만건신규건수-SMD</p>
+									<button type="button" class="btn xs gray choice">선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm btn_pop_close">닫기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
 </div>
-<!-- //페이지 로딩 필요시 -->
+<!-- //인수처 검색 팝업 -->
 
 <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-3.1.0.min.js"></script>

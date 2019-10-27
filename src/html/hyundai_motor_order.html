@@ -115,84 +115,67 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">인수처정보입력</h2>
+				<h2 class="sprite_before tit">현대차주문</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
-					<li><a href="#">인수처정보입력</a></li>
+					<li><a href="#">현대차주문</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
 				<div class="txt">
-					주문하신 전표의 인수처 및 배송지를 입력하는 화면입니다. 인수처를 선택하신 후 배송지를 입력하여 주십시오. <br/>
-					궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+					세트,단품을 주문하실수 있습니다. <br/>
+					궁금하신 사항이 있으시다면, 고객상담센터로 문의하시기 바랍니다.
 				</div>
 			</div>
 
 			<div class="sub_comm_tit">
-				<h2>인수처정보입력</h2>
+				<h2>유선단말기세트</h2>
 			</div>
 
+			<p class="vat_txt">[VAT별도]</p>
 			<!-- 조회 영역 -->
-			<div class="tbl_area">
-				<table class="tbl_row">
+			<div class="tbl_area tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 250px;">모델명</th>
+							<th style="width: 120px;">제조원</th>
+							<th style="width: 120px;">프로젝트코드</th>
+							<th style="width: 200px;">프로젝트명</th>
+							<th style="width: 150px;">주문처코드</th>
+							<th style="width: 200px;">주문처</th>
+							<th style="width: 120px;">주문가능수량</th>
+						</tr>
+					</thead>
 					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<th style="width: 120px;">주문처</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
-								</div>
+								KS12345(단품)
 							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">인수처</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_undertaking_sch'); return false;">검색</button>
-									<span class="txt"><span class="point">*</span> 인수처코드 미존재시 KSNET 담당자에게 등록요청을 해 주세요.</span>
-								</div>
+								팜체크
 							</td>
-						</tr>
-						<tr>
-							<th>배송지</th>
 							<td>
-								<input type="radio" name="addr_delivery" id="delivery1" checked>
-								<label for="delivery1">직접입력</label>
-								<input type="radio" name="addr_delivery" id="delivery2">
-								<label for="delivery2">인수처와 동일주소</label>
+								프로젝트코드
 							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">전화번호</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
+								프로젝트명
 							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;" rowspan="3">주소</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
+								주문처코드
 							</td>
-						</tr>
-						<tr>
 							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								주문처
 							</td>
-						</tr>
-						<tr>
 							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								156
 							</td>
 						</tr>
 					</tbody>
@@ -200,66 +183,116 @@
 			</div>
 			<!-- //조회 영역 -->
 
+			<div class="tbl_area tbl_layout_fix tbl_total">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 120px;">단가</th>
+							<td>
+								<span class="f_bold">1개</span>
+							</td>
+							<th style="width: 120px;">주문수량</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" name="" id="" class="inpt" />
+									<span class="txt f_bold">대</span>
+								</div>
+							</td>
+							<th style="width: 120px;">주문금액</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" name="" id="" class="inpt" />
+									<span class="f_bold">원</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btn_area">
+				<button type="button" class="btn sm sch">주문</button>
+			</div>
+
 			<!-- 전표추가 목록 -->
 			<div class="undertaking_list">
 				<div class="sub_comm_tit">
-					<h2>전표주문내역</h2>
-				</div>
-				<div class="btn_right">
-					<button type="button" class="btn sm blue add" name="">+ 추가</button>
+					<h2>무선단말기</h2>
 				</div>
 			</div>
-			<div class="tbl_area tbl_no_scroll tbl_undertaking">
+
+			<p class="vat_txt">[VAT별도]</p>
+			<!-- 조회 영역 -->
+			<div class="tbl_area tbl_no_scroll">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 200px;">전표코드</th>
-							<th style="width: auto;">전표모델명</th>
-							<th style="width: 200px;">주문수량</th>
-							<th style="width: 120px;">삭제</th>
+							<th style="width: 250px;">모델명</th>
+							<th style="width: 120px;">제조원</th>
+							<th style="width: 120px;">프로젝트코드</th>
+							<th style="width: 200px;">프로젝트명</th>
+							<th style="width: 150px;">주문처코드</th>
+							<th style="width: 200px;">주문처</th>
+							<th style="width: 120px;">주문가능수량</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="4" class="no_result">등록된 내용이 없습니다.</td>
+							<td colspan="7" class="no_result">등록된 내용이 없습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								KS12345(단품)
 							</td>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								팜체크
 							</td>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
+								프로젝트코드
 							</td>
 							<td>
-
+								프로젝트명
+							</td>
+							<td>
+								주문처코드
+							</td>
+							<td>
+								주문처
+							</td>
+							<td>
+								156
 							</td>
 						</tr>
-						<!-- 추가 버튼 클릭시 -->
-						<!-- <tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //조회 영역 -->
+
+			<div class="tbl_area tbl_layout_fix tbl_total">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 120px;">단가</th>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								<span class="f_bold">1개</span>
 							</td>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
+							<th style="width: 120px;">주문수량</th>
 							<td>
 								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
+									<input type="text" name="" id="" class="inpt" />
+									<span class="txt f_bold">대</span>
 								</div>
 							</td>
+							<th style="width: 120px;">주문금액</th>
 							<td>
-								<a href="#" class="btn order_buy">삭제</a>
+								<div class="align_abreast">
+									<input type="text" name="" id="" class="inpt" />
+									<span class="f_bold">원</span>
+								</div>
 							</td>
-						</tr> -->
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -267,7 +300,6 @@
 
 			<div class="btn_area">
 				<button type="button" class="btn sm sch">주문</button>
-				<button type="button" class="btn sm sch">취소</button>
 			</div>
 
 		</div>

@@ -115,84 +115,77 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">인수처정보입력</h2>
+				<h2 class="sprite_before tit">결제수단선택</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문 &nbsp;&gt;</a></li>
-					<li><a href="#">인수처정보입력</a></li>
+					<li><a href="#">장비주문 &nbsp;&gt;</a></li>
+					<li><a href="#">결제수단선택</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 
 			<div class="sub_comm_desc">
 				<div class="txt">
-					주문하신 전표의 인수처 및 배송지를 입력하는 화면입니다. 인수처를 선택하신 후 배송지를 입력하여 주십시오. <br/>
-					궁금하신 사항이 있으시다면 고객상담센터로 문의하시기 바랍니다.
+					주문하신 내역의 결제를 위하여 결제스단을 선택합니다. <br/>
+					궁금하신 사항이 있으시면 고객상담센타로 문의하시길 바랍니다.
 				</div>
 			</div>
 
 			<div class="sub_comm_tit">
-				<h2>인수처정보입력</h2>
+				<h2>결제수단선택</h2>
 			</div>
 
 			<!-- 조회 영역 -->
-			<div class="tbl_area">
+			<p class="vat_txt">[VAT별도]</p>
+			<div class="tbl_area tbl_no_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">모델명</th>
+							<th style="width: 130px;">판매가격</th>
+							<th style="width: 200px;">출고유형</th>
+							<th style="width: 130px;">프로젝트코드</th>
+							<th style="width: 200px;">프로젝트명</th>
+							<th style="width: 130px;">주문처코드</th>
+							<th style="width: 200px;">주문처</th>
+							<th style="width: 100px;">주문수량</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="8" class="no_result">등록된 내용이 없습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>
+								KS1060
+							</td>
+							<td>
+								1,000,000
+							</td>
+							<td>판매</td>
+							<td>프로젝트코드</td>
+							<td>일반판매</td>
+							<td>주문처코드</td>
+							<td>주문처</td>
+							<td>10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl_area tbl_layout_fix tbl_total mrb60">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">주문처</th>
+							<th style="width: 210px;">총주문수량</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_order_sch'); return false;">검색</button>
-								</div>
+								<span class="f_bold f_blue">1개</span>
 							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">인수처</th>
+							<th style="width: 210px;">금액합계</th>
 							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch" onclick="layer_open('pop_undertaking_sch'); return false;">검색</button>
-									<span class="txt"><span class="point">*</span> 인수처코드 미존재시 KSNET 담당자에게 등록요청을 해 주세요.</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>배송지</th>
-							<td>
-								<input type="radio" name="addr_delivery" id="delivery1" checked>
-								<label for="delivery1">직접입력</label>
-								<input type="radio" name="addr_delivery" id="delivery2">
-								<label for="delivery2">인수처와 동일주소</label>
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">전화번호</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;" rowspan="3">주소</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								<span class="f_bold f_red">100,000원</span>
 							</td>
 						</tr>
 					</tbody>
@@ -200,70 +193,73 @@
 			</div>
 			<!-- //조회 영역 -->
 
-			<!-- 전표추가 목록 -->
-			<div class="undertaking_list">
-				<div class="sub_comm_tit">
-					<h2>전표주문내역</h2>
-				</div>
-				<div class="btn_right">
-					<button type="button" class="btn sm blue add" name="">+ 추가</button>
-				</div>
-			</div>
-			<div class="tbl_area tbl_no_scroll tbl_undertaking">
-				<table class="tbl_col">
-					<thead>
-						<tr>
-							<th style="width: 200px;">전표코드</th>
-							<th style="width: auto;">전표모델명</th>
-							<th style="width: 200px;">주문수량</th>
-							<th style="width: 120px;">삭제</th>
-						</tr>
-					</thead>
+			<div class="tbl_area">
+				<table class="tbl_row">
 					<tbody>
-						<!-- 등록된 내용 없을 시 -->
-						<!-- <tr>
-							<td colspan="4" class="no_result">등록된 내용이 없습니다.</td>
-						</tr> -->
-						<!-- //등록된 내용 없을 시 -->
 						<tr>
+							<th style="width: 130px;">인수처</th>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
-							</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
-								</div>
-							</td>
-							<td>
-
+								D1234562 신세계 통신
 							</td>
 						</tr>
-						<!-- 추가 버튼 클릭시 -->
-						<!-- <tr>
+						<tr>
+							<th>배송지상호</th>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								신세계 통신
 							</td>
+						</tr>
+						<tr>
+							<th>배송지 전화번호</th>
 							<td>
-								<input type="text" class="inpt" name="" id="" value=""/>
+								02-1234-1234
 							</td>
+						</tr>
+						<tr>
+							<th rowspan="2">배송지주소</th>
+							<td>
+								123-123
+							</td>
+						</tr>
+						<tr>
+							<td>
+								서울시 서울구 서울로 23-45 
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="2">결제수단</th>
+							<td>
+								<input type="radio" name="pay_method" id="pay_card" checked>
+								<label for="pay_card">신용카드</label>
+								<input type="radio" name="pay_method" id="virtual_account">
+								<label for="virtual_account">가상계좌</label>
+								<input type="radio" name="pay_method" id="etc">
+								<label for="etc">기타</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="" id="card_chk" /> <label for="card_chk">국민카드 결제시 반드시 체크</label>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="2">사용자 추가정보</th>
 							<td>
 								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value=""/>
-									<span class="txt">박스</span>
+									<span class="f_bold txt">사용자 이메일주소</span>
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="f_bold txt ml30">사용자 휴대폰번호</span>
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 								</div>
 							</td>
+						</tr>
+						<tr>
 							<td>
-								<a href="#" class="btn order_buy">삭제</a>
+								<input type="checkbox" name="" id="agree_chk" /> <label for="agree_chk">개인정보활용에 동의함</label>
 							</td>
-						</tr> -->
+						</tr>
 					</tbody>
 				</table>
 			</div>
-			<!-- //전표추가 목록 -->
 
 			<div class="btn_area">
 				<button type="button" class="btn sm sch">주문</button>

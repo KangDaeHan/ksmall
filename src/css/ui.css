@@ -334,6 +334,7 @@ input[type="checkbox"] + label , input[type="radio"] + label {
 /* 테이블 */
 .tbl_top_util {
 	position: relative;
+	min-height: 30px;
 	margin-bottom: 10px;
 }
 .tbl_top_util:after {
@@ -495,8 +496,8 @@ table .link , table .txt {
 .tbl_col td:last-child {
 	border-right: 0;
 }
-.tbl_col td.t_left {
-	text-align: left;
+table td.t_left {
+	text-align: left !important;
 }
 .tbl_col td .bold {
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
@@ -535,6 +536,12 @@ table .link , table .txt {
 }
 .tbl_col td .reorder:hover {
 	background: #fddd04;
+}
+.tbl_layout_fix table {
+	table-layout: fixed;
+}
+table .t_center {
+	text-align: center;
 }
 
 /* 파일업로드 */
@@ -948,6 +955,9 @@ button {
 .ly .pop_wrap .tbl_h262 {
 	max-height: 262px;
 }
+.ly .pop_wrap .tbl_h144 {
+	max-height: 144px;
+}
 .ly .pop_idpw_find {
 	width: 500px;
 }
@@ -1095,8 +1105,14 @@ button {
 .f_red {
 	color: #ff1234 !important;
 }
+.f_blue {
+	color: #001cff !important;
+}
 .bor_black {
 	border-color: #000 !important;
+}
+.align_abreast .wid100 {
+	width: 100px !important;
 }
 .align_abreast .wid177 {
 	width: 177px !important;
@@ -1109,6 +1125,25 @@ button {
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	color: #808080;
 	font-weight: 600;
+}
+.mr0 {
+	margin: 0 !important;
+}
+.mrb15 {
+	margin-bottom: 15px;
+}
+.mrb60.mrb60 {
+	margin-bottom: 60px;
+}
+.ml30 {
+	margin-left: 30px;
+}
+.f_bold {
+	font-weight: 600;
+	color: #000 !important;
+}
+.brown {
+	color: #721544 !important;
 }
 
 
@@ -4750,6 +4785,9 @@ table .total_price .box .price {
 	border: 0;
 	cursor: pointer;
 }
+#policy_2017 {
+	display: none;
+}
 .policy_box {
 	padding-top: 25px;
 	border: 2px solid #fab000;
@@ -4984,7 +5022,7 @@ table .total_price .box .price {
 }
 
 /* 비밀번호 변경 안내 팝업 */
-.pwd_change .pwd_info_box {
+.pwd_change .pwd_info_box , .pop_content .account_activation_box {
 	padding: 20px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
@@ -4998,6 +5036,151 @@ table .total_price .box .price {
 }
 .pop_rd_box {
 	margin: 0 0 15px 0;
+}
+
+.file_on , .file_off {
+	display: block;
+	position: relative;
+	width: 23px;
+	height: 25px;
+	margin: 0 auto;
+	border: 0;
+	background-position: -174px -320px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.file_on {
+	background-position: -214px -320px;
+}
+.tbl_total table {
+	border-bottom: 2px solid #9e9e9e;
+}
+.tbl_total table th {
+	border-top: 2px solid #9e9e9e;
+}
+.tbl_total table td {
+	border-top: 2px solid #9e9e9e;
+	text-align: center;
+}
+.tbl_total table td .f_bold {
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-weight: 600;
+}
+.vat_txt {
+	margin-bottom: 7px;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+	text-align: right;
+}
+.pop_content .account_activation_box {
+	position: relative;
+	padding-top: 31px;
+	text-align: center;
+}
+.account_activation_box:before {
+	content: '';
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 14px;
+	background: url("../image/sprite.png") no-repeat -258px -308px;
+}
+.signature_box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.signature_box img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: auto;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.btn.acknowledgment {
+	max-width: 120px;
+	margin: 0 auto;
+}
+
+.pop_print {
+	padding: 0 20px;
+}
+.pop_print h2 {
+	padding: 20px 0;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+}
+.pop_print .print_top {
+	padding: 10px 0;
+}
+.pop_print .print_top p {
+	margin-bottom: 10px;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+.pop_print .print_top .txt {
+	padding-left: 20px;
+}
+.pop_print .sign_area {
+	float: right;
+	margin: 30px 0;
+	font-size: 0;
+}
+.pop_print .sign_area .box {
+	float: left;
+	width: 180px;
+}
+.pop_print .sign_area .box .tit {
+	padding: 7px 5px;
+	margin-left: -1px;
+	border: 1px solid #cdcdcd;
+    border-bottom-color: #9e9e9e;
+    background: #e8e8e8;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+}
+.pop_print .sign_area .box .number_txt {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100px;
+	border: 1px solid #cdcdcd;
+	border-top: 0;
+	margin-left: -1px;
+	text-align: center;
+}
+.pop_print .sign_area .box .number_txt p {
+	margin-bottom: 7px;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+.pop_print .sign_area .box:first-child .txt , .pop_print .sign_area .box:first-child .number_txt {
+	margin: 0;
+}
+.pop_print .sign_area .box .signature_box {
+	height: 100px;
+	border: 1px solid #cdcdcd;
+	border-top: 0;
+	border-left: 0;
+}
+.pop_print .print_date {
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-align: right;
 }
 
 

@@ -370,23 +370,8 @@
 			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
-			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
-				<div class="right">
-					<div class="sel_area">
-						<select name="" id="" class="sel_box">
-							<option value="">5개</option>
-							<option value="">10개</option>
-							<option value="">20개</option>
-							<option value="">30개</option>
-						</select>
-					</div>
-				</div>
-			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll tbl_h292">
+			<div class="tbl_area tbl_scroll tbl_h144 mr0">
 				<table class="tbl_col">
 					<thead>
 						<tr>
@@ -466,34 +451,19 @@
 			</div>
 			<!-- //리스트 -->
 
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
-				</div>
-			</div>
-			<!-- //페이징 -->
-
 			<!-- 전표배송지 정보 -->
-			<h2 class="pop_sub_tit">정기전표주문</h2>
+			<h2 class="pop_sub_tit">전표배송지 정보</h2>
 			<div class="tbl_area tbl_addr_info">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 120px;">우편번호</th>
+							<th style="width: 130px;">인수처</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+							<th style="width: 130px;">상호명</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -501,29 +471,86 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="width: 120px;">주소</th>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">번지</th>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th style="width: 120px;">연락처</th>
-							<td>
+							<th>전화번호</th>
+							<td colspan="3">
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 								</div>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="3">주소</th>
+							<td colspan="3">
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<!-- //전표배송지 정보 -->
+			<br/><br/>
+			<!-- 배송지 정보 -->
+			<div class="tbl_area tbl_addr_info">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 130px;">배송지정보</th>
+							<td colspan="3">
+								<input type="radio" name="addr_delivery" id="delivery1" checked>
+								<label for="delivery1">직접입력</label>
+								<input type="radio" name="addr_delivery" id="delivery2">
+								<label for="delivery2">인수처와 동일주소</label>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 130px;">배송지 상호</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+							<th style="width: 130px;">배송지 전화번호</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="3">주소</th>
+							<td colspan="3">
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<a href="#" class="btn xs gray">검색</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //배송지 정보 -->
 
 		</div>
 		<div class="pop_footer">

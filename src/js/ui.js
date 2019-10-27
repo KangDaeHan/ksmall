@@ -579,7 +579,7 @@ $(document).ready(function() {
 		$("input[name=agree]").prop("checked",true);
 	});
 
-
+	
 	chagsubmu.hide();
 	chagtit.on("click", function(e) {
 		$(".answer:visible").slideUp();

@@ -30,6 +30,7 @@
 			<a href="#" class="btn xs">주문배송</a>
 			<a href="#" class="btn xs">장바구니</a>
 			<a href="#" class="btn xs">결제이용방법안내</a>
+			<a href="#" class="btn xs" onclick="layer_open('pop_account_activation'); return false;">휴면계정알림 팝업 버튼 샘플</a>
 		</div>
 		<!-- //상단 로그인 -->
 
@@ -80,6 +81,7 @@
 					<li><a href="#">인수확인서 조회</a></li>
 					<li><a href="#">정기전표 주문</a></li>
 					<li><a href="#">정기전표주문 조회</a></li>
+					<li><a href="#">전표주문</a></li>
 				</ul>
 			</li>
 			<li class="menu7 tooltip" title="고객지원"><a href="#"><span class="sprite icon"></span><span class="txt">고객지원</span></a>
@@ -790,6 +792,30 @@
 	</div>
 </div>
 <!-- //주문처 검색 팝업 -->
+
+<!-- 휴면계정 알림 팝업 -->
+<div class="ly" id="pop_account_activation">
+	<div class="bg"></div>
+	<div class="pop_wrap pop_idpw_find">
+		<!-- 팝업 내용 -->
+		<div class="pop_header">
+			<h2 class="tit">휴면계정알림</h2>
+			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+		</div>
+		<div class="pop_content">
+			<div class="account_activation_box">
+				해당 계정은 휴면상태로 로그인이 불가능합니다. 
+			</div>
+			
+		</div>
+		<div class="pop_footer">
+			<a href="#" class="btn sm btn_pop_close">확인</a>
+			<a href="#" class="btn sm compare">휴면계정해제하기</a>
+		</div>
+		<!-- //팝업 내용 -->
+	</div>
+</div>
+<!-- //휴면계정 알림 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">
