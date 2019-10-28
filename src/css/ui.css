@@ -4284,7 +4284,7 @@ button {
 }
 .faq_tab_con .con_box .question {
 	position: relative;
-	padding: 18px 55px 18px 17px;
+	padding: 18px 55px 18px 35px;
 	border-bottom: 1px solid #cbcbcb;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 15px;
@@ -4300,6 +4300,14 @@ button {
 	width: 51px;
 	height: 100%;
 	background: #fff url("../image/bl_arrow_type2.png") no-repeat -51px 50%;
+}
+.faq_tab_con .con_box .question span {
+	position: absolute;
+	top: 18px;
+	left: 17px;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 15px;
+	color: #403f3e;
 }
 .faq_tab_con .con_box .question.on {
 	background: #eae9e9;
