@@ -3348,7 +3348,27 @@ button {
 	display: block;
 	width: 100%;
 	height: 100%;
+	outline: 0;
 }
+.today_view_area .today_slide .slick-slide:hover:after {
+	display: none;
+}
+.today_view_area .today_slide .slick-slide a:after {
+	display: none;
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+}
+.today_view_area .today_slide .slick-slide a:hover:after {
+	display: block;
+}
+
 .today_view_area .today_slide img {
 	position: absolute;
     top: 0;
